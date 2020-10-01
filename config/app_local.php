@@ -44,8 +44,8 @@ return [
              */
             //'port' => '8080',
 
-            'username' => 'root',
-            'password' => '',
+            'username' => 'dev',
+            'password' => 'dev',
 
             'database' => 'dev_finson_db',
             /**
