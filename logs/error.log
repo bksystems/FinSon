@@ -923,3 +923,914 @@ Request URL: /
 Client IP: 192.168.0.115
 
 
+2020-10-01 17:09:18 Error: [Cake\Database\Exception\MissingConnectionException] Connection to Mysql could not be established: SQLSTATE[HY000] [1049] Unknown database 'dev_finson_db' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver.php on line 140
+Exception Attributes: array (
+  'driver' => 'Mysql',
+  'reason' => 'SQLSTATE[HY000] [1049] Unknown database \'dev_finson_db\'',
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1261
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\Paginator.php:208
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\Paginator.php:177
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php:201
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:788
+- C:\xampp\htdocs\FinSon\src\Controller\StructuresStatesController.php:26
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:146
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Caused by: [PDOException] SQLSTATE[HY000] [1049] Unknown database 'dev_finson_db' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver.php on line 132
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver.php:132
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver.php:138
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\SchemaDialect.php:47
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:230
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:53
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:399
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:508
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:277
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:177
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1679
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1261
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\Paginator.php:208
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\Paginator.php:177
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Component\PaginatorComponent.php:201
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:788
+- C:\xampp\htdocs\FinSon\src\Controller\StructuresStatesController.php:26
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:146
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structures-states
+
+
+2020-10-01 17:15:05 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php, line 70]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 258
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 122
+[main] - [internal], line ??
+
+2020-10-01 17:19:34 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php, line 70]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 258
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 122
+[main] - [internal], line ??
+
+2020-10-01 17:21:02 Error: Fatal Error (1): Maximum execution time of 120 seconds exceeded in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php, line 70]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE\src\Error\BaseErrorHandler.php, line 258
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE\src\Error\BaseErrorHandler.php, line 122
+[main] - [internal], line ??
+
+2020-10-01 18:08:33 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBussinesPartners could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBussinesPartners',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-bussines-partners
+
+
+2020-10-01 18:16:00 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBussinesPartners could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBussinesPartners',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-bussines-partners
+
+
+2020-10-01 18:16:17 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBusninesPartners could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBusninesPartners',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-busnines-partners
+
+
+2020-10-01 18:16:26 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBusinnesPartnes could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBusinnesPartnes',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-businnes-partnes
+
+
+2020-10-01 18:18:29 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBusinessPartnes could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBusinessPartnes',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partnes
+
+
+2020-10-01 18:23:11 Warning: Warning (2): Use of undefined constant options - assumed 'options' (this will throw an Error in a future version of PHP) in [C:\xampp\htdocs\FinSon\templates\BpsBusinessPartners\add.php, line 26]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+include - ROOT\templates\BpsBusinessPartners\add.php, line 26
+Cake\View\View::_evaluate() - CORE\src\View\View.php, line 1176
+Cake\View\View::_render() - CORE\src\View\View.php, line 1134
+Cake\View\View::render() - CORE\src\View\View.php, line 764
+Cake\Controller\Controller::render() - CORE\src\Controller\Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 18:23:11 Error: [TypeError] Argument 2 passed to Cake\View\Helper\FormHelper::select() must be iterable, string given, called in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php on line 1188 in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php on line 2008
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php:1188
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php:1094
+- C:\xampp\htdocs\FinSon\templates\BpsBusinessPartners\add.php:26
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:1176
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:1134
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:764
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:696
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:538
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 18:23:23 Error: [TypeError] Argument 2 passed to Cake\View\Helper\FormHelper::select() must be iterable, string given, called in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php on line 1188 in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php on line 2008
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php:1188
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\Helper\FormHelper.php:1094
+- C:\xampp\htdocs\FinSon\templates\BpsBusinessPartners\add.php:26
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:1176
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:1134
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:764
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:696
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:538
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 19:51:01 Error: [ArgumentCountError] Too few arguments to function Cake\ORM\ResultSet::max(), 0 passed in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php on line 501 and at least 1 expected in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php on line 192
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:501
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1299
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:121
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:69
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 19:51:16 Error: [Error] Call to a member function first() on null in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 122
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:69
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 19:53:12 Error: [Error] Call to a member function firstOrFail() on null in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 122
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:69
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 19:55:47 Error: [Error] Call to undefined function App\Controller\isnull() in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 122
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:69
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 19:58:19 Error: [TypeError] Argument 1 passed to Cake\ORM\Table::save() must implement interface Cake\Datasource\EntityInterface, string given, called in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 61 in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php on line 1812
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:61
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:164
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+
+
+2020-10-01 20:00:24 Error: [Error] Call to undefined method App\Model\Entity\BpsBusinessPartner::first() in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 126
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 20:03:19 Error: [TypeError] Argument 1 passed to Cake\ORM\Entity::get() must be of the type string, int given, called in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php on line 604 in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php on line 275
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\EntityTrait.php:604
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:126
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 20:03:34 Error: [Error] Function name must be a string in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 126
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 20:05:22 Warning: Warning (2): A non-numeric value encountered in [C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php, line 126]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+App\Controller\BpsBusinessPartnersController::number_prev_bps() - APP/Controller\BpsBusinessPartnersController.php, line 126
+App\Controller\BpsBusinessPartnersController::add() - APP/Controller\BpsBusinessPartnersController.php, line 70
+Cake\Controller\Controller::invokeAction() - CORE\src\Controller\Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE\src\Controller\ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE\src\Http\BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE\src\Http\Middleware\CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE\src\Http\Middleware\BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE\src\Routing\Middleware\RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE\src\Routing\Middleware\AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE\src\Error\Middleware\ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE\src\Http\Runner.php, line 73
+Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
+Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:05:23 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:05:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:05:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:05:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:06:12 Error: [Error] Call to undefined function App\Controller\srtval() in C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php on line 126
+Stack Trace:
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 20:13:36 Error: [TypeError] Return value of Cake\Collection\Collection::_propertyExtractor() must be callable, array returned in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Collection\ExtractTrait.php on line 40
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Collection\Iterator\SortIterator.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Collection\CollectionTrait.php:194
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:501
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1299
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:122
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-10-01 20:15:41 Error: [Cake\Controller\Exception\MissingActionException] Action BpsBusinessPartnersController::calculatePersonalData.json() could not be found, or is not accessible. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 508
+Exception Attributes: array (
+  'controller' => 'BpsBusinessPartnersController',
+  'action' => 'calculatePersonalData.json',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/calculate_personal_data.json
+
+
+2020-10-01 20:15:53 Error: [Cake\Controller\Exception\MissingActionException] Action BpsBusinessPartnersController::calculatePersonalData.json() could not be found, or is not accessible. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 508
+Exception Attributes: array (
+  'controller' => 'BpsBusinessPartnersController',
+  'action' => 'calculatePersonalData.json',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/calculate-personal-data.json
+
+
+2020-10-01 20:17:52 Error: [Cake\Controller\Exception\MissingActionException] Action BpsBusinessPartnersController::calculatePersonalData.json() could not be found, or is not accessible. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 508
+Exception Attributes: array (
+  'controller' => 'BpsBusinessPartnersController',
+  'action' => 'calculatePersonalData.json',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/calculate-personal-data.json
+
+
+2020-10-01 20:18:18 Error: [Cake\Controller\Exception\MissingActionException] Action BpsBusinessPartnersController::calculatePersonalData.json() could not be found, or is not accessible. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 508
+Exception Attributes: array (
+  'controller' => 'BpsBusinessPartnersController',
+  'action' => 'calculatePersonalData.json',
+  'prefix' => '',
+  'plugin' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/calculatePersonalData.json
+
+
+2020-10-01 20:29:58 Error: [Cake\View\Exception\MissingTemplateException] Template file `BpsBusinessPartners\json\calculate_personal_data.php` could not be found.
+
+The following paths were searched:
+
+- `C:\xampp\htdocs\FinSon\templates\BpsBusinessPartners\json\calculate_personal_data.php`
+- `C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\templates\BpsBusinessPartners\json\calculate_personal_data.php`
+ in BpsBusinessPartners\json\calculate_personal_data.php on line 1354
+Exception Attributes: array (
+  'file' => 'BpsBusinessPartners\\json\\calculate_personal_data.php',
+  'paths' => 
+  array (
+    0 => 'C:\\xampp\\htdocs\\FinSon\\templates\\',
+    1 => 'C:\\xampp\\htdocs\\FinSon\\vendor\\cakephp\\cakephp\\templates\\',
+  ),
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:761
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\SerializedView.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\JsonView.php:115
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:696
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:538
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/calculatePersonalData.json
+
+
+2020-10-01 20:33:49 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculatePersonalData.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:33:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculatePersonalData.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:33:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculatePersonalData.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-10-01 20:33:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculatePersonalData.json
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
