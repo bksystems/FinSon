@@ -1,0 +1,11 @@
+2020-09-30 15:45:40 Error: [RuntimeException] Your database does not have any tables. in C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Utility\TableScanner.php on line 68
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Utility\TableScanner.php:82
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\AllCommand.php:85
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\BaseCommand.php:179
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:336
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:171
+- C:\xampp\htdocs\FinSon\bin\cake.php:12
+
+
+
