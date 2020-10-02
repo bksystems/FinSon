@@ -16,7 +16,7 @@
     </aside>
     <div class="column-responsive column-80">
         <div class="structuresCountries view content">
-            <h3><?= h($structuresCountry->uuid) ?></h3>
+            <h3><?= h($structuresCountry->country) ?></h3>
             <table>
                 <tr>
                     <th><?= __('Uuid') ?></th>
@@ -48,6 +48,41 @@
                 <blockquote>
                     <?= $this->Text->autoParagraph(h($structuresCountry->description)); ?>
                 </blockquote>
+            </div>
+            <div class="related">
+                <h4><?= __('Related Structures Countries') ?></h4>
+                <?php if (!empty($structuresCountry->structures_countries)) : ?>
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <th><?= __('Uuid') ?></th>
+                            <th><?= __('Country') ?></th>
+                            <th><?= __('Country Key') ?></th>
+                            <th><?= __('Enable') ?></th>
+                            <th><?= __('Description') ?></th>
+                            <th><?= __('Created') ?></th>
+                            <th><?= __('Modified') ?></th>
+                            <th class="actions"><?= __('Actions') ?></th>
+                        </tr>
+                        <?php foreach ($structuresCountry->structures_countries as $structuresCountries) : ?>
+                        <tr>
+                            <td><?= h($structuresCountries->uuid) ?></td>
+                            <td><?= h($structuresCountries->country) ?></td>
+                            <td><?= h($structuresCountries->country_key) ?></td>
+                            <td><?= h($structuresCountries->enable) ?></td>
+                            <td><?= h($structuresCountries->description) ?></td>
+                            <td><?= h($structuresCountries->created) ?></td>
+                            <td><?= h($structuresCountries->modified) ?></td>
+                            <td class="actions">
+                                <?= $this->Html->link(__('View'), ['controller' => 'StructuresCountries', 'action' => 'view', $structuresCountries->uuid]) ?>
+                                <?= $this->Html->link(__('Edit'), ['controller' => 'StructuresCountries', 'action' => 'edit', $structuresCountries->uuid]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => 'StructuresCountries', 'action' => 'delete', $structuresCountries->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $structuresCountries->uuid)]) ?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                    </table>
+                </div>
+                <?php endif; ?>
             </div>
         </div>
     </div>
