@@ -44,6 +44,14 @@ class BpsBusinessPartnersTable extends Table
         $this->setPrimaryKey('uuid');
 
         $this->addBehavior('Timestamp');
+
+        $this->belongsTo('StructuresCountries')
+            ->setForeignKey('structures_country_uuid')
+            ->setJoinType('INNER');
+        
+        $this->belongsTo('StructuresStates')
+            ->setForeignKey('structures_state_uuid')
+            ->setJoinType('INNER');
     }
 
     /**

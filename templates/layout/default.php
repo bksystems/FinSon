@@ -31,8 +31,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
 
-    <?= $this->Html->css(['bootstrap.min']) ?>
-    <?= $this->Html->script(['jquery-3.5.1.min', 'bootstrap.min']) ?>
+    <?= $this->Html->css(['bootstrap.min', 'dataTables.bootstrap4.min']) ?>
+    <?= $this->Html->script(['jquery-3.5.1.min', 'jquery.dataTables.min', 'bootstrap.min', 'dataTables.bootstrap4.min']) ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

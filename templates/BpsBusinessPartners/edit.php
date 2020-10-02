@@ -4,40 +4,69 @@
  * @var \App\Model\Entity\BpsBusinessPartner $bpsBusinessPartner
  */
 ?>
+
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $bpsBusinessPartner->uuid],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $bpsBusinessPartner->uuid), 'class' => 'side-nav-item']
-            ) ?>
-            <?= $this->Html->link(__('List Bps Business Partners'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">bpsBusinessPartners</li>
+        </ol>
+        </nav>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-2">
+        <div class="card" style="font-size:14px;">
+            <div class="card-header">Submenu</div>
+                <ul class="list-group list-group-flush">
+  
+                    <?= $this->Form->postLink(
+                                    __('Eliminar'),
+                                    ['action' => 'delete', $bpsBusinessPartner->uuid],
+                                    ['confirm' => __('Are you sure you want to delete # {0}?', $bpsBusinessPartner->uuid), 'class' => 'list-group-item']
+                                ) ?>
+                    <?= $this->Html->link(__('List Bps Business Partners'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+ 
+                </ul>
+            </div>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="bpsBusinessPartners form content">
-            <?= $this->Form->create($bpsBusinessPartner) ?>
-            <fieldset>
-                <legend><?= __('Edit Bps Business Partner') ?></legend>
-                <?php
-                    echo $this->Form->control('bps_unique_number');
-                    echo $this->Form->control('bps_last_name');
-                    echo $this->Form->control('bps_second_last_name');
-                    echo $this->Form->control('bps_first_name');
-                    echo $this->Form->control('bps_second_name');
-                    echo $this->Form->control('bps_birthdate');
-                    echo $this->Form->control('structures_country_uuid');
-                    echo $this->Form->control('structures_state_uuid');
-                    echo $this->Form->control('bps_unique_registry_key');
-                    echo $this->Form->control('bps_elector_key');
-                    echo $this->Form->control('bps_federal_taxpayer_registry');
-                    echo $this->Form->control('bps_identification_number');
-                ?>
-            </fieldset>
-            <?= $this->Form->button(__('Submit')) ?>
-            <?= $this->Form->end() ?>
+    <div class="col-md-10">
+        <div class="card">
+            <div class="card-header">
+                <?= __('Edit Bps Business Partner') ?>
+            </div>
+            <div class="card-body">
+                <?= $this->Form->create($bpsBusinessPartner) ?>
+                <fieldset>
+                <div class="row">
+                    <div class="col-md-6">
+                    <?php
+                    echo $this->Form->control('bps_unique_number', [ 'class' => 'form-control form-control-sm', 'disabled']);
+                    echo $this->Form->control('bps_last_name', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_second_last_name', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_first_name', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_second_name', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_birthdate', [ 'class' => 'form-control form-control-sm']);
+                    ?>
+                    </div>
+                    <div class="col-md-6">
+                    <?php
+                    echo $this->Form->control('structures_country_uuid', ['options' => $structuresCountries,  'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('structures_state_uuid', ['options' => $structuresStates,  'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_unique_registry_key', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_elector_key', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_federal_taxpayer_registry', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_identification_number', [ 'class' => 'form-control form-control-sm']);
+                    ?>
+                    </div>
+                    </div>
+                </fieldset>
+                <br>
+                <?= $this->Form->button(__('Guardar'), ['class' => 'btn btn-success']) ?>
+                <?= $this->Form->end() ?>
+            </div>
         </div>
     </div>
 </div>

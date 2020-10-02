@@ -26,7 +26,10 @@ class BpsBusinessPartnersController extends AppController
 
     public function index()
     {
-        $bpsBusinessPartners = $this->paginate($this->BpsBusinessPartners);
+        $bpsBusinessPartners = $this->paginate($this->BpsBusinessPartners->find('all',[
+                'contain' => ['StructuresCountries', 'StructuresStates'],
+            ]));
+            
 
         $this->set(compact('bpsBusinessPartners'));
     }
@@ -65,10 +68,10 @@ class BpsBusinessPartnersController extends AppController
             }
             $this->Flash->error(__('The bps business partner could not be saved. Please, try again.'));
         }
-        $options_countries = $this->StructuresCountries->find('list');
-        $options_states = $this->StructuresStates->find('list');
+        $structuresCountries = $this->StructuresCountries->find('list');
+        $structuresStates = $this->StructuresStates->find('list');
         $number_prev_bps = $this->number_prev_bps();
-        $this->set(compact('bpsBusinessPartner', 'options_countries', 'options_states', 'number_prev_bps'));
+        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates', 'number_prev_bps'));
     }
 
     /**
@@ -92,7 +95,9 @@ class BpsBusinessPartnersController extends AppController
             }
             $this->Flash->error(__('The bps business partner could not be saved. Please, try again.'));
         }
-        $this->set(compact('bpsBusinessPartner'));
+        $structuresCountries = $this->StructuresCountries->find('list');
+        $structuresStates = $this->StructuresStates->find('list');
+        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates'));
     }
 
     /**
