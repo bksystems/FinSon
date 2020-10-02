@@ -11,17 +11,27 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Features</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Socios
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <?= $this->Html->link('Socios de negocio', ['controller' => 'bps_business_partners', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Telefonos de socios', ['controller' => 'structures_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Direcciones de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Documentos de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Roles de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
+          Config. Estructura
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <?= $this->Html->link('Paises', ['controller' => 'structures_countries', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Estados', ['controller' => 'structures_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Municipios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Colonias', ['controller' => 'structures_colonies', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
     </ul>

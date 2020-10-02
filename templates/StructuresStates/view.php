@@ -4,27 +4,34 @@
  * @var \App\Model\Entity\StructuresState $structuresState
  */
 ?>
+
+
+
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Structures State'), ['action' => 'edit', $structuresState->uuid], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Structures State'), ['action' => 'delete', $structuresState->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $structuresState->uuid), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Structures States'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Structures State'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-header"><?= __('Actions') ?></div>
+            <ul class="list-group list-group-flush">
+                <?= $this->Html->link(__('Edit Structures State'), ['action' => 'edit', $structuresState->uuid], ['class' => 'list-group-item']) ?>
+                <?= $this->Form->postLink(__('Delete Structures State'), ['action' => 'delete', $structuresState->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $structuresState->uuid), 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('List Structures States'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New Structures State'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+            </ul>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="structuresStates view content">
-            <h3><?= h($structuresState->uuid) ?></h3>
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+        <div class="card-header"><?= h($structuresState->state) ?></div>
+        <div class="card-body">
             <table>
                 <tr>
                     <th><?= __('Uuid') ?></th>
                     <td><?= h($structuresState->uuid) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Structures Country Uuid') ?></th>
-                    <td><?= h($structuresState->structures_country_uuid) ?></td>
+                    <th><?= __('Structures Country') ?></th>
+                    <td><?= $structuresState->has('structures_country') ? $this->Html->link($structuresState->structures_country->country, ['controller' => 'StructuresCountries', 'action' => 'view', $structuresState->structures_country->uuid]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('State') ?></th>
@@ -57,6 +64,7 @@
                     <?= $this->Text->autoParagraph(h($structuresState->description)); ?>
                 </blockquote>
             </div>
+        </div>
         </div>
     </div>
 </div>

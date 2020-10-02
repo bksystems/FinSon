@@ -19,25 +19,32 @@
  * @var \{{ entityClass }} ${{ singularVar }}
  */
 ?>
+
+
+
+
 {% set associations = {'BelongsTo': [], 'HasOne': [], 'HasMany': [], 'BelongsToMany': []}|merge(associations) %}
 {% set fieldsData = Bake.getViewFieldsData(fields, schema, associations) %}
 {% set associationFields = fieldsData.associationFields %}
 {% set groupedFields = fieldsData.groupedFields %}
 {% set pK = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit {{ singularHumanName }}'), ['action' => 'edit', {{ pK|raw }}], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete {{ singularHumanName }}'), ['action' => 'delete', {{ pK|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ pK|raw }}), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List {{ pluralHumanName }}'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New {{ singularHumanName }}'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-header"><?= __('Actions') ?></div>
+            <ul class="list-group list-group-flush">
+                <?= $this->Html->link(__('Edit {{ singularHumanName }}'), ['action' => 'edit', {{ pK|raw }}], ['class' => 'list-group-item']) ?>
+                <?= $this->Form->postLink(__('Delete {{ singularHumanName }}'), ['action' => 'delete', {{ pK|raw }}], ['confirm' => __('Are you sure you want to delete # {0}?', {{ pK|raw }}), 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('List {{ pluralHumanName }}'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New {{ singularHumanName }}'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+            </ul>
 {% set done = [] %}
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="{{ pluralVar }} view content">
-            <h3><?= h(${{ singularVar }}->{{ displayField }}) ?></h3>
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+        <div class="card-header"><?= h(${{ singularVar }}->{{ displayField }}) ?></div>
+        <div class="card-body">
             <table>
 {% if groupedFields['string'] %}
 {% for field in groupedFields['string'] %}
@@ -127,10 +134,12 @@
                         </tr>
                         <?php endforeach; ?>
                     </table>
+                    </div>
                 </div>
                 <?php endif; ?>
             </div>
 {% endfor %}
+        </div>
         </div>
     </div>
 </div>

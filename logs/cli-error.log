@@ -48,3 +48,39 @@ Stack Trace:
 
 
 
+2020-10-02 20:04:58 Error: [Cake\View\Exception\MissingTemplateException] Template file `No bake template found for "Bake.Template/viewy" skipping file generation.` could not be found. in No bake template found for "Bake.Template/viewy" skipping file generation. on line 104
+Exception Attributes: array (
+  'file' => 'No bake template found for "Bake.Template/viewy" skipping file generation.',
+  'paths' => 
+  array (
+  ),
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:387
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:342
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:126
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\BaseCommand.php:179
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:336
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:171
+- C:\xampp\htdocs\FinSon\bin\cake.php:12
+
+
+
+2020-10-02 20:11:30 Error: [Cake\View\Exception\MissingTemplateException] Template file `No bake template found for "Bake.Template/all" skipping file generation.` could not be found. in No bake template found for "Bake.Template/all" skipping file generation. on line 104
+Exception Attributes: array (
+  'file' => 'No bake template found for "Bake.Template/all" skipping file generation.',
+  'paths' => 
+  array (
+  ),
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:387
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:342
+- C:\xampp\htdocs\FinSon\vendor\cakephp\bake\src\Command\TemplateCommand.php:126
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\BaseCommand.php:179
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:336
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Console\CommandRunner.php:171
+- C:\xampp\htdocs\FinSon\bin\cake.php:12
+
+
+

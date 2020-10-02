@@ -4,19 +4,26 @@
  * @var \App\Model\Entity\BpsBusinessPartner $bpsBusinessPartner
  */
 ?>
+
+
+
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Bps Business Partner'), ['action' => 'edit', $bpsBusinessPartner->uuid], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Bps Business Partner'), ['action' => 'delete', $bpsBusinessPartner->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $bpsBusinessPartner->uuid), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Bps Business Partners'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Bps Business Partner'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-header"><?= __('Actions') ?></div>
+            <ul class="list-group list-group-flush">
+                <?= $this->Html->link(__('Edit Bps Business Partner'), ['action' => 'edit', $bpsBusinessPartner->uuid], ['class' => 'list-group-item']) ?>
+                <?= $this->Form->postLink(__('Delete Bps Business Partner'), ['action' => 'delete', $bpsBusinessPartner->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $bpsBusinessPartner->uuid), 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('List Bps Business Partners'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New Bps Business Partner'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+            </ul>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="bpsBusinessPartners view content">
-            <h3><?= h($bpsBusinessPartner->uuid) ?></h3>
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+        <div class="card-header"><?= h($bpsBusinessPartner->uuid) ?></div>
+        <div class="card-body">
             <table>
                 <tr>
                     <th><?= __('Uuid') ?></th>
@@ -43,12 +50,12 @@
                     <td><?= h($bpsBusinessPartner->bps_second_name) ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Structures Country Uuid') ?></th>
-                    <td><?= h($bpsBusinessPartner->structures_country_uuid) ?></td>
+                    <th><?= __('Structures Country') ?></th>
+                    <td><?= $bpsBusinessPartner->has('structures_country') ? $this->Html->link($bpsBusinessPartner->structures_country->country, ['controller' => 'StructuresCountries', 'action' => 'view', $bpsBusinessPartner->structures_country->uuid]) : '' ?></td>
                 </tr>
                 <tr>
-                    <th><?= __('Structures State Uuid') ?></th>
-                    <td><?= h($bpsBusinessPartner->structures_state_uuid) ?></td>
+                    <th><?= __('Structures State') ?></th>
+                    <td><?= $bpsBusinessPartner->has('structures_state') ? $this->Html->link($bpsBusinessPartner->structures_state->state, ['controller' => 'StructuresStates', 'action' => 'view', $bpsBusinessPartner->structures_state->uuid]) : '' ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Bps Unique Registry Key') ?></th>
@@ -79,6 +86,7 @@
                     <td><?= h($bpsBusinessPartner->modified) ?></td>
                 </tr>
             </table>
+        </div>
         </div>
     </div>
 </div>

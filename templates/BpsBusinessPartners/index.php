@@ -30,36 +30,46 @@
                 <table class="table" style="width: 100%" id="index_table">
     <thead>
                 <tr>
-                    <th><?= $this->Paginator->sort('Numero') ?></th>
-                    <th><?= $this->Paginator->sort('Apellido P') ?></th>
-                    <th><?= $this->Paginator->sort('Apellido M') ?></th>
-                    <th><?= $this->Paginator->sort('P. Nombre') ?></th>
-                    <th><?= $this->Paginator->sort('S. Nombre') ?></th>
-                    <th><?= $this->Paginator->sort('F. Nacimiento') ?></th>
-                    <th><?= $this->Paginator->sort('Pais') ?></th>
-                    <th><?= $this->Paginator->sort('Estado') ?></th>
-                    <th><?= $this->Paginator->sort('CURP') ?></th>
-                    <th><?= $this->Paginator->sort('C Electoral') ?></th>
-                    <th class="actions"><?= __('Acciones') ?></th>
+                    <th><?= $this->Paginator->sort('uuid') ?></th>
+                    <th><?= $this->Paginator->sort('bps_unique_number') ?></th>
+                    <th><?= $this->Paginator->sort('bps_last_name') ?></th>
+                    <th><?= $this->Paginator->sort('bps_second_last_name') ?></th>
+                    <th><?= $this->Paginator->sort('bps_first_name') ?></th>
+                    <th><?= $this->Paginator->sort('bps_second_name') ?></th>
+                    <th><?= $this->Paginator->sort('bps_birthdate') ?></th>
+                    <th><?= $this->Paginator->sort('structures_country_uuid') ?></th>
+                    <th><?= $this->Paginator->sort('structures_state_uuid') ?></th>
+                    <th><?= $this->Paginator->sort('bps_unique_registry_key') ?></th>
+                    <th><?= $this->Paginator->sort('bps_elector_key') ?></th>
+                    <th><?= $this->Paginator->sort('bps_federal_taxpayer_registry') ?></th>
+                    <th><?= $this->Paginator->sort('bps_identification_number') ?></th>
+                    <th><?= $this->Paginator->sort('created') ?></th>
+                    <th><?= $this->Paginator->sort('modified') ?></th>
+                    <th class="actions"><?= __('Actions') ?></th>
                 </tr>
             </thead>
             <tbody>
                 <?php foreach ($bpsBusinessPartners as $bpsBusinessPartner): ?>
                 <tr>
+                    <td><?= h($bpsBusinessPartner->uuid) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_unique_number) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_last_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_second_last_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_first_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_second_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_birthdate) ?></td>
-                    <td><?= h($bpsBusinessPartner->structures_country->country_key) ?></td>
-                    <td><?= h($bpsBusinessPartner->structures_state->state_key) ?></td>
+                    <td><?= $bpsBusinessPartner->has('structures_country') ? $this->Html->link($bpsBusinessPartner->structures_country->country, ['controller' => 'StructuresCountries', 'action' => 'view', $bpsBusinessPartner->structures_country->uuid]) : '' ?></td>
+                    <td><?= $bpsBusinessPartner->has('structures_state') ? $this->Html->link($bpsBusinessPartner->structures_state->state, ['controller' => 'StructuresStates', 'action' => 'view', $bpsBusinessPartner->structures_state->uuid]) : '' ?></td>
                     <td><?= h($bpsBusinessPartner->bps_unique_registry_key) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_elector_key) ?></td>
+                    <td><?= h($bpsBusinessPartner->bps_federal_taxpayer_registry) ?></td>
+                    <td><?= h($bpsBusinessPartner->bps_identification_number) ?></td>
+                    <td><?= h($bpsBusinessPartner->created) ?></td>
+                    <td><?= h($bpsBusinessPartner->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('View'), ['action' => 'view', $bpsBusinessPartner->uuid]) ?>
-                        <?= $this->Html->link(__('Edit'), ['action' => 'edit', $bpsBusinessPartner->uuid]) ?>
-                        <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $bpsBusinessPartner->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $bpsBusinessPartner->uuid)]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsBusinessPartner->uuid]) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsBusinessPartner->uuid]) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsBusinessPartner->uuid], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsBusinessPartner->uuid)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

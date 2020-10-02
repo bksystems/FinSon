@@ -2762,3 +2762,214 @@ Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
 Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
 [main] - ROOT\webroot\index.php, line 40
 
+2020-10-02 19:54:05 Error: [Cake\Http\Exception\MissingControllerException] Controller class Finson could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Finson',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:146
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /finson/
+
+
+2020-10-02 19:54:13 Error: [Cake\Http\Exception\MissingControllerException] Controller class FinSOn could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'FinSOn',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:146
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /FinSOn/
+
+
+2020-10-02 20:10:01 Error: [Cake\Http\Exception\MissingControllerException] Controller class StructureCountries could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'StructureCountries',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structure-countries
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+
+
+2020-10-02 20:15:32 Error: [Cake\Http\Exception\MissingControllerException] Controller class StructuresMunicipalities could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'StructuresMunicipalities',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structures-municipalities
+Referer URL: http://localhost:8080/FinSon/structures-states
+
+
+2020-10-02 20:24:55 Error: [ParseError] syntax error, unexpected '=', expecting ']' in C:\xampp\htdocs\FinSon\templates\StructuresMunicipalities\add.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:1134
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\View\View.php:764
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:696
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:538
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structures-municipalities/add
+Referer URL: http://localhost:8080/FinSon/structures-municipalities
+
+
+2020-10-02 20:39:28 Error: [Cake\Http\Exception\MissingControllerException] Controller class StructuresColnies could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'StructuresColnies',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structures-colnies
+
+
+2020-10-02 20:39:34 Error: [Cake\Http\Exception\MissingControllerException] Controller class StructuresColonies could not be found. in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'StructuresColonies',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:46
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /structures-colonies
+
+

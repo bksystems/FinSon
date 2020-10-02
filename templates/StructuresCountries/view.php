@@ -4,19 +4,26 @@
  * @var \App\Model\Entity\StructuresCountry $structuresCountry
  */
 ?>
+
+
+
+
 <div class="row">
-    <aside class="column">
-        <div class="side-nav">
-            <h4 class="heading"><?= __('Actions') ?></h4>
-            <?= $this->Html->link(__('Edit Structures Country'), ['action' => 'edit', $structuresCountry->uuid], ['class' => 'side-nav-item']) ?>
-            <?= $this->Form->postLink(__('Delete Structures Country'), ['action' => 'delete', $structuresCountry->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $structuresCountry->uuid), 'class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('List Structures Countries'), ['action' => 'index'], ['class' => 'side-nav-item']) ?>
-            <?= $this->Html->link(__('New Structures Country'), ['action' => 'add'], ['class' => 'side-nav-item']) ?>
+    <div class="col-md-2">
+        <div class="card">
+            <div class="card-header"><?= __('Actions') ?></div>
+            <ul class="list-group list-group-flush">
+                <?= $this->Html->link(__('Edit Structures Country'), ['action' => 'edit', $structuresCountry->uuid], ['class' => 'list-group-item']) ?>
+                <?= $this->Form->postLink(__('Delete Structures Country'), ['action' => 'delete', $structuresCountry->uuid], ['confirm' => __('Are you sure you want to delete # {0}?', $structuresCountry->uuid), 'class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('List Structures Countries'), ['action' => 'index'], ['class' => 'list-group-item']) ?>
+                <?= $this->Html->link(__('New Structures Country'), ['action' => 'add'], ['class' => 'list-group-item']) ?>
+            </ul>
         </div>
-    </aside>
-    <div class="column-responsive column-80">
-        <div class="structuresCountries view content">
-            <h3><?= h($structuresCountry->country) ?></h3>
+    </div>
+    <div class="col-md-10">
+        <div class="card">
+        <div class="card-header"><?= h($structuresCountry->country) ?></div>
+        <div class="card-body">
             <table>
                 <tr>
                     <th><?= __('Uuid') ?></th>
@@ -81,9 +88,11 @@
                         </tr>
                         <?php endforeach; ?>
                     </table>
+                    </div>
                 </div>
                 <?php endif; ?>
             </div>
+        </div>
         </div>
     </div>
 </div>
