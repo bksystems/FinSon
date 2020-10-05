@@ -1396,3 +1396,155 @@ Cake\Http\Runner::run() - CORE\src\Http\Runner.php, line 58
 Cake\Http\Server::run() - CORE\src\Http\Server.php, line 90
 [main] - ROOT\webroot\index.php, line 40
 
+2020-10-03 02:20:06 Notice: Notice (8): Undefined variable: structuresCountries in [/Applications/MAMP/htdocs/FinSon/templates/StructuresStates/add.php, line 39]
+Request URL: /structures-states/add
+Referer URL: http://localhost:8888/FinSon/structures-states
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/StructuresStates/add.php, line 39
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2020-10-03 02:30:56 Notice: Notice (8): Undefined variable: bpsBusinessPartnersGenders in [/Applications/MAMP/htdocs/FinSon/templates/BpsBusinessPartners/add.php, line 47]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/BpsBusinessPartners/add.php, line 47
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2020-10-03 02:33:01 Notice: Notice (1024): Undefined property: BpsBusinessPartnersController::$BpsGenders in /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php on line 73 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php, line 319]
+Request URL: /bps-business-partners/add
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Controller\Controller::__get() - CORE/src/Controller/Controller.php, line 319
+App\Controller\BpsBusinessPartnersController::add() - APP/Controller/BpsBusinessPartnersController.php, line 73
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 529
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2020-10-03 02:41:51 Notice: Notice (8): Trying to get property 'gender' of non-object in [/Applications/MAMP/htdocs/FinSon/templates/BpsBusinessPartners/index.php, line 62]
+Request URL: /bps-business-partners
+Referer URL: http://localhost:8888/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/BpsBusinessPartners/index.php, line 62
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2020-10-03 02:41:51 Notice: Notice (8): Trying to get property 'uuid' of non-object in [/Applications/MAMP/htdocs/FinSon/templates/BpsBusinessPartners/index.php, line 62]
+Request URL: /bps-business-partners
+Referer URL: http://localhost:8888/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/BpsBusinessPartners/index.php, line 62
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+

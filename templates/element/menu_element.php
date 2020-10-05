@@ -34,6 +34,17 @@
           <?= $this->Html->link('Colonias', ['controller' => 'structures_colonies', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cat. Sys
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <?= $this->Html->link('Genero-Sexo', ['controller' => 'bps_genders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos direcciones', ['controller' => 'bps_types_addresses', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos telefonos', ['controller' => 'bps_types_phones', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos documentos', ['controller' => 'bps_types_documents', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+        </div>
+      </li>
     </ul>
   </div>
 </nav>

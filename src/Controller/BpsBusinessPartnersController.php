@@ -21,13 +21,14 @@ class BpsBusinessPartnersController extends AppController
         parent::initialize();
         $this->loadModel('StructuresCountries');
         $this->loadModel('StructuresStates');
+        $this->loadModel('BpsGenders');
     }
 
 
     public function index()
     {
         $bpsBusinessPartners = $this->paginate($this->BpsBusinessPartners->find('all',[
-                'contain' => ['StructuresCountries', 'StructuresStates'],
+                'contain' => ['StructuresCountries', 'StructuresStates', 'BpsGenders'],
             ]));
             
 
@@ -70,8 +71,9 @@ class BpsBusinessPartnersController extends AppController
         }
         $structuresCountries = $this->StructuresCountries->find('list');
         $structuresStates = $this->StructuresStates->find('list');
+        $bpsGenders = $this->BpsGenders->find('list');
         $number_prev_bps = $this->number_prev_bps();
-        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates', 'number_prev_bps'));
+        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates', 'bpsGenders', 'number_prev_bps'));
     }
 
     /**

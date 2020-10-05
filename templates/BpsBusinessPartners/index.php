@@ -37,6 +37,7 @@
                     <th><?= $this->Paginator->sort('bps_first_name') ?></th>
                     <th><?= $this->Paginator->sort('bps_second_name') ?></th>
                     <th><?= $this->Paginator->sort('bps_birthdate') ?></th>
+                    <th><?= $this->Paginator->sort('bps_gender_uuid') ?></th>
                     <th><?= $this->Paginator->sort('structures_country_uuid') ?></th>
                     <th><?= $this->Paginator->sort('structures_state_uuid') ?></th>
                     <th><?= $this->Paginator->sort('bps_unique_registry_key') ?></th>
@@ -58,6 +59,7 @@
                     <td><?= h($bpsBusinessPartner->bps_first_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_second_name) ?></td>
                     <td><?= h($bpsBusinessPartner->bps_birthdate) ?></td>
+                    <td><?= $bpsBusinessPartner->has('structures_state') ? $this->Html->link($bpsBusinessPartner->bps_gender->gender, ['controller' => 'BpsGender', 'action' => 'view', $bpsBusinessPartner->bps_gender->uuid]) : '' ?></td>
                     <td><?= $bpsBusinessPartner->has('structures_country') ? $this->Html->link($bpsBusinessPartner->structures_country->country, ['controller' => 'StructuresCountries', 'action' => 'view', $bpsBusinessPartner->structures_country->uuid]) : '' ?></td>
                     <td><?= $bpsBusinessPartner->has('structures_state') ? $this->Html->link($bpsBusinessPartner->structures_state->state, ['controller' => 'StructuresStates', 'action' => 'view', $bpsBusinessPartner->structures_state->uuid]) : '' ?></td>
                     <td><?= h($bpsBusinessPartner->bps_unique_registry_key) ?></td>

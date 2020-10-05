@@ -42,6 +42,7 @@ class BpsBusinessPartner extends Entity
         'bps_first_name' => true,
         'bps_second_name' => true,
         'bps_birthdate' => true,
+        'bps_gender_uuid' => true,
         'structures_country_uuid' => true,
         'structures_state_uuid' => true,
         'bps_unique_registry_key' => true,

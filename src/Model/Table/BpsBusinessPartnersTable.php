@@ -52,6 +52,10 @@ class BpsBusinessPartnersTable extends Table
         $this->belongsTo('StructuresStates')
             ->setForeignKey('structures_state_uuid')
             ->setJoinType('INNER');
+        
+        $this->belongsTo('BpsGenders')
+            ->setForeignKey('bps_gender_uuid')
+            ->setJoinType('INNER');
     }
 
     /**
@@ -99,6 +103,11 @@ class BpsBusinessPartnersTable extends Table
             ->date('bps_birthdate')
             ->requirePresence('bps_birthdate', 'create')
             ->notEmptyDate('bps_birthdate');
+
+        $validator
+            ->uuid('bps_gender_uuid')
+            ->requirePresence('bps_gender_uuid', 'create')
+            ->notEmptyString('bps_gender_uuid');
 
         $validator
             ->uuid('structures_country_uuid')

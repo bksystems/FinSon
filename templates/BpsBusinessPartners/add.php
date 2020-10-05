@@ -35,13 +35,20 @@
             <div class="card-body">
                 <?= $this->Form->create($bpsBusinessPartner) ?>
                 <fieldset>
+                    <div class="row">
+                    <div class="col-md-6">
                     <?php
-                    echo $this->Form->control('bps_unique_number', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_unique_number', [ 'class' => 'form-control form-control-sm', 'value' => $number_prev_bps, 'disabled']);
                     echo $this->Form->control('bps_last_name', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_second_last_name', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_first_name', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_second_name', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_birthdate', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_gender_uuid', [ 'class' => 'form-control form-control-sm', 'options' => $bpsGenders]);
+                    ?>
+                    </div>
+                    <div class="col-md-6">
+                    <?php
                     echo $this->Form->control('structures_country_uuid', ['options' => $structuresCountries,  'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('structures_state_uuid', ['options' => $structuresStates,  'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_unique_registry_key', [ 'class' => 'form-control form-control-sm']);
@@ -49,6 +56,8 @@
                     echo $this->Form->control('bps_federal_taxpayer_registry', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_identification_number', [ 'class' => 'form-control form-control-sm']);
                     ?>
+                    </div>
+                    </div>
                 </fieldset>
                 <br>
                 <?= $this->Form->button(__('Guardar'), ['class' => 'btn btn-success']) ?>

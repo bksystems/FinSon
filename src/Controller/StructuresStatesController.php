@@ -61,8 +61,8 @@ class StructuresStatesController extends AppController
             }
             $this->Flash->error(__('The structures state could not be saved. Please, try again.'));
         }
-        $options_countries = $this->StructuresCountries->find('list');
-        $this->set(compact('structuresState', 'options_countries'));
+        $structuresCountries = $this->StructuresCountries->find('list');
+        $this->set(compact('structuresState', 'structuresCountries'));
     }
 
     /**
