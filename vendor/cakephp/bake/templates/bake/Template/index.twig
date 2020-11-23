@@ -77,9 +77,9 @@
 {% endfor %}
 {% set pk = '$' ~ singularVar ~ '->' ~ primaryKey[0] %}
                     <td class="actions">
-                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', {{ pk|raw }}]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', {{ pk|raw }}]) ?>
-                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', {{ pk|raw }}], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', {{ pk|raw }})]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', {{ pk|raw }}], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', {{ pk|raw }}], ['class' => 'text-warning']) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', {{ pk|raw }}], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', {{ pk|raw }})]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

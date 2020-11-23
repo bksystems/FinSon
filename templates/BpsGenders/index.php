@@ -51,9 +51,9 @@
                     <td><?= h($bpsGender->created) ?></td>
                     <td><?= h($bpsGender->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsGender->uuid]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsGender->uuid]) ?>
-                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsGender->uuid], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsGender->uuid)]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsGender->uuid], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsGender->uuid], ['class' => 'text-warning']) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsGender->uuid], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsGender->uuid)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

@@ -108,8 +108,8 @@ $(document).ready(function() {
                 "sortAscending":  ": Activado ascendente",
                 "sortDescending": ": Activado desendente"
             }
-        }
-         
+        },
+         "order":[[1,"asc"]]
     });
 } );
 </script>

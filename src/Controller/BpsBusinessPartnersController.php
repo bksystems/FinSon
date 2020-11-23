@@ -136,13 +136,70 @@ class BpsBusinessPartnersController extends AppController
         return $last_number;
     }
 
-    public function calculatePersonalData(){
-        $data_curp = $this->BpsBusinessPartners->find('all');
-        $data_rfc = $this->BpsBusinessPartners->find('all');
-        $this->set([
-            'data_curp' => $data_curp,
-            'data_rfc' => $data_rfc,
-            '_serialize' => ['data_curp', 'data_rfc' ]
-        ]);
+    public function calculatePersonalData($fln, $sln, $fn, $sn,  $birthdate, $gender, $state){
+            $fl1 = substr($fln,0,1);
+            $ar_fln = str_split(substr($fln, 1));
+            foreach($ar_fln as $p){
+                if($p == 'A' || $p == 'E' || $p == 'I' || $p == 'O' || $p == 'U'){
+                    $fl2 = $p;
+                    break;
+                }
+            }
+
+            $ar_fln2 =  str_split(substr($fln, 1));
+
+            foreach($ar_fln2 as $p){
+                if($p != 'A' && $p != 'E' && $p != 'I' && $p != 'O' && $p != 'U'){
+                    $fl3 = $p;
+                    break;
+                }
+            }
+
+            $ar_sln1 =  str_split(substr($sln, 1));
+
+            foreach($ar_sln1 as $p){
+                if($p != 'A' && $p != 'E' && $p != 'I' && $p != 'O' && $p != 'U'){
+                    $sl2 = $p;
+                    break;
+                }
+            }
+
+            $ar_fn1 =  str_split(substr($fn, 1));
+
+            foreach($ar_fn1 as $p){
+                if($p != 'A' && $p != 'E' && $p != 'I' && $p != 'O' && $p != 'U'){
+                    $fn2 = $p;
+                    break;
+                }
+            }
+           
+            $sl1 = substr($sln,0,1);
+            $fn1 = substr($fn,0,1);
+            $by = substr($birthdate, 2,2);
+            $bm = substr($birthdate, 5,2);
+            $bd = substr($birthdate, 8,2);
+            $g = $this->BpsGenders->get($gender)->gender;
+            $st = $this->StructuresStates->get($state)->state_renapo;
+            $data_rfc = $fl1 .  $fl2 . $sl1 . $fn1 .  $by . $bm . $bd;
+            $data_curp =  $fl1 .  $fl2 . $sl1 . $fn1 .  $by . $bm . $bd . $g . $st .  $fl3 . $sl2 . $fn2;
+            $age = $this->calculateAgePerson($birthdate);
+            $this->set([
+                'data_curp' => $data_curp,
+                'data_rfc' => $data_rfc,
+                'age' => $age,
+                '_serialize' => ['data_curp', 'data_rfc', 'age']
+            ]);
+    
     }
+
+    public function calculateAgePerson($birthdate){
+        list($ano,$mes,$dia) = explode("-",$birthdate);
+        $ano_diferencia  = date("Y") - $ano;
+        $mes_diferencia = date("m") - $mes;
+        $dia_diferencia   = date("d") - $dia;
+        if ($dia_diferencia < 0 || $mes_diferencia < 0)
+            $ano_diferencia--;
+        return $ano_diferencia;
+    }
+
 }

@@ -47,9 +47,9 @@
                     <td><?= h($bpsTypesAddress->created) ?></td>
                     <td><?= h($bpsTypesAddress->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsTypesAddress->uuid]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsTypesAddress->uuid]) ?>
-                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsTypesAddress->uuid], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsTypesAddress->uuid)]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsTypesAddress->uuid], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsTypesAddress->uuid], ['class' => 'text-warning']) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsTypesAddress->uuid], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsTypesAddress->uuid)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

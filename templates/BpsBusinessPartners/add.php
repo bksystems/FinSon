@@ -55,6 +55,7 @@
                     echo $this->Form->control('bps_elector_key', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_federal_taxpayer_registry', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('bps_identification_number', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('bps_age', [ 'class' => 'form-control form-control-sm', 'disabled']);
                     ?>
                     </div>
                     </div>
@@ -66,3 +67,74 @@
         </div>
     </div>
 </div>
+
+
+<script type="text/javascript">
+
+    function calculate_data(){
+        $url_initial_path = "<?= $this->Url->build(['controller' => 'bps-business-partners', 'action' => 'calculate-personal-data']); ?>";
+        $f_lname = $('#bps-last-name').val();
+        $s_lname = $('#bps-second-last-name').val();
+        $f_name = $('#bps-first-name').val();
+        $s_name = $('#bps-second-name').val();
+        $birthdate = $('#bps-birthdate').val();
+        $gender = $('#bps-gender-uuid').val();
+        $state = $('#structures-state-uuid').val();
+        if(!$f_lname){
+            $f_lname = 'XX';
+        }
+        if(!$s_lname){
+            $s_lname = 'XX';
+        }
+        if(!$f_name){
+            $f_name = 'XX';
+        }
+        if(!$s_name){
+            $s_name = 'XX';
+        }
+        if(!$birthdate){
+            $birthdate = '1900-01-01';
+        }
+        if(!$gender){
+            $gender = 'X';
+        }
+        if(!$state){
+            $state = 'XX';
+        }
+        $parameters = '/' + $f_lname + '/' + $s_lname + '/' + $f_name + '/' +  $s_name + '/' +  $birthdate + '/' + $gender + '/' + $state;
+        $.ajax({
+            type: 'GET',
+            url: $url_initial_path + $parameters + '.json',
+            dataType: 'json',
+            success:function(json){
+                $('#bps-age').val(json.age);
+                $('#bps-unique-registry-key').val(json.data_curp);
+                $('#bps-federal-taxpayer-registry').val(json.data_rfc);
+            }
+        });
+    }
+
+    $(document).ready(function() {
+        $('#bps-last-name').keyup(function(){
+            calculate_data();
+        });
+        $('#bps-second-last-name').keyup(function(){
+            calculate_data();
+        });
+        $('#bps-first-name').keyup(function(){
+            calculate_data();
+        });
+        $('#bps-second-name').keyup(function(){
+            calculate_data();
+        });
+        $('#bps-birthdate').change(function() {
+            calculate_data();
+        });
+        $('#bps-gender-uuid').on('change', function() {
+            calculate_data();
+        });
+        $('#structures-state-uuid').on('change', function() {
+            calculate_data();
+        });
+    });
+</script>

@@ -49,9 +49,9 @@
                     <td><?= h($structuresCountry->created) ?></td>
                     <td><?= h($structuresCountry->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $structuresCountry->uuid]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $structuresCountry->uuid]) ?>
-                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $structuresCountry->uuid], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', $structuresCountry->uuid)]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $structuresCountry->uuid], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $structuresCountry->uuid], ['class' => 'text-warning']) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $structuresCountry->uuid], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', $structuresCountry->uuid)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>

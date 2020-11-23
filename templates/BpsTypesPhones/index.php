@@ -47,9 +47,9 @@
                     <td><?= h($bpsTypesPhone->created) ?></td>
                     <td><?= h($bpsTypesPhone->modified) ?></td>
                     <td class="actions">
-                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsTypesPhone->uuid]) ?>
-                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsTypesPhone->uuid]) ?>
-                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsTypesPhone->uuid], ['confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsTypesPhone->uuid)]) ?>
+                        <?= $this->Html->link(__('Detalles'), ['action' => 'view', $bpsTypesPhone->uuid], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Editar'), ['action' => 'edit', $bpsTypesPhone->uuid], ['class' => 'text-warning']) ?>
+                        <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $bpsTypesPhone->uuid], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', $bpsTypesPhone->uuid)]) ?>
                     </td>
                 </tr>
                 <?php endforeach; ?>
