@@ -99,7 +99,9 @@ class BpsBusinessPartnersController extends AppController
         }
         $structuresCountries = $this->StructuresCountries->find('list');
         $structuresStates = $this->StructuresStates->find('list');
-        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates'));
+        $bpsGenders = $this->BpsGenders->find('list');
+        $age = $this->calculateAgePerson(date_format($bpsBusinessPartner->bps_birthdate, 'Y-m-d'));
+        $this->set(compact('bpsBusinessPartner', 'structuresCountries', 'structuresStates', 'bpsGenders', 'age'));
     }
 
     /**
