@@ -40,7 +40,7 @@ class BpsBusinessPartnersTable extends Table
         parent::initialize($config);
 
         $this->setTable('bps_business_partners');
-        $this->setDisplayField('uuid');
+        $this->setDisplayField('full_name');
         $this->setPrimaryKey('uuid');
 
         $this->addBehavior('Timestamp');

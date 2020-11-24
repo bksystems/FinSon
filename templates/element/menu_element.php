@@ -17,10 +17,10 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <?= $this->Html->link('Socios de negocio', ['controller' => 'bps_business_partners', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Telefonos de socios', ['controller' => 'structures_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Direcciones de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Documentos de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Roles de socios', ['controller' => 'structures_municipalities', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Telefonos de socios', ['controller' => 'bps_business_partners_phones', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Direcciones de socios', ['controller' => 'bps_business_partners_addresses', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Documentos de socios', ['controller' => 'bps_business_partners_documents', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Roles de socios', ['controller' => 'bps_business_partners_rols', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -39,10 +39,11 @@
           Cat. Sys
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <?= $this->Html->link('Genero-Sexo', ['controller' => 'bps_genders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Tipos direcciones', ['controller' => 'bps_types_addresses', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Tipos telefonos', ['controller' => 'bps_types_phones', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos direcciones', ['controller' => 'bps_types_addresses', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Tipos documentos', ['controller' => 'bps_types_documents', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Roles de socios', ['controller' => 'bps_types_rols', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Genero-Sexo', ['controller' => 'bps_genders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
     </ul>

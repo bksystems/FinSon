@@ -40,7 +40,7 @@ class BpsTypesPhonesTable extends Table
         parent::initialize($config);
 
         $this->setTable('bps_types_phones');
-        $this->setDisplayField('uuid');
+        $this->setDisplayField('type_phone');
         $this->setPrimaryKey('uuid');
 
         $this->addBehavior('Timestamp');

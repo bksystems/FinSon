@@ -52,4 +52,8 @@ class BpsBusinessPartner extends Entity
         'created' => true,
         'modified' => true,
     ];
+
+    protected function _getFullName(){
+        return '(' . $this->bps_unique_number . ') ' . $this->bps_last_name . ' - ' . $this->bps_second_last_name . '  ' . $this->bps_first_name . ', ' . $this->bps_second_name;
+    }
 }

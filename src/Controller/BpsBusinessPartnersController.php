@@ -27,9 +27,9 @@ class BpsBusinessPartnersController extends AppController
 
     public function index()
     {
-        $bpsBusinessPartners = $this->paginate($this->BpsBusinessPartners->find('all',[
+        $bpsBusinessPartners = $this->BpsBusinessPartners->find('all',[
                 'contain' => ['StructuresCountries', 'StructuresStates', 'BpsGenders'],
-            ]));
+            ]);
             
 
         $this->set(compact('bpsBusinessPartners'));
