@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="col-md-10">
-        <div class="card" style="font-size:14px;">
+        <div class="card" style="font-size:13px;">
             <div class="card-header">Listado</div>
             <div class="card-body">
                 <table class="table" style="width: 100%" id="index_table">

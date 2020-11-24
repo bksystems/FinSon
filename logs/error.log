@@ -18936,3 +18936,417 @@ Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
 Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
 [main] - ROOT/webroot/index.php, line 40
 
+2020-11-24 16:54:43 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/XX/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/XX/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/XX/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:43 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/XX/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/C/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/C/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/C/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/C/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:44 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUE/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:49 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/CUEVAS/ESPINO/DU/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/CUEVAS/ESPINO/DU/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUEVAS/ESPINO/DU/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:54:49 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/CUEVAS/ESPINO/DU/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/L/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/L/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/L/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/L/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/LO/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/LO/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LO/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:27 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LO/XX/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (512): Unable to emit headers. Headers sent in file=C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php line=954 in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 71]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 168]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE\src\Http\ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
+2020-11-24 16:56:29 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Debugger.php:954) in [C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\ResponseEmitter.php, line 197]
+Request URL: /bps-business-partners/calculate-personal-data/LOZANO/RE/XX/XX/1900-01-01/1425115e-1691-4d35-91c7-59f0abaa1b18/99709267-de84-4c8e-a00a-46826371a769.json
+Referer URL: http://localhost:8080/FinSon/bps-business-partners/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE\src\Error\BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT\vendor\cakephp\debug_kit\src\Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE\src\Http\ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE\src\Http\ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE\src\Http\Server.php, line 130
+[main] - ROOT\webroot\index.php, line 40
+
