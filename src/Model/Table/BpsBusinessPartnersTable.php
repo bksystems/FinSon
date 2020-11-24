@@ -56,6 +56,8 @@ class BpsBusinessPartnersTable extends Table
         $this->belongsTo('BpsGenders')
             ->setForeignKey('bps_gender_uuid')
             ->setJoinType('INNER');
+    
+      
     }
 
     /**

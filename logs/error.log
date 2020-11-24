@@ -24373,3 +24373,580 @@ Request URL: /bps-business-partners-rols
 Referer URL: http://localhost:8080/FinSon/bps-business-partners-rols/add
 
 
+2020-11-24 22:56:15 Error: [InvalidArgumentException] The `BpsBusinessPartnersRols` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php on line 903
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:492
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:318
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:448
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:419
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1142
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1091
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:214
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:284
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:291
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:339
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 22:57:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 22:57:58 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partners_rol_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 22:58:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 22:59:30 Error: [InvalidArgumentException] The `BpsBusinessPartnersRols` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php on line 903
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:492
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:318
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:448
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:419
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1142
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1091
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:214
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:284
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:291
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:339
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 22:59:50 Error: [InvalidArgumentException] The `BpsBusinessPartnersRols` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php on line 903
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:492
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:318
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:448
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:419
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1142
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1091
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:214
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:284
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:291
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:339
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:48
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:04:17 Error: [InvalidArgumentException] The `BpsBusinessPartnersPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php on line 903
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:492
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:318
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:448
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\EagerLoader.php:419
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1142
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1091
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Driver\Mysql.php:214
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:284
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:291
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:339
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:05:01 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:06:57 Error: [Cake\Datasource\Exception\RecordNotFoundException] Record not found in table "bps_business_partners" in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php on line 458
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:07:15 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:12:51 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.bps_b_p_p' doesn't exist in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php on line 142
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:100
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php:84
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:509
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:649
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:494
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:449
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:811
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:2482
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1264
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1506
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.bps_b_p_p' doesn't exist in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:310
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:313
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:140
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\Collection.php:100
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Schema\CachedCollection.php:84
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:509
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:649
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:494
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:449
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:811
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:2482
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1264
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1506
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:13:05 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
+2020-11-24 23:13:32 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsBusinessPartners.bps_business_partner_uuid' in 'on clause' in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php on line 39
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\MysqlStatement.php:39
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:178
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php:74
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:341
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php:70
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Connection.php:344
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Database\Query.php:249
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1112
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:292
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Query.php:1059
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:443
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Datasource\QueryTrait.php:454
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\ORM\Table.php:1521
+- C:\xampp\htdocs\FinSon\src\Controller\BpsBusinessPartnersController.php:49
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:68
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8080/FinSon/bps-business-partners
+
+
