@@ -32,6 +32,7 @@
                 <tr>
                     <th><?= $this->Paginator->sort('product_name') ?></th>
                     <th><?= $this->Paginator->sort('sales_types_payment_uuid') ?></th>
+                    <th><?= $this->Paginator->sort('number_payments') ?></th>
                     <th><?= $this->Paginator->sort('anual_rate') ?></th>
                     <th><?= $this->Paginator->sort('enable') ?></th>
                     <th class="actions"><?= __('Actions') ?></th>
@@ -42,6 +43,7 @@
                 <tr>
                     <td><?= h($salesProduct->product_name) ?></td>
                     <td><?= h($salesProduct->sales_types_payment->type_pyment) ?></td>
+                    <td><?= h($salesProduct->number_payments) ?></td>
                     <td><?= $this->Number->format($salesProduct->anual_rate) ?></td>
                     <td><?= h($salesProduct->enable) ?></td>
                     <td class="actions">

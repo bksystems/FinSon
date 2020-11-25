@@ -86,7 +86,8 @@ class SalesProductsController extends AppController
             }
             $this->Flash->error(__('The sales product could not be saved. Please, try again.'));
         }
-        $this->set(compact('salesProduct'));
+        $salesTypesPayments = $this->SalesTypesPayments->find('list');
+        $this->set(compact('salesProduct', 'salesTypesPayments'));
     }
 
     /**

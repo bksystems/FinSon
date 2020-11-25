@@ -42,7 +42,8 @@
                 <fieldset>
                     <?php
                     echo $this->Form->control('product_name', [ 'class' => 'form-control form-control-sm']);
-                    echo $this->Form->control('sales_types_payment_uuid', [ 'class' => 'form-control form-control-sm']);
+                    echo $this->Form->control('sales_types_payment_uuid', [ 'class' => 'form-control form-control-sm', 'options' => $salesTypesPayments]);
+                    echo $this->Form->control('number_payments', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('anual_rate', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('enable', [ 'class' => 'form-control form-control-sm']);
                     echo $this->Form->control('description', [ 'class' => 'form-control form-control-sm']);

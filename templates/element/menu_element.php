@@ -14,7 +14,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <?= $this->Html->link('Simulador', ['controller' => 'bps_business_partners', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Generador', ['controller' => 'bps_business_partners_phones', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Generador', ['controller' => 'SalesCredits', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -59,7 +59,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <?= $this->Html->link('Productos', ['controller' => 'sales_products', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Frecuencias de pago', ['controller' => 'sales_types_payments', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Tipos documentos', ['controller' => 'bps_types_documents', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos estatus crédito', ['controller' => 'sales_products_types_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Roles de socios', ['controller' => 'bps_types_rols', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Genero-Sexo', ['controller' => 'bps_genders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>

@@ -40,7 +40,7 @@ class SalesProductsTable extends Table
         parent::initialize($config);
 
         $this->setTable('sales_products');
-        $this->setDisplayField('uuid');
+        $this->setDisplayField('product_name');
         $this->setPrimaryKey('uuid');
 
         $this->belongsTo('SalesTypesPayments')
@@ -73,6 +73,11 @@ class SalesProductsTable extends Table
             ->uuid('sales_types_payment_uuid')
             ->requirePresence('sales_types_payment_uuid', 'create')
             ->notEmptyString('sales_types_payment_uuid');
+        
+        $validator
+            ->numeric('number_payments')
+            ->requirePresence('number_payments', 'create')
+            ->notEmptyString('number_payments');
 
         $validator
             ->numeric('anual_rate')
