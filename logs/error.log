@@ -24950,3 +24950,536 @@ Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
 Referer URL: http://localhost:8080/FinSon/bps-business-partners
 
 
+2020-11-24 23:47:07 Error: [InvalidArgumentException] The `BpsBusinessPartnersPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:49
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 00:11:43 Error: [InvalidArgumentException] The `BpsBusinessPartnersPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:49
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:146
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+
+
+2020-11-25 00:12:13 Error: [InvalidArgumentException] The `BpsBusinessPartnersPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:49
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+
+
+2020-11-25 00:12:36 Error: [InvalidArgumentException] The `BpsBusinessPartnersPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:49
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 00:17:22 Error: [InvalidArgumentException] The `BpsTypesRols` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders, BpsBusinessPartnersPhones, BpsBusinessPartnersRols in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:50
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 01:11:38 Error: [InvalidArgumentException] The `BpsTypesPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders, BpsBusinessPartnersPhones, BpsBusinessPartnersRols in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:50
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 01:12:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'BpsTypesPhones.bps_types_phone_uuid' in 'where clause' in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:74
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:341
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php:470
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Association/Loader/SelectLoader.php:128
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Association/HasMany.php:670
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:678
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:50
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 01:14:07 Error: [InvalidArgumentException] The `BpsTypesPhones` association is not defined on `BpsBusinessPartners`.
+Valid associations are: StructuresCountries, StructuresStates, BpsGenders, BpsBusinessPartnersPhones, BpsBusinessPartnersRols in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/BpsBusinessPartnersController.php:50
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+Referer URL: http://localhost:8888/FinSon/bps-business-partners
+
+
+2020-11-25 01:42:57 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBusinessPartnersAddresses could not be found. in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBusinessPartnersAddresses',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners-addresses
+Referer URL: http://localhost:8888/FinSon/bps-business-partners/view/36690c38-9756-4cc0-ab62-5a2eb5f193b6
+
+
+2020-11-25 02:10:11 Error: [Error] Call to a member function find() on null in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesProductsController.php on line 64
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-products/add
+Referer URL: http://localhost:8888/FinSon/sales-products
+
+
+2020-11-25 02:10:11 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /sales-products/add
+Referer URL: http://localhost:8888/FinSon/sales-products
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-25 02:10:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /sales-products/add
+Referer URL: http://localhost:8888/FinSon/sales-products
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-25 02:10:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-products/add
+Referer URL: http://localhost:8888/FinSon/sales-products
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-25 02:10:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-products/add
+Referer URL: http://localhost:8888/FinSon/sales-products
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-25 02:15:07 Error: [InvalidArgumentException] The `SalesTypesPayments` association is not defined on `SalesProducts`. in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:141
+- /Applications/MAMP/htdocs/FinSon/templates/SalesProducts/index.php:44
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:1176
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:1134
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:764
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:696
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:538
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-products
+Referer URL: http://localhost:8888/FinSon/sales-products/add
+
+

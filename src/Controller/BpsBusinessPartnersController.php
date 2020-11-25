@@ -23,6 +23,7 @@ class BpsBusinessPartnersController extends AppController
         $this->loadModel('StructuresStates');
         $this->loadModel('BpsGenders');
         $this->loadModel('BpsBusinessPartnersPhones');
+        $this->loadModel('BpsTypesPhones');
     }
 
 
@@ -46,7 +47,9 @@ class BpsBusinessPartnersController extends AppController
     public function view($id = null)
     {
         $bpsBusinessPartner = $this->BpsBusinessPartners->get($id, [
-            'contain' => ['StructuresCountries', 'StructuresStates', 'BpsGenders', 'BpsBusinessPartnersPhones'],
+            'contain' => ['StructuresCountries', 'StructuresStates', 'BpsGenders', 
+                            'BpsBusinessPartnersPhones' => ['BpsTypesPhones']
+                            , 'BpsBusinessPartnersRols' => ['BpsTypesRols']]
         ]);
 
         $this->set(compact('bpsBusinessPartner'));

@@ -56,8 +56,12 @@ class BpsBusinessPartnersTable extends Table
         $this->belongsTo('BpsGenders')
             ->setForeignKey('bps_gender_uuid')
             ->setJoinType('INNER');
-    
-      
+
+        $this->hasMany('BpsBusinessPartnersPhones')
+            ->setForeignKey('bps_business_partner_uuid');
+        
+        $this->hasMany('BpsBusinessPartnersRols')
+            ->setForeignKey('bps_business_partner_uuid');      
     }
 
     /**
