@@ -27299,3 +27299,55 @@ Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
 Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
 [main] - ROOT/webroot/index.php, line 40
 
+2020-11-26 15:36:10 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 529 and exactly 2 expected in C:\xampp\htdocs\FinSon\src\Controller\SalesCreditsController.php on line 186
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-19.json
+Referer URL: http://localhost:8080/FinSon/sales-credits/add
+
+
+2020-11-26 15:36:13 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php on line 529 and exactly 2 expected in C:\xampp\htdocs\FinSon\src\Controller\SalesCreditsController.php on line 186
+Stack Trace:
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\Controller.php:529
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Controller\ControllerFactory.php:79
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\BaseApplication.php:251
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php:156
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Middleware\BodyParserMiddleware.php:159
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php:166
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php:77
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php:121
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php:60
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:73
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Runner.php:58
+- C:\xampp\htdocs\FinSon\vendor\cakephp\cakephp\src\Http\Server.php:90
+- C:\xampp\htdocs\FinSon\webroot\index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-13.json
+Referer URL: http://localhost:8080/FinSon/sales-credits/add
+
+
