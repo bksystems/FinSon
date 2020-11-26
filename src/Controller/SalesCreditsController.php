@@ -145,9 +145,9 @@ class SalesCreditsController extends AppController
         $mt_rate = ($an_rate / 12) * 100;
         $dy_rate = ($an_rate / 364) *  100;
         $it_payment = ($dy_rate * $product->sales_types_payment->paydays);
-        $product->month_rate = $mt_rate;
-        $product->day_rate = $dy_rate;
-        $product->payment_rate = $it_payment;
+        $product->month_rate = number_format($mt_rate, 2);
+        $product->day_rate = number_format($dy_rate, 2);
+        $product->payment_rate = number_format($it_payment, 2);
 
         $this->set([
             'product' => $product,

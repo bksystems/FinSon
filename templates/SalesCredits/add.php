@@ -55,6 +55,8 @@
                                                                                        'label' => 'Cliente',
                                                                                        'disabled'
                                                                                        ]) ?>
+
+
                         </div>
                         <div class="col-md-2">
                             <?= $this->Form->control('bps_businees_partner_state_credit', ['class' => 'form-control form-control-sm', 'disabled', 'label' => 'Crédito activo']) ?>
@@ -70,22 +72,22 @@
                             <?= $this->Form->control('sales_types_payment_uuid', ['class' => 'form-control form-control-sm', 'label' => 'Tipo frecuencia', 'disabled']) ?>
                         </div>
                         <div class="col-md-1">
-                            <?= $this->Form->control('sales_types_payment_uuid', ['class' => 'form-control form-control-sm', 'label' => '# Frecuencia', 'disabled']) ?>
+                            <?= $this->Form->control('sales_types_payment_uuid', ['class' => 'form-control form-control-sm', 'label' => '# Frec.', 'disabled']) ?>
                         </div>
                         <div class="col-md-1">
                             <?= $this->Form->control('sales_product_payments', ['class' => 'form-control form-control-sm', 'label' => '# Pagos', 'disabled']) ?>
                         </div>
                         <div class="col-md-1">
-                            <?= $this->Form->control('sales_product_anual_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => 'Tasa Anual']) ?>
+                            <?= $this->Form->control('sales_product_anual_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => '% Anual']) ?>
                         </div>
                         <div class="col-md-1">
-                            <?= $this->Form->control('sales_product_month_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => 'Tasa Mensual']) ?>
+                            <?= $this->Form->control('sales_product_month_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => '% Mensual']) ?>
                         </div>
                         <div class="col-md-1">
-                            <?= $this->Form->control('sales_product_day_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => 'Tasa Diaria']) ?>
+                            <?= $this->Form->control('sales_product_day_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => '% Diaria']) ?>
                         </div>
                         <div class="col-md-1">
-                            <?= $this->Form->control('sales_product_payment_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => 'Tasa Pago']) ?>
+                            <?= $this->Form->control('sales_product_payment_rate', ['class' => 'form-control form-control-sm', 'disabled', 'label' => '% Pago']) ?>
                         </div>
                     </div>
                     <br>
@@ -100,7 +102,7 @@
                             <?= $this->Form->control('payment', [ 'class' => 'form-control form-control-sm', 'disabled']); ?>
                         </div>
                         <div class="col-md-2">
-                            <?= $this->Form->control('init_date_credit', [ 'class' => 'form-control form-control-sm']); ?>
+                            <?= $this->Form->control('init_date_credit', [ 'class' => 'form-control form-control-sm', 'data-target' => "#init-date-credit"]); ?>
                         </div>
                         <div class="col-md-2">
                             <?= $this->Form->control('end_date_credit', [ 'class' => 'form-control form-control-sm', 'disabled']); ?>
@@ -169,6 +171,14 @@
                     $('#end-date-credit').val(json.range.end_date);
                 }
             })
+        });
+
+        $('#init-date-credit').datetimepicker({
+            format: 'yyyy-mm-dd',
+            minView: 2,
+            autoclose: true,
+            todayHighlight: true,
+            language: 'es'
         });
         
     });

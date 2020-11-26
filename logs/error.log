@@ -26937,3 +26937,365 @@ Request URL: /sales-credits/get-bps-data/.json
 Referer URL: http://localhost:8080/FinSon/sales-credits/add
 
 
+2020-11-26 05:19:26 Error: [Cake\Http\Exception\MissingControllerException] Controller class Js could not be found. in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /js/moment.min.js.map
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:23:21 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:32:09 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-18.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:34:28 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-03.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:34:30 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-10.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:34:34 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-12.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:38:05 Error: [Cake\Http\Exception\MissingControllerException] Controller class Js could not be found. in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'Js',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /js/bootstrap-datetimepicker.es.js
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:38:30 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-18.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:38:34 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCreditEndDate(), 1 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 2 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 186
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit-end-date//2020-11-26.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:42:04 Error: [ArgumentCountError] Too few arguments to function App\Controller\SalesCreditsController::calculateCredit(), 2 passed in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php on line 529 and exactly 3 expected in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 159
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/calculate-credit//760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/3000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+
+
+2020-11-26 05:43:57 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:43:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:43:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:43:57 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:45:23 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:45:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:45:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-26 05:45:23 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/calculate-credit/36690c38-9756-4cc0-ab62-5a2eb5f193b6/760a3b9f-c474-4314-bea1-ff6bb1c8b5a0/30000.json
+Referer URL: http://localhost:8888/FinSon/sales-credits/add
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
