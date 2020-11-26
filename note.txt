@@ -1,0 +1,1 @@
+documentación para datetime picket  https://www.malot.fr/bootstrap-datetimepicker/
