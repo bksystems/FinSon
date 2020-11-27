@@ -17,6 +17,7 @@ class SalesCreditsController extends AppController
         $this->loadModel('BpsBusinessPartners');
         $this->loadModel('SalesProducts');
         $this->loadModel('BpsBusinessPartnersRols');
+        $this->loadModel('SalesProductsTypesStates');
     }
     /**
      * Index method
@@ -56,6 +57,17 @@ class SalesCreditsController extends AppController
         $salesCredit = $this->SalesCredits->newEmptyEntity();
         if ($this->request->is('post')) {
             $salesCredit = $this->SalesCredits->patchEntity($salesCredit, $this->request->getData());
+            $salesCreditStateActivate = $this->SalesProductsTypesStates->find('all')->where(['type_state' => 'ACTIVO']);
+            $salesCredit->sales_products_types_state_uuid = $salesCreditStateActivate->first()->uuid;
+
+            $salesCreditCalculateDates = $this->calculateDatesCredit($salesCredit->sales_product_uuid, $salesCredit->init_date_credit);
+            $salesCredit->end_date_credit = $salesCreditCalculateDates['end_date'];
+            $salesCredit->day_week_payment = $salesCreditCalculateDates['date_payment_mx'];
+            
+            $salesCreditCalculate = $this->calculateCredit($salesCredit->sales_product_uuid, $salesCredit->requested_amount);
+            $salesCredit->amount_payable = $salesCreditCalculate['amount_payable'];
+            $salesCredit->payment = $salesCreditCalculate['payment'];          
+
             if ($this->SalesCredits->save($salesCredit)) {
                 $this->Flash->success(__('The sales credit has been saved.'));
 
@@ -112,7 +124,7 @@ class SalesCreditsController extends AppController
         return $this->redirect(['action' => 'index']);
     }
 
-    public function getBpsData($uuid){
+    public function getBpsDataJson($uuid){
         $bp = $this->BpsBusinessPartners->get($uuid);
         $bpsRols = $this->BpsBusinessPartnersRols->find('all', ['contain' => ['BpsTypesRols']])
                                                  ->where(['bps_business_partner_uuid' => $uuid]);
@@ -127,16 +139,20 @@ class SalesCreditsController extends AppController
                 $bp->rol_blocked = true;
             }
         }
-        $as =  '';
+        $bp->active_credit = $this->SalesCredits->find()
+                                                ->where([
+                                                    'bps_business_partner_uuid' => $uuid, 
+                                                    'sales_products_types_state_uuid' => '30af1e37-032b-4f4f-9c40-60a7d6827e3a'
+                                                ])
+                                                ->count();
         $this->set([
             'bp' => $bp,
-            'data_rfc' => $as,
-            '_serialize' => ['bp', 'as']
+            '_serialize' => ['bp']
         ]);
 
     }
 
-    public function getSalesProductData($uuid){
+    public function getSalesProductDataJson($uuid){
         $product = $this->SalesProducts->get($uuid, ['contain' => ['SalesTypesPayments']]);
         //$bpsRols = $this->BpsBusinessPartnersRols->find('all', ['contain' => ['BpsTypesRols']])
          //                                        ->where(['bps_business_partner_uuid' => $uuid]);
@@ -156,34 +172,22 @@ class SalesCreditsController extends AppController
 
     }
 
-    public function calculateCredit($uuid_bp, $uuid_product, $amount){
-        $product = $this->SalesProducts->get($uuid_product, ['contain' => ['SalesTypesPayments']]);
+    public function getCalculateCreditJson($uuid_bp, $uuid_product, $amount){
         $bp = $this->BpsBusinessPartners->get($uuid_bp);
-
-        $an_rate = $product->anual_rate / 100.00;
-        $mt_rate = $an_rate / 12;
-        $dy_rate = $an_rate / 364;
-        $it_payment = $dy_rate * $product->sales_types_payment->paydays;
-        $payment = number_format( (round( (($amount * $it_payment) / (1 - pow((1 + $it_payment), $product->number_payments * -1))), 0)), 2);
-        $amount_payable = number_format(($payment * $product->number_payments), 2);
-
-
-        $calculate['anual_rate'] = $an_rate;
-        $calculate['month_rate'] = $mt_rate;
-        $calculate['day_rate'] = $dy_rate;
-        $calculate['interes_payment'] =  $it_payment; 
-        $calculate['payment'] = $payment;
-        $calculate['amount_payable'] = $amount_payable;
-
         $this->set([
-            'product' => $product,
-            'bp' => $bp,
-            'calculate' => $calculate,
+            'calculate' => $this->calculateCredit( $uuid_product, $amount),
             '_serialize' => ['calculate']
         ]);
     }
 
-    public function calculateCreditEndDate( $uuid_product, $credit_init_date){
+    public function getCalculateCreditEndDateJson( $uuid_product, $credit_init_date){
+        $this->set([
+            'range' => $this->calculateDatesCredit($uuid_product, $credit_init_date),
+            '_serialize' => ['range']
+        ]);
+    }
+
+    private function calculateDatesCredit($uuid_product, $credit_init_date){
         $product = $this->SalesProducts->get($uuid_product, ['contain' => ['SalesTypesPayments']]);
         $range['init_date'] = $credit_init_date;
         $add_days = $product->number_payments * $product->sales_types_payment->paydays;
@@ -191,13 +195,31 @@ class SalesCreditsController extends AppController
         $range['end_date'] = $end_date;
         $range['date_payment_eu'] = date('D', strtotime($credit_init_date . ' + 0 days'));
         $range['date_payment_mx'] = $this->DayOfWeek(date('D', strtotime($credit_init_date . ' + 0 days')));
-        $this->set([
-            'range' => $range,
-            '_serialize' => ['range']
-        ]);
+        return $range;
     }
 
-    public function DayOfWeek($day){
+    private function calculateCredit($uuid_product, $amount){
+        $product = $this->SalesProducts->get($uuid_product, ['contain' => ['SalesTypesPayments']]);
+
+        $an_rate = $product->anual_rate / 100.00;
+        $mt_rate = $an_rate / 12;
+        $dy_rate = $an_rate / 364;
+        $it_payment = $dy_rate * $product->sales_types_payment->paydays;
+        $payment = (round( (($amount * $it_payment) / (1 - pow((1 + $it_payment), $product->number_payments * -1))), 0));
+        $amount_payable =($payment * $product->number_payments);
+
+        $product['amount'] = $amount;
+        $product['anual_rate'] = $an_rate;
+        $product['month_rate'] = $mt_rate;
+        $product['day_rate'] = $dy_rate;
+        $product['interes_payment'] =  $it_payment; 
+        $product['payment'] = $payment;
+        $product['amount_payable'] = $amount_payable;
+
+        return $product;
+    }
+
+    private function DayOfWeek($day){
         $day_spanish = '';
         switch ($day) {
             case 'Mon':

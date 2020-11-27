@@ -75,13 +75,13 @@ class SalesCreditsTable extends Table
 
         $validator
             ->date('end_date_credit')
-            ->requirePresence('end_date_credit', 'create')
-            ->notEmptyDate('end_date_credit');
+            //->requirePresence('end_date_credit', 'create')
+            ->allowEmptyTime('end_date_credit');
 
         $validator
             ->uuid('sales_products_types_state_uuid')
-            ->requirePresence('sales_products_types_state_uuid', 'create')
-            ->notEmptyString('sales_products_types_state_uuid');
+            //->requirePresence('sales_products_types_state_uuid', 'create')
+            ->allowEmptyString('sales_products_types_state_uuid');
 
         $validator
             ->numeric('requested_amount')
@@ -90,13 +90,13 @@ class SalesCreditsTable extends Table
 
         $validator
             ->numeric('amount_payable')
-            ->requirePresence('amount_payable', 'create')
-            ->notEmptyString('amount_payable');
+            //->requirePresence('amount_payable', 'create')
+            ->allowEmptyString('amount_payable');
 
         $validator
             ->numeric('payment')
-            ->requirePresence('payment', 'create')
-            ->notEmptyString('payment');
+            //->requirePresence('payment', 'create')
+            ->allowEmptyString('payment');
 
         return $validator;
     }
