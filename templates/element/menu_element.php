@@ -1,19 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">FinSon</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">KPIs<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Créditos
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <?= $this->Html->link('Simulador', ['controller' => 'bps_business_partners', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          
           <?= $this->Html->link('Generador', ['controller' => 'SalesCredits', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>
@@ -60,7 +60,7 @@
           <?= $this->Html->link('Productos', ['controller' => 'sales_products', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Frecuencias de pago', ['controller' => 'sales_types_payments', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Tipos estatus crédito', ['controller' => 'sales_products_types_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
-          <?= $this->Html->link('Roles de socios', ['controller' => 'bps_types_rols', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
+          <?= $this->Html->link('Tipos estatus pagos', ['controller' => 'sales_credits_payments_states', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
           <?= $this->Html->link('Genero-Sexo', ['controller' => 'bps_genders', 'action' => 'index'], ['class' => 'dropdown-item']) ?>
         </div>
       </li>

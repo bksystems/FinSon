@@ -1,0 +1,1718 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 27-11-2020 a las 18:58:14
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `dev_finson_db`
+--
+DROP DATABASE IF EXISTS `dev_finson_db`;
+CREATE DATABASE IF NOT EXISTS `dev_finson_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
+USE `dev_finson_db`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_business_partners`
+--
+
+CREATE TABLE `bps_business_partners` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_unique_number` char(10) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_last_name` varchar(110) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_second_last_name` varchar(110) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `bps_first_name` varchar(110) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_second_name` varchar(110) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `bps_birthdate` date NOT NULL,
+  `bps_gender_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_country_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_state_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_unique_registry_key` char(18) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_elector_key` char(18) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_federal_taxpayer_registry` char(18) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_identification_number` char(18) COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_business_partners`
+--
+
+INSERT INTO `bps_business_partners` (`uuid`, `bps_unique_number`, `bps_last_name`, `bps_second_last_name`, `bps_first_name`, `bps_second_name`, `bps_birthdate`, `bps_gender_uuid`, `structures_country_uuid`, `structures_state_uuid`, `bps_unique_registry_key`, `bps_elector_key`, `bps_federal_taxpayer_registry`, `bps_identification_number`, `created`, `modified`) VALUES
+('0216d799-a944-49c4-8e20-cebb8654054f', 'C100000028', 'HERNANDEZ', 'GARCIA', 'HUGO', 'EDUARDO', '1995-11-23', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'HEGH951123MCLRRG03', 'HRGRHG95112305H600', 'HEGH951123', '1748402152', '2020-11-24 18:02:36', '2020-11-24 18:02:36'),
+('02788a66-58a0-497d-b6a7-b4d594dd3355', 'C100000015', 'CUEVAS', 'ESPINO', 'DULCE', 'GUADALUPE', '1996-04-13', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'CUED960413MCLVSL08', 'CVESDK96941305M700', 'CUED960413', '1194423806', '2020-11-24 16:56:05', '2020-11-24 16:56:05'),
+('05a79917-49a9-4081-9923-0fbdc8bcf3e3', 'C100000025', 'HERNANDEZ', 'CANIVE', 'MARTHA', 'CECILIA', '1992-09-29', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'HECM920929MCLRNR04', 'HCNMR92062005M400', 'HECM920929', '1529127757315', '2020-11-24 17:33:41', '2020-11-24 17:33:41'),
+('0e9b4a36-8714-4f37-bc14-c497b7292609', 'C100000013', 'FIGUEROA', 'VELAZCO', 'CLAUDIA', '', '1986-08-22', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'FIVC860822MCLGLL03', 'FGVLCL86082205M300', 'FIVC860822', '1607885883', '2020-11-24 03:19:29', '2020-11-24 03:19:29'),
+('115c00b9-3353-4796-88f5-38b7a55eda64', 'C100000023', 'MARTINEZ', 'AGUADO', 'MARIA', 'ELENA', '1962-11-12', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'fd1ce8f7-2cc5-4aaf-b0b4-9af4f441cf06', 'MAAM621112MDGRGR03', 'MRAGEL62111210M200', 'MAAM621112', '1299534698', '2020-11-24 17:21:43', '2020-11-24 17:21:43'),
+('11b5d4bb-e640-4bf8-a6a7-c81dd864d546', 'C100000005', 'REYNA', 'CORDOVA', 'ARIA', 'ALEXIS', '1991-10-24', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'RECA911024HCLYRR02', 'RYCRAR91102405H100', 'RECA911024', '1247258438', '2020-11-24 03:05:17', '2020-11-24 03:05:17'),
+('1b3d4881-379a-4e21-b53e-02308b8519fd', 'C100000009', 'FLORES', 'MARTINEZ', 'SANJUANITA', '', '1967-01-27', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'fd1ce8f7-2cc5-4aaf-b0b4-9af4f441cf06', 'FOMS670127MDGLRN', 'FOMS670127MASLRN', 'FOMS670127', '00000000000', '2020-11-24 03:10:10', '2020-11-24 03:10:10'),
+('1baa1389-e0eb-43cf-8d6e-8550c184ce22', 'C100000030', 'SANCHEZ', 'MURUAGA', 'JULIAN', '', '1968-11-17', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'SAMJ681117MCLNRL01', 'SNMRJL68111705H501', 'SAMJ681117', '0000000000', '2020-11-24 18:34:29', '2020-11-24 18:34:29'),
+('1f095d72-f555-4712-a22b-5ac10a4f28da', 'C100000006', 'MARTINEZ', 'SANTOS', 'JESSICA', 'GUADALUPE', '1998-04-09', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'MASJ980409MCLRNS05', 'MRSNJS98040905M800', 'MASJ980409', '1637365786', '2020-11-24 03:06:33', '2020-11-24 03:06:33'),
+('1f757497-b396-4f00-ad3f-19e1bbc9bbb5', 'C100000034', 'TORRES', 'SOLORIO', 'REBECA', 'LIZBETH', '1994-08-24', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'TOSR940824MCLRLB04', 'TRSLRB94082416M500', 'TOSR940824', '1732992784', '2020-11-24 18:40:00', '2020-11-24 18:40:00'),
+('20fa3ae9-5883-4bcb-8d80-faeb5a8efe84', 'C100000016', 'LOZANO', 'REYES', 'ASUNCION', '', '1965-11-17', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'LORA651117MCLZYS01', 'LZRYAS65112705M400', 'LORA651117', '1200802702', '2020-11-24 16:58:36', '2020-11-24 16:58:36'),
+('21c2fb37-ced7-4d02-b994-906942bd3586', 'C100000020', 'VIGIL', 'HERNANDEZ', 'ANA', 'GRISELDA', '1987-01-18', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'VIHA870118MCLGRN03', 'VGHRAN87011805M000', 'VIHA870118', '1543104315847', '2020-11-24 17:17:41', '2020-11-24 17:17:41'),
+('2e789c58-288a-4eb2-83fd-a82930d2c299', 'C100000008', 'ARELLANO', 'HURTADO', 'MIRIAM', '', '1986-04-22', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'AEHM860422MMNRRR04', 'ARHRMR86042216M700', 'AEHM860422', '1837898770', '2020-11-24 03:09:03', '2020-11-24 03:09:03'),
+('36690c38-9756-4cc0-ab62-5a2eb5f193b6', 'C100000000', 'RIZO', 'FLORES', 'JUAN', 'CARLOS', '1987-11-04', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'RIFJ871104HCLZLN04', 'RZFLJN87110405H800', 'RIFJ871104946', '3510073924980', '2020-10-02 17:58:10', '2020-11-23 22:38:09'),
+('3b8fc770-26c7-4523-98a2-435adb9c9aff', 'C100000026', 'GAYTAN', 'TORRES', 'DANIEL', 'NEFTALY', '1996-09-06', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'GATD960906HCLYRN06', 'GYTRDN96090605H900', 'GATD960906', '14315482266', '2020-11-24 17:57:11', '2020-11-24 17:57:11'),
+('4adea1c9-853d-47df-b10a-674713418174', 'C100000038', 'VIGIL', 'HERNANDEZ', 'AYRTON', 'FERNANDO', '1995-04-06', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'VIHA950406HCLGRY04', 'VGHRAY95040605H000', 'VIHA950406', '1543135677489', '2020-11-24 18:59:57', '2020-11-24 18:59:57'),
+('5ce0bc22-e459-4e68-880c-c52eaf89dde9', 'C100000014', 'TORRES', 'JUAREZ', 'JUAN', 'JOSE', '1974-01-04', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'TOJJ740104HMNRRN', 'TOJJ740104HMNRRN', 'TOJJ740104', '00000000', '2020-11-24 03:20:44', '2020-11-24 03:20:44'),
+('6b4673b0-8dd5-40a3-99c1-5bc4a5d5491e', 'C100000002', 'VALDIVIA', 'CAMACHO', 'SANDRA', 'ISABEL', '1987-08-14', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'fd1ce8f7-2cc5-4aaf-b0b4-9af4f441cf06', 'VACS870814MDGLMN05', 'VLCMSN87081410M200', 'VACS870814', '1424989786', '2020-10-03 02:25:33', '2020-10-03 02:25:33'),
+('7ac1673a-3564-41b3-a347-eb3fda3a4298', 'C100000012', 'RUBIO', 'ESQUIVEL', 'LORENA', '', '1974-01-04', '15b014cb-0528-4264-a01a-bda3d89fee56', '4957ee1c-8691-4cda-9622-bc6b33f5028b', '99709267-de84-4c8e-a00a-46826371a769', 'RUEL740104MASBSR02', 'RBESLR74010405M300', 'RUEL740104', '000000000', '2020-11-24 03:13:54', '2020-11-24 03:13:54'),
+('7c17da38-a1bb-41ad-88c2-dcd1de2e166b', 'C100000010', 'RODRIGUEZ', 'ESCALERA', 'PEDRO', '', '1972-11-13', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'ROEP721113HCLDSD07', 'RDESPD72111305H000', 'ROEP721113', '1826731121', '2020-11-24 03:11:28', '2020-11-24 03:11:28'),
+('80162621-5b97-4934-a503-1e2585a56454', 'C100000022', 'CANIVE', 'DELGADO', 'MARTHA', '', '1967-03-09', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'CADM670309MCLNLR08', 'CNDLMR67030905M600', 'CADM670309', '1694521992', '2020-11-24 17:20:22', '2020-11-24 17:20:22'),
+('8f71ecaf-774f-4b49-b9fb-28f78f231be4', 'C100000035', 'DUARTE', 'MARTINEZ', 'ESTHER', 'HAYDEE', '1988-07-16', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'DUME880716MCLRRS', 'DRMRES88071605M000', 'DUME880716', '1377075239921', '2020-11-24 18:55:47', '2020-11-24 18:55:47'),
+('91100394-44e9-42ff-9d03-4ab54b1861d7', 'C100000007', 'MARTINEZ', 'CHAVEZ', 'MARIA', 'GUADALUPE', '1964-05-25', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'MACM640525MCLRHR', 'MRCHGD64052505M400', 'MACM640525', '1098461834', '2020-11-24 03:07:40', '2020-11-24 03:07:40'),
+('91365ae5-b563-4601-bf86-097633bb21b2', 'C100000004', 'CASTORENA', 'HERNANDEZ', 'IDALIA', '', '1984-05-04', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'CAHI840504MCLSRD05', 'CSHRID84050405M301', 'CAHI840504', '1354123138623', '2020-10-03 02:28:00', '2020-10-03 02:28:00'),
+('91c98687-5e5c-48f7-8d13-002c3c903dec', 'C100000019', 'CUEVAS', 'CAMACHO', 'RICARDO', '', '1967-04-03', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'fd1ce8f7-2cc5-4aaf-b0b4-9af4f441cf06', 'CUCR670403HDGVMC02', 'CVCMRC67040310H300', 'CUCR670403', '00000000', '2020-11-24 17:16:05', '2020-11-24 17:16:05'),
+('93731d88-5dd6-4f68-a8e5-8d4079e35553', 'C100000032', 'HURTADO', 'JIMENEZ', 'MARIA', 'DE LOS ANGELES', '1956-09-13', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'HUJM560913MMNRMR04', 'HRJMAN56091316M901', 'HUJM560913', '1417465423', '2020-11-24 18:37:29', '2020-11-24 18:37:29'),
+('93ed4272-6202-4196-b87d-5ebf5bb93769', 'C100000036', 'ESCAREÑO', 'HERNANDEZ', 'FERNANDO', '', '1975-05-30', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'EAHF750530HCLSRR06', 'ESHRFR75053005H301', 'EAHF750530', '1298067882014', '2020-11-24 18:57:13', '2020-11-24 18:57:13'),
+('969f0192-ff05-4db5-8a9c-0f27e0440673', 'C100000021', 'HERNANDEZ', 'PICHARDO', 'MARIA', 'DEL SOCORRO', '1967-09-01', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'HEPM670901MCLRCR02', 'HRPCSC67090105M100', 'HEPM670901', '1644369843', '2020-11-24 17:18:54', '2020-11-24 17:18:54'),
+('a6cb0cd5-6693-420a-9344-e58d85efef9b', 'C100000011', 'TORRES', 'SOLORIOA', 'PAOLA', 'JAZMIN', '1998-05-07', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'TOSP980507MMNRLL08', 'TRSLPL98050716M900', 'TOSP980507', '1452585028', '2020-11-24 03:12:48', '2020-11-24 03:14:18'),
+('a8f02f67-e301-4c70-afa9-36ec34d6f02f', 'C100000033', 'GAITAN', 'TORRES', 'ABIUT', 'ISRAEL', '1993-12-18', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'GATA931218HCLTRB05', 'GYTRAB93121805H200', 'GATA931218', '1204909805', '2020-11-24 18:38:40', '2020-11-24 18:38:40'),
+('b0634d07-3320-4223-ab59-71f7e9527f13', 'C100000001', 'SOLORIO', 'HURTADO', 'JUANA', 'CRUZ ELENA', '1975-12-15', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'SOHJ751215MMNLRN00', 'SUHRUN75121516M500', 'SOHJ751215', '1861858375', '2020-10-03 02:23:09', '2020-10-03 02:23:09'),
+('cbf8829f-0425-4721-974f-0f20096932d2', 'C100000024', 'RIZO', 'FLORES', 'RUBEN', 'DAVID', '1983-09-29', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'RIFR830929HCLZLB', 'MMMMMMMM', 'RIFR830929', '0000000000', '2020-11-24 17:24:48', '2020-11-24 17:24:48'),
+('d738cd62-a939-4d58-af0e-84976b0782ed', 'C100000031', 'TUMOINE', 'RODRIGUEZ', 'LUIS', 'GERARDO', '1999-07-29', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'TURL990729HCLMDS04', 'YMRDLS99072905H500', 'TURL990729', '1843073613', '2020-11-24 18:36:03', '2020-11-24 18:36:03'),
+('ddc7b75b-e33e-44da-9e7a-e69283b5af4d', 'C100000027', 'RODRIGUEZ', 'REYES', 'BRENDA', 'CECILIA', '1967-08-24', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'RORB670824MCLDYR03', 'RDRYBR76082405H900', 'RORB670824', '2011190646', '2020-11-24 17:58:48', '2020-11-24 17:58:48'),
+('de0506b3-082d-4cbf-9659-12f32d6e757d', 'C100000017', 'LUEVANOS', 'MUÑETONES', 'LAURA', 'DENISSE', '1994-09-17', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'LUML940917MCLVXR02', 'LVMTLR94041705M500', 'LUML940917', '000000000000', '2020-11-24 17:13:02', '2020-11-24 17:13:02'),
+('ed4dc073-6500-4147-85f3-b647c8782d86', 'C100000029', 'HERNANDEZ', 'CANIVE', 'CINTHIA', '', '1987-09-16', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'HECC870916MCLRNN01', 'HRCNCN87091605M000', 'HECC870916', '1751117793', '2020-11-24 18:30:09', '2020-11-24 18:30:09'),
+('faad8d7d-638c-4728-a97f-0e5a3c17660e', 'C100000018', 'LOPEZ', 'ARAUJO', 'MARIO', 'ANDRES', '1985-08-25', '1425115e-1691-4d35-91c7-59f0abaa1b18', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'LOAM850825MCLPRR05', 'LPARMR85082505H700', 'LOAM850825', '1451131518597', '2020-11-24 17:14:21', '2020-11-24 17:14:52'),
+('fb85e846-d391-42f7-90fe-0b8dce9069aa', 'C100000003', 'SANTOS', 'JIMENEZ', 'MARIA', 'CONCEPCIÓN', '1967-10-09', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'SAJC671009MCLNMN08', 'SNJMCN67100905M901', 'SAJC671009', '1139306889', '2020-10-03 02:26:39', '2020-10-03 02:26:39'),
+('fce7955c-6828-4f5e-a7e8-2d297f40328b', 'C100000037', 'CONTRERAS', 'RODRIGUEZ', 'MARIA', 'MAGDALENA', '1983-08-30', '15b014cb-0528-4264-a01a-bda3d89fee56', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'CORM830830MCLNDR01', 'CNRDMG83083005M800', 'CORM830830', '1208058861313', '2020-11-24 18:58:33', '2020-11-24 18:58:33');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_business_partners_phones`
+--
+
+CREATE TABLE `bps_business_partners_phones` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_business_partner_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_types_phone_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `number` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
+  `is_primary` tinyint(1) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_business_partners_phones`
+--
+
+INSERT INTO `bps_business_partners_phones` (`uuid`, `bps_business_partner_uuid`, `bps_types_phone_uuid`, `number`, `is_primary`, `created`, `modified`) VALUES
+('01738278-737b-4c6e-b2c0-c0c5462c22e1', '0e9b4a36-8714-4f37-bc14-c497b7292609', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8713921402', 1, '2020-11-24 21:35:32', '2020-11-24 21:35:32'),
+('0802f86f-e92a-4a67-a045-4bdfe43b470c', 'b0634d07-3320-4223-ab59-71f7e9527f13', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8713437175', 1, '2020-11-24 21:26:31', '2020-11-24 21:26:31'),
+('1bcc172a-bcd2-4b98-88ec-b1773cb07348', '6b4673b0-8dd5-40a3-99c1-5bc4a5d5491e', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712195839', 1, '2020-11-24 21:26:55', '2020-11-24 21:26:55'),
+('1d4d8f84-348c-4099-a7a6-81bf9646df26', '20fa3ae9-5883-4bcb-8d80-faeb5a8efe84', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712695881', 1, '2020-11-24 21:42:49', '2020-11-24 21:42:49'),
+('2c3da1b1-60c1-4611-8135-ae3748e73be1', '5ce0bc22-e459-4e68-880c-c52eaf89dde9', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8715888510', 1, '2020-11-24 21:39:41', '2020-11-24 21:39:41'),
+('34aa3088-b5ad-47f9-a21b-623667ceaac6', 'de0506b3-082d-4cbf-9659-12f32d6e757d', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714161801', 1, '2020-11-24 21:43:10', '2020-11-24 21:43:10'),
+('3aac1095-1238-4bfd-bd22-3a53ea046516', '115c00b9-3353-4796-88f5-38b7a55eda64', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711366374', 1, '2020-11-24 22:05:10', '2020-11-24 22:05:10'),
+('3b0d59c6-360a-4f40-8a80-66787fbb504f', 'ddc7b75b-e33e-44da-9e7a-e69283b5af4d', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711044877', 1, '2020-11-24 22:07:15', '2020-11-24 22:07:15'),
+('44d452b5-5f7e-41a6-88c9-20d56a1502fe', '1f095d72-f555-4712-a22b-5ac10a4f28da', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711743382', 1, '2020-11-24 21:29:12', '2020-11-24 21:29:12'),
+('4766133d-8d4a-46e9-bcb5-4bb06feab4d3', '7ac1673a-3564-41b3-a347-eb3fda3a4298', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712871038', 1, '2020-11-24 21:35:00', '2020-11-24 21:35:00'),
+('57ff65f2-73e9-4b22-9647-84a94098d769', '91365ae5-b563-4601-bf86-097633bb21b2', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712145613', 1, '2020-11-24 21:28:10', '2020-11-24 21:28:10'),
+('6055f01d-9e9d-4469-8e9e-a12be543d48c', '91100394-44e9-42ff-9d03-4ab54b1861d7', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711364471', 1, '2020-11-24 21:29:33', '2020-11-24 21:29:33'),
+('6075e384-757d-44e0-98bd-235fc67bc03b', 'fb85e846-d391-42f7-90fe-0b8dce9069aa', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714187699', 1, '2020-11-24 21:27:31', '2020-11-24 21:27:31'),
+('63e0b39e-519e-4614-bd46-0651168347b2', '36690c38-9756-4cc0-ab62-5a2eb5f193b6', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711325087', 1, '2020-11-24 21:16:44', '2020-11-24 21:16:44'),
+('6d010288-3051-4361-9c60-bb170c3cd3fb', '05a79917-49a9-4081-9923-0fbdc8bcf3e3', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714999135', 1, '2020-11-24 22:06:20', '2020-11-24 22:06:20'),
+('768921fa-f992-41fd-a1b5-a005c85ecd15', '11b5d4bb-e640-4bf8-a6a7-c81dd864d546', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712145613', 1, '2020-11-24 21:28:32', '2020-11-24 21:28:32'),
+('803533c8-a64c-4402-aa36-292b562ca3fd', '0216d799-a944-49c4-8e20-cebb8654054f', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714442321', 1, '2020-11-24 22:07:56', '2020-11-24 22:07:56'),
+('85ce4749-05cc-4c8f-a371-c9ffcae3eb07', '7c17da38-a1bb-41ad-88c2-dcd1de2e166b', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711310576', 1, '2020-11-24 21:31:51', '2020-11-24 21:31:51'),
+('869f268d-5565-4445-a526-b30c52082e9c', '02788a66-58a0-497d-b6a7-b4d594dd3355', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8713314593', 1, '2020-11-24 21:40:03', '2020-11-24 21:40:03'),
+('87b9ccb9-0386-4d5c-bea6-10fece53f9d2', '8f71ecaf-774f-4b49-b9fb-28f78f231be4', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711651618', 1, '2020-11-24 22:12:04', '2020-11-24 22:12:04'),
+('93b827c4-12cb-4881-a7de-af813ec5e78d', '91c98687-5e5c-48f7-8d13-002c3c903dec', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711326067', 1, '2020-11-24 21:45:43', '2020-11-24 21:45:43'),
+('979bc3b2-cba2-4f48-bcf6-ad5198b58f44', '1b3d4881-379a-4e21-b53e-02308b8519fd', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712774460', 1, '2020-11-24 21:31:12', '2020-11-24 21:31:12'),
+('99c430e7-baa4-4803-aa29-16cd514f85be', 'cbf8829f-0425-4721-974f-0f20096932d2', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8717100637', 1, '2020-11-24 22:05:50', '2020-11-24 22:05:50'),
+('9dc72df5-c426-4181-802d-d01f53d8c774', 'a6cb0cd5-6693-420a-9344-e58d85efef9b', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8715906134', 1, '2020-11-24 21:34:31', '2020-11-24 21:34:31'),
+('c059a883-1e20-4cda-a899-b1ca51f3fdd6', '80162621-5b97-4934-a503-1e2585a56454', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714012242', 1, '2020-11-24 22:04:37', '2020-11-24 22:04:37'),
+('c21633d9-a959-45a3-b396-61aa0286a247', 'ed4dc073-6500-4147-85f3-b647c8782d86', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8713426764', 1, '2020-11-24 22:08:41', '2020-11-24 22:08:41'),
+('c525426d-98e2-45c1-ae82-6767838c996f', '21c2fb37-ced7-4d02-b994-906942bd3586', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8713912505', 1, '2020-11-24 21:46:09', '2020-11-24 21:46:09'),
+('ccb10d2d-58c3-4270-ae61-46dee7b48fb1', 'faad8d7d-638c-4728-a97f-0e5a3c17660e', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8714161801', 1, '2020-11-24 21:45:17', '2020-11-24 21:45:17'),
+('cfa41af5-d04d-4aa7-83ae-1bf5d14b552f', '1baa1389-e0eb-43cf-8d6e-8550c184ce22', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8712660266', 1, '2020-11-24 22:09:02', '2020-11-24 22:09:02'),
+('d85ab739-a8c9-4edd-87b3-99c520eb0504', '2e789c58-288a-4eb2-83fd-a82930d2c299', '5a6c0597-9443-493b-adbd-f8d9f172fda8', '8711310576', 1, '2020-11-24 21:30:52', '2020-11-24 21:30:52');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_business_partners_rols`
+--
+
+CREATE TABLE `bps_business_partners_rols` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_business_partner_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_types_rol_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_business_partners_rols`
+--
+
+INSERT INTO `bps_business_partners_rols` (`uuid`, `bps_business_partner_uuid`, `bps_types_rol_uuid`, `created`, `modified`) VALUES
+('01ce5030-b95c-47a8-864e-58db87c3ff42', '1f757497-b396-4f00-ad3f-19e1bbc9bbb5', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:20', '2020-11-24 22:48:20'),
+('1335f804-a6c7-4e4b-a6cc-3146fac58a8c', '1f095d72-f555-4712-a22b-5ac10a4f28da', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:02', '2020-11-24 22:44:02'),
+('138da4da-eb2f-46ad-bfeb-6b49f62c9d74', '05a79917-49a9-4081-9923-0fbdc8bcf3e3', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:00', '2020-11-24 22:47:00'),
+('19022166-3e20-4e02-9082-1a6be37967ab', 'a6cb0cd5-6693-420a-9344-e58d85efef9b', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:58', '2020-11-24 22:44:58'),
+('2011b4b4-355e-40d1-a7bb-e003006efd89', '11b5d4bb-e640-4bf8-a6a7-c81dd864d546', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:43:55', '2020-11-24 22:43:55'),
+('284c31ef-c7bd-404f-b6bb-bf91ecc10582', 'a8f02f67-e301-4c70-afa9-36ec34d6f02f', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:12', '2020-11-24 22:48:12'),
+('28fb885c-131d-4d67-bb55-638ae6eef1fb', '93ed4272-6202-4196-b87d-5ebf5bb93769', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:38', '2020-11-24 22:48:38'),
+('3e33c2e8-0647-48aa-8bf1-74f78213fd6b', '1baa1389-e0eb-43cf-8d6e-8550c184ce22', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:39', '2020-11-24 22:47:39'),
+('4394560c-4792-45ca-9612-b7162eb3a714', 'ddc7b75b-e33e-44da-9e7a-e69283b5af4d', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:18', '2020-11-24 22:47:18'),
+('4a74e58c-9e14-41d9-9a52-e2f7e5ac2bcd', '115c00b9-3353-4796-88f5-38b7a55eda64', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:46', '2020-11-24 22:46:46'),
+('4c505e5e-c7ff-4fdc-95b8-518029d1fd53', '0e9b4a36-8714-4f37-bc14-c497b7292609', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:45:37', '2020-11-24 22:45:37'),
+('4d932530-e36a-4fd4-8af1-ac862101bb22', '91c98687-5e5c-48f7-8d13-002c3c903dec', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:13', '2020-11-24 22:46:13'),
+('4e97d361-6dcd-4183-abad-99fcfbddacac', '6b4673b0-8dd5-40a3-99c1-5bc4a5d5491e', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:43:20', '2020-11-24 22:43:20'),
+('50cb24c0-f802-4245-b9ef-4b7d221e5256', '0216d799-a944-49c4-8e20-cebb8654054f', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:24', '2020-11-24 22:47:24'),
+('543a9849-178c-435b-baba-db37c8ae25dc', '7c17da38-a1bb-41ad-88c2-dcd1de2e166b', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:52', '2020-11-24 22:44:52'),
+('5b9ce1af-beec-42ea-aced-810986322f39', '1b3d4881-379a-4e21-b53e-02308b8519fd', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:25', '2020-11-24 22:44:25'),
+('60d65138-1f9a-425f-8196-b813997c480a', '36690c38-9756-4cc0-ab62-5a2eb5f193b6', 'a8fab67c-1233-40e8-8b64-f4fcb75cd198', '2020-11-24 22:39:17', '2020-11-24 22:39:17'),
+('65226d25-cad1-4368-b568-e274032f234a', 'fce7955c-6828-4f5e-a7e8-2d297f40328b', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:53', '2020-11-24 22:48:53'),
+('687e2ba1-a289-481f-b563-199301e5912e', '7ac1673a-3564-41b3-a347-eb3fda3a4298', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:45:30', '2020-11-24 22:45:30'),
+('6b423614-8c71-43ce-bb91-9d3ccd054f23', '91100394-44e9-42ff-9d03-4ab54b1861d7', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:11', '2020-11-24 22:44:11'),
+('6cbe35e7-004e-4334-8af3-9fd53fe3fa2c', 'd738cd62-a939-4d58-af0e-84976b0782ed', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:45', '2020-11-24 22:47:45'),
+('71261e63-f1a1-4f0c-9d19-6e0132757511', '21c2fb37-ced7-4d02-b994-906942bd3586', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:20', '2020-11-24 22:46:20'),
+('752c1a7d-99a4-40f8-a09c-47fd1904cf72', '36690c38-9756-4cc0-ab62-5a2eb5f193b6', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-25 18:12:36', '2020-11-25 18:12:36'),
+('77b55d48-ce74-4543-8dc8-2012599dcf17', 'de0506b3-082d-4cbf-9659-12f32d6e757d', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:01', '2020-11-24 22:46:01'),
+('7c707a8d-696f-49d1-9aaf-019b55972d6c', '2e789c58-288a-4eb2-83fd-a82930d2c299', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:44:19', '2020-11-24 22:44:19'),
+('885b1aef-432a-470a-b8b9-e1e1cd8b3022', '969f0192-ff05-4db5-8a9c-0f27e0440673', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:28', '2020-11-24 22:46:28'),
+('8944f520-3055-44de-92c9-2dde5c56bbf7', '02788a66-58a0-497d-b6a7-b4d594dd3355', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:45:49', '2020-11-24 22:45:50'),
+('8b92e2fb-d502-4cc2-a012-5778f0c636de', '5ce0bc22-e459-4e68-880c-c52eaf89dde9', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:45:43', '2020-11-24 22:45:43'),
+('8da27082-08e4-48db-9842-d7c72cab95bb', '36690c38-9756-4cc0-ab62-5a2eb5f193b6', '1b3c75be-e2bd-4ffd-a74b-f8e2be163850', '2020-11-25 18:12:44', '2020-11-25 18:12:44'),
+('8e25c151-457a-411a-8bdd-66241893b0a2', 'cbf8829f-0425-4721-974f-0f20096932d2', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:53', '2020-11-24 22:46:53'),
+('916c054d-19f6-407e-8e2a-5be7b6c59086', 'b0634d07-3320-4223-ab59-71f7e9527f13', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:39:24', '2020-11-24 22:39:24'),
+('96f866fa-d3f5-43af-a49a-f513c5177242', '36690c38-9756-4cc0-ab62-5a2eb5f193b6', '486597a6-a904-4d97-bb43-d9444468582c', '2020-11-25 18:21:37', '2020-11-25 18:21:37'),
+('9ddb039b-4e5b-4c09-8e7c-f66a10c64521', '80162621-5b97-4934-a503-1e2585a56454', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:34', '2020-11-24 22:46:34'),
+('a7bf038e-7e9f-4a41-a953-61a06c64a2c3', '3b8fc770-26c7-4523-98a2-435adb9c9aff', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:10', '2020-11-24 22:47:10'),
+('aa66e0e8-2fcf-4d95-8c95-f060a2f4f5a5', '93731d88-5dd6-4f68-a8e5-8d4079e35553', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:05', '2020-11-24 22:48:05'),
+('b5fa9b28-5ab9-4459-99a3-952fab5bd1df', 'ed4dc073-6500-4147-85f3-b647c8782d86', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:47:31', '2020-11-24 22:47:31'),
+('ba64b39e-831a-40c6-b8b4-86373c9bc160', '20fa3ae9-5883-4bcb-8d80-faeb5a8efe84', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:45:55', '2020-11-24 22:45:55'),
+('d86e5abd-8196-4dfb-9748-00702c07245e', '1b3d4881-379a-4e21-b53e-02308b8519fd', 'a8fab67c-1233-40e8-8b64-f4fcb75cd198', '2020-11-24 22:44:32', '2020-11-24 22:44:32'),
+('da0147dc-e90d-4b09-aaa7-75ce33975f00', '91365ae5-b563-4601-bf86-097633bb21b2', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:43:47', '2020-11-24 22:43:47'),
+('da68bdd6-6ae1-45e1-885f-292f7986fe1a', 'fb85e846-d391-42f7-90fe-0b8dce9069aa', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:43:31', '2020-11-24 22:43:31'),
+('e2a2c5b0-8a1e-4f21-8e21-7f110b3a0ab6', 'faad8d7d-638c-4728-a97f-0e5a3c17660e', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:46:07', '2020-11-24 22:46:07'),
+('efee80b2-ce0a-410f-b3c8-90957fe86281', '8f71ecaf-774f-4b49-b9fb-28f78f231be4', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:27', '2020-11-24 22:48:27'),
+('f2cc7bd4-f6c1-4780-a762-b7c206f59dc4', '4adea1c9-853d-47df-b10a-674713418174', '6e3562a2-5d45-4d6b-a73b-3ef9a2165304', '2020-11-24 22:48:59', '2020-11-24 22:48:59');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_genders`
+--
+
+CREATE TABLE `bps_genders` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `gender` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `sex` char(1) COLLATE utf8_spanish_ci NOT NULL,
+  `gender_full` char(20) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_genders`
+--
+
+INSERT INTO `bps_genders` (`uuid`, `gender`, `sex`, `gender_full`, `enable`, `created`, `modified`) VALUES
+('1425115e-1691-4d35-91c7-59f0abaa1b18', 'H', 'M', 'Hombre', 1, '2020-10-03 02:37:25', '2020-10-03 02:37:25'),
+('15b014cb-0528-4264-a01a-bda3d89fee56', 'M', 'F', 'Mujer', 1, '2020-10-03 02:37:34', '2020-10-03 02:37:34');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_types_addresses`
+--
+
+CREATE TABLE `bps_types_addresses` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `type_address` char(50) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_types_addresses`
+--
+
+INSERT INTO `bps_types_addresses` (`uuid`, `type_address`, `enable`, `created`, `modified`) VALUES
+('02cf0bae-bb18-4055-b922-a7187e77d232', 'NEGOCIO', 1, '2020-10-03 02:53:29', '2020-10-03 02:53:29'),
+('d0f8c99f-3a20-4248-a991-1f482df166ba', 'RENTA', 1, '2020-10-03 02:53:35', '2020-10-03 02:53:35'),
+('f8765c13-32f0-4297-8901-a55e26e9208e', 'CASA', 1, '2020-10-03 02:53:23', '2020-10-03 02:53:23');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_types_phones`
+--
+
+CREATE TABLE `bps_types_phones` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `type_phone` char(50) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_types_phones`
+--
+
+INSERT INTO `bps_types_phones` (`uuid`, `type_phone`, `enable`, `created`, `modified`) VALUES
+('4762c7e9-f057-413e-a2a6-1d9fa9befa58', 'CASA', 1, '2020-10-03 02:52:52', '2020-10-03 02:52:52'),
+('5a6c0597-9443-493b-adbd-f8d9f172fda8', 'CELULAR', 1, '2020-10-03 02:52:47', '2020-10-03 02:52:47'),
+('b08c8e70-048e-434f-9873-68fccb0afec2', 'SMS', 1, '2020-10-03 02:52:56', '2020-10-03 02:52:56'),
+('ec220cef-e474-45c3-8e6f-b50405260c82', 'RECADOS', 1, '2020-10-03 02:53:09', '2020-10-03 02:53:09');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `bps_types_rols`
+--
+
+CREATE TABLE `bps_types_rols` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `type_rol` varchar(150) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `description` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `bps_types_rols`
+--
+
+INSERT INTO `bps_types_rols` (`uuid`, `type_rol`, `enable`, `description`, `created`, `modified`) VALUES
+('1b3c75be-e2bd-4ffd-a74b-f8e2be163850', 'AVAL', 1, 'ROL PARA DETERMINAR QUE PUEDE SER AVAL', '2020-11-24 22:21:54', '2020-11-24 22:21:54'),
+('486597a6-a904-4d97-bb43-d9444468582c', 'BLOQUEADO', 1, 'ESTE ROL SE ASIGNA CUANDO UN BP NO PUEDE OBTENER UN CREDITO', '2020-11-24 22:29:47', '2020-11-24 22:29:47'),
+('6e3562a2-5d45-4d6b-a73b-3ef9a2165304', 'CLIENTE', 1, 'ROL PARA DETERMINAR QUE ES CLIENTE', '2020-11-24 22:21:37', '2020-11-24 22:21:37'),
+('a8fab67c-1233-40e8-8b64-f4fcb75cd198', 'EMPLEADO', 1, 'ROL PARA DETERMINAR QUE ES EMPLEADO', '2020-11-24 22:22:21', '2020-11-24 22:22:21');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_credits`
+--
+
+CREATE TABLE `sales_credits` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `credit_unique_number` char(10) COLLATE utf8_spanish_ci NOT NULL,
+  `bps_business_partner_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `sales_product_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `init_date_credit` date NOT NULL,
+  `end_date_credit` date NOT NULL,
+  `sales_products_types_state_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `requested_amount` double NOT NULL,
+  `amount_payable` double NOT NULL,
+  `payment` double NOT NULL,
+  `day_week_payment` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+  `payment_rate` double NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_credits`
+--
+
+INSERT INTO `sales_credits` (`uuid`, `credit_unique_number`, `bps_business_partner_uuid`, `sales_product_uuid`, `init_date_credit`, `end_date_credit`, `sales_products_types_state_uuid`, `requested_amount`, `amount_payable`, `payment`, `day_week_payment`, `payment_rate`, `created`, `modified`) VALUES
+('1b12d326-b177-46f5-9c0f-be2ed1a42b26', 'S100000000', '6b4673b0-8dd5-40a3-99c1-5bc4a5d5491e', 'db554dd4-1011-4ece-a19b-020d924e1a4d', '2019-03-04', '2019-06-24', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 6064, 758, 'Lunes', 0.045076923076923, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('1d0c7597-198a-4fbe-b821-49e762249caf', 'S100000012', 'a6cb0cd5-6693-420a-9344-e58d85efef9b', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-06-17', '2019-10-07', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Lunes', 0.019423076923077, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('29885792-cf40-4309-8535-210e34dfc43a', 'S100000024', '20fa3ae9-5883-4bcb-8d80-faeb5a8efe84', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-08-22', '2019-12-12', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 6000, 7040, 440, 'Jueves', 0.019423076923077, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('31e6476f-fd38-452d-b524-59edbffb340b', 'S100000028', 'faad8d7d-638c-4728-a97f-0e5a3c17660e', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-09-20', '2020-01-10', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 6000, 7040, 440, 'Viernes', 0.019423076923077, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('36537bca-6101-49a5-967a-e446347f0d9a', 'S100000016', 'b0634d07-3320-4223-ab59-71f7e9527f13', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-07-15', '2019-11-04', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 10000, 11728, 733, 'Lunes', 0.019423076923077, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('38bb7223-d71b-4978-b694-6cb9f050bc52', 'S100000011', '7c17da38-a1bb-41ad-88c2-dcd1de2e166b', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-06-13', '2019-10-03', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Jueves', 0.019423076923077, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('3da56b0e-030a-44b0-854e-911f137c2cd6', 'S100000019', '0e9b4a36-8714-4f37-bc14-c497b7292609', 'db554dd4-1011-4ece-a19b-020d924e1a4d', '2019-07-19', '2019-11-08', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 6064, 758, 'Viernes', 0.045076923076923, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('3ef6a825-1e8e-406d-b7bc-d33680d683fd', 'S100000014', 'fb85e846-d391-42f7-90fe-0b8dce9069aa', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-06-27', '2019-10-17', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Jueves', 0.019423076923077, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('476993d0-5694-4aa5-a255-415251a890a7', 'S100000021', '2e789c58-288a-4eb2-83fd-a82930d2c299', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-07-25', '2019-11-14', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Jueves', 0.019423076923077, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('499702c3-4f2c-405a-9bee-4019616145c1', 'S100000020', '5ce0bc22-e459-4e68-880c-c52eaf89dde9', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-07-19', '2019-11-08', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Viernes', 0.019423076923077, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('4b9e8a52-fdd9-45e1-9089-78738167a06f', 'S100000025', '1b3d4881-379a-4e21-b53e-02308b8519fd', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-08-26', '2019-12-16', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Lunes', 0.019423076923077, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('5ce491be-bd00-415f-b6e5-8ebfb3845dea', 'S100000004', '11b5d4bb-e640-4bf8-a6a7-c81dd864d546', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-03-27', '2019-07-17', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Miercoles', 0.019423076923077, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 'S100000018', '6b4673b0-8dd5-40a3-99c1-5bc4a5d5491e', 'db554dd4-1011-4ece-a19b-020d924e1a4d', '2019-07-18', '2019-11-07', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 6064, 758, 'Jueves', 0.045076923076923, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('6a8b917d-592d-4443-8e56-52c3b186377a', 'S100000023', '1f095d72-f555-4712-a22b-5ac10a4f28da', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-08-01', '2019-11-21', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Jueves', 0.019423076923077, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('813c195f-59c6-48c5-94ab-d5677b947969', 'S100000013', '7ac1673a-3564-41b3-a347-eb3fda3a4298', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-06-20', '2019-10-10', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 2000, 2352, 147, 'Jueves', 0.019423076923077, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('860ecd97-368d-4887-9bdf-201d249832df', 'S100000008', '1b3d4881-379a-4e21-b53e-02308b8519fd', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-05-09', '2019-08-29', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Jueves', 0.019423076923077, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('8c95d7fc-b416-4cfa-9125-f9ba8312f049', 'S100000026', 'b0634d07-3320-4223-ab59-71f7e9527f13', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-09-05', '2019-12-26', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 22000, 25808, 1613, 'Jueves', 0.019423076923077, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('8c9795bd-4a15-4caf-8888-69e5725530b0', 'S100000005', '1f095d72-f555-4712-a22b-5ac10a4f28da', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-04-02', '2019-07-23', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Martes', 0.019423076923077, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 'S100000007', '2e789c58-288a-4eb2-83fd-a82930d2c299', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-04-04', '2019-07-25', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Jueves', 0.019423076923077, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('9597d208-1925-49bb-9f6b-77b0406ed22b', 'S100000022', '91100394-44e9-42ff-9d03-4ab54b1861d7', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-07-31', '2019-11-20', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 6000, 7040, 440, 'Miercoles', 0.019423076923077, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('9e002436-447e-4e7c-a9f1-6c03f041cc26', 'S100000017', '11b5d4bb-e640-4bf8-a6a7-c81dd864d546', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-07-17', '2019-11-06', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Miercoles', 0.019423076923077, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('9faf46c1-a472-4b7b-8b23-89f80a15326c', 'S100000002', 'fb85e846-d391-42f7-90fe-0b8dce9069aa', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-03-07', '2019-06-27', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Jueves', 0.019423076923077, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('a97bae61-1977-4dde-8f16-e4b8a16a725f', 'S100000001', 'b0634d07-3320-4223-ab59-71f7e9527f13', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-03-04', '2019-06-24', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 2000, 2352, 147, 'Lunes', 0.019423076923077, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 'S100000010', '1b3d4881-379a-4e21-b53e-02308b8519fd', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-06-06', '2019-09-26', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 7000, 8208, 513, 'Jueves', 0.019423076923077, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 'S100000015', '91365ae5-b563-4601-bf86-097633bb21b2', 'db554dd4-1011-4ece-a19b-020d924e1a4d', '2019-07-03', '2019-10-23', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 4000, 4856, 607, 'Miercoles', 0.045076923076923, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('c8a63fe9-a388-4226-b8ff-86170e02769d', 'S100000030', '7ac1673a-3564-41b3-a347-eb3fda3a4298', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-10-02', '2020-01-22', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 2000, 2352, 147, 'Miercoles', 0.019423076923077, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('d52977b5-c2ba-463d-a737-ef0052e0c601', 'S100000003', '91365ae5-b563-4601-bf86-097633bb21b2', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-03-20', '2019-07-10', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 3000, 3520, 220, 'Miercoles', 0.019423076923077, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('db500b2f-a102-4668-9b18-10cea205d0db', 'S100000006', '91100394-44e9-42ff-9d03-4ab54b1861d7', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-04-02', '2019-07-23', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Martes', 0.019423076923077, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('dcf1b612-9f21-42e2-b01f-10e08e78d42e', 'S100000009', 'b0634d07-3320-4223-ab59-71f7e9527f13', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-05-16', '2019-09-05', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 20000, 23456, 1466, 'Jueves', 0.019423076923077, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('ef421fe9-373f-4ba7-806f-c2efe8199449', 'S100000029', '2e789c58-288a-4eb2-83fd-a82930d2c299', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-10-02', '2020-01-22', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 5000, 5872, 367, 'Miercoles', 0.019423076923077, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('faebc689-b368-4b0b-9bfe-3f0754ec98d0', 'S100000027', 'de0506b3-082d-4cbf-9659-12f32d6e757d', '760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', '2019-09-18', '2020-01-08', '30af1e37-032b-4f4f-9c40-60a7d6827e3a', 10000, 11728, 733, 'Miercoles', 0.019423076923077, '2020-11-27 17:45:07', '2020-11-27 17:45:07');
+
+--
+-- Disparadores `sales_credits`
+--
+DELIMITER $$
+CREATE TRIGGER `tg_sales_credits_amortization_table_event` AFTER INSERT ON `sales_credits` FOR EACH ROW BEGIN
+	DECLARE n_py int;
+    DECLARE t_py int;
+    DECLARE date_payment DATE;
+    DECLARE dinterval int;
+    DECLARE balance real;
+    DECLARE payment_ineterest real;
+    DECLARE payment_principal real;
+    DECLARE adjustment real;
+    DECLARE uuid_acat char(36);
+    SET t_py = (SELECT number_payments FROM sales_products where uuid = New.sales_product_uuid);
+    SET dinterval = (SELECT st.paydays FROM sales_types_payments AS st WHERE st.uuid LIKE (SELECT sp.sales_types_payment_uuid FROM sales_products AS sp WHERE sp.uuid LIKE (SELECT sc.sales_product_uuid FROM sales_credits AS sc WHERE sc.uuid LIKE New.uuid)));
+    SET n_py = 1;
+    SET date_payment = New.init_date_credit;
+    SET balance = New.requested_amount;
+    WHILE n_py <= t_py DO
+    	SET date_payment = DATE_ADD(date_payment, INTERVAL dinterval DAY);
+        SET payment_ineterest = balance * New.payment_rate;
+        SET payment_principal = New.payment - payment_ineterest;
+        SET adjustment = balance - payment_principal;
+        SET uuid_acat = UUID();
+    	INSERT INTO sales_credits_amortizations_tables values (uuid_acat, New.uuid, n_py, date_payment, New.payment, payment_principal, payment_ineterest, balance, adjustment, now(), now());
+        INSERT INTO sales_credits_payments value (uuid(), uuid_acat, n_py, New.Payment, payment_principal, payment_ineterest, date_payment, 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df',  now(), now());
+        SET balance = balance - payment_principal;
+    	SET n_py = n_py + 1;
+    END WHILE;
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_credits_amortizations_tables`
+--
+
+CREATE TABLE `sales_credits_amortizations_tables` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `sales_credit_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `number_payment` int(11) NOT NULL,
+  `payment_date` date NOT NULL,
+  `amount_payment` double NOT NULL,
+  `principal_payment` double NOT NULL,
+  `interest_payment` double NOT NULL,
+  `balance` double NOT NULL,
+  `adjustment` double NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_credits_amortizations_tables`
+--
+
+INSERT INTO `sales_credits_amortizations_tables` (`uuid`, `sales_credit_uuid`, `number_payment`, `payment_date`, `amount_payment`, `principal_payment`, `interest_payment`, `balance`, `adjustment`, `created`, `modified`) VALUES
+('13d0c87a-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 1, '2019-09-12', 1613, 1185.692307692306, 427.307692307694, 22000, 20814.307692307695, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0cb90-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 2, '2019-09-19', 1613, 1208.7221005917143, 404.2778994082857, 20814.307692307695, 19605.585591715982, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0cd8a-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 3, '2019-09-26', 1613, 1232.1992029301305, 380.80079706986965, 19605.585591715982, 18373.386388785853, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0cf27-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 4, '2019-10-03', 1613, 1256.1323028331965, 356.86769716680357, 18373.386388785853, 17117.254085952656, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d0b5-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 5, '2019-10-10', 1613, 1280.5302571766874, 332.4697428233125, 17117.254085952656, 15836.723828775968, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d244-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 6, '2019-10-17', 1613, 1305.4020948641578, 307.59790513584215, 15836.723828775968, 14531.321733911811, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d3c6-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 7, '2019-10-24', 1613, 1330.7570201682502, 282.2429798317498, 14531.321733911811, 13200.56471374356, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d547-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 8, '2019-10-31', 1613, 1356.604416136903, 256.3955838630971, 13200.56471374356, 11843.960297606658, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d6c1-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 9, '2019-11-07', 1613, 1382.9538480657159, 230.0461519342841, 11843.960297606658, 10461.006449540942, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d843-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 10, '2019-11-14', 1613, 1409.8150670377618, 203.18493296223835, 10461.006449540942, 9051.19138250318, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d9c4-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 11, '2019-11-21', 1613, 1437.1980135321492, 175.80198646785095, 9051.19138250318, 7613.9933689710315, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0db3f-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 12, '2019-11-28', 1613, 1465.1128211026776, 147.88717889732254, 7613.9933689710315, 6148.8805478683535, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0dcb9-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 13, '2019-12-05', 1613, 1493.569820127941, 119.43017987205889, 6148.8805478683535, 4655.310727740412, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0df04-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 14, '2019-12-12', 1613, 1522.5795416342723, 90.4204583657276, 4655.310727740412, 3132.73118610614, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0e11d-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 15, '2019-12-19', 1613, 1552.152721192938, 60.847278807061805, 3132.73118610614, 1580.5784649132017, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0e2b9-30d8-11eb-a819-18dbf2217749', '8c95d7fc-b416-4cfa-9125-f9ba8312f049', 16, '2019-12-26', 1613, 1582.3003028930318, 30.69969710696808, 1580.5784649132017, -1.7218379798300703, '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('19a88d68-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 1, '2019-08-01', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8903b-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 2, '2019-08-08', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a891d2-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 3, '2019-08-15', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8935b-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 4, '2019-08-22', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a89640-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 5, '2019-08-29', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a89d93-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 6, '2019-09-05', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a0c2-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 7, '2019-09-12', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a375-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 8, '2019-09-19', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a639-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 9, '2019-09-26', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a916-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 10, '2019-10-03', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8ae1f-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 11, '2019-10-10', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae0dd1-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 12, '2019-10-17', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae69e5-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 13, '2019-10-24', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae6eba-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 14, '2019-10-31', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae7320-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 15, '2019-11-07', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae759f-30d7-11eb-a819-18dbf2217749', '476993d0-5694-4aa5-a255-415251a890a7', 16, '2019-11-14', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('1d8acda1-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 1, '2019-07-04', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad0bc-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 2, '2019-07-11', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad2f2-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 3, '2019-07-18', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad483-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 4, '2019-07-25', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad612-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 5, '2019-08-01', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad79f-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 6, '2019-08-08', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad91f-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 7, '2019-08-15', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ada97-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 8, '2019-08-22', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8adca2-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 9, '2019-08-29', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8adf01-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 10, '2019-09-05', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae151-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 11, '2019-09-12', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae3fe-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 12, '2019-09-19', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae62f-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 13, '2019-09-26', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae7b2-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 14, '2019-10-03', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae98f-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 15, '2019-10-10', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8aec1b-30d6-11eb-a819-18dbf2217749', '3ef6a825-1e8e-406d-b7bc-d33680d683fd', 16, '2019-10-17', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('235507f5-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 1, '2019-03-11', 147, 108.15384615384599, 38.846153846154, 2000, 1891.846153846154, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550b50-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 2, '2019-03-18', 147, 110.25452662721878, 36.74547337278122, 1891.846153846154, 1781.5916272189352, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550cf1-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 3, '2019-03-25', 147, 112.3960087790167, 34.6039912209833, 1781.5916272189352, 1669.1956184399185, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550e83-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 4, '2019-04-01', 147, 114.57908510337838, 32.420914896621625, 1669.1956184399185, 1554.61653333654, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('235510f6-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 5, '2019-04-08', 147, 116.80456348711708, 30.195436512882917, 1554.61653333654, 1437.811969849423, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('2355130b-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 6, '2019-04-15', 147, 119.07326750869379, 27.92673249130621, 1437.811969849423, 1318.738702340729, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551494-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 7, '2019-04-22', 147, 121.38603674299728, 25.613963257002727, 1318.738702340729, 1197.3526655977319, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551615-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 8, '2019-04-29', 147, 123.74372707204395, 23.25627292795604, 1197.3526655977319, 1073.6089385256878, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551798-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 9, '2019-05-06', 147, 126.14721100171252, 20.85278899828748, 1073.6089385256878, 947.4617275239752, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551919-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 10, '2019-05-13', 147, 128.5973779846304, 18.402622015369595, 947.4617275239752, 818.8643495393449, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551aad-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 11, '2019-05-20', 147, 131.0951347493319, 15.904865250668108, 818.8643495393449, 687.7692147900129, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551c46-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 12, '2019-05-27', 147, 133.64140563580932, 13.35859436419069, 687.7692147900129, 554.1278091542036, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551dc7-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 13, '2019-06-03', 147, 136.23713293758178, 10.762867062418229, 554.1278091542036, 417.89067621662184, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551f49-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 14, '2019-06-10', 147, 138.8832772504079, 8.11672274959211, 417.89067621662184, 279.00739896621394, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('235520c8-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 15, '2019-06-17', 147, 141.5808178277716, 5.419182172228408, 279.00739896621394, 137.42658113844234, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23552246-30d2-11eb-a819-18dbf2217749', 'a97bae61-1977-4dde-8f16-e4b8a16a725f', 16, '2019-06-24', 147, 144.33075294327256, 2.6692470567274484, 137.42658113844234, -6.904171804830213, '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('25c60aef-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 1, '2019-06-13', 513, 377.038461538461, 135.96153846153902, 7000, 6622.961538461539, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c60e4e-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 2, '2019-06-20', 513, 384.3617085798811, 128.63829142011886, 6622.961538461539, 6238.599829881658, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61023-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 3, '2019-06-27', 513, 391.82719561191345, 121.17280438808653, 6238.599829881658, 5846.772634269744, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c611f5-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 4, '2019-07-04', 513, 399.4376853728372, 113.56231462716279, 5846.772634269744, 5447.334948896907, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c613ab-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 5, '2019-07-11', 513, 407.19599426180963, 105.80400573819036, 5447.334948896907, 5040.138954635097, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c615f1-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 6, '2019-07-18', 513, 415.1049933811256, 97.8950066188744, 5040.138954635097, 4625.033961253972, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61782-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 7, '2019-07-25', 513, 423.16760959872056, 89.83239040127943, 4625.033961253972, 4201.8663516552515, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61908-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 8, '2019-08-01', 513, 431.3868266313111, 81.61317336868886, 4201.8663516552515, 3770.4795250239404, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61a93-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 9, '2019-08-08', 513, 439.7656861485732, 73.23431385142683, 3770.4795250239404, 3330.7138388753674, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61ccd-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 10, '2019-08-15', 513, 448.3072888987666, 64.69271110123336, 3330.7138388753674, 2882.4065499766007, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61e56-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 11, '2019-08-22', 513, 457.0147958562235, 55.98520414377651, 2882.4065499766007, 2425.3917541203773, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61ff0-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 12, '2019-08-29', 513, 465.89142939112327, 47.10857060887675, 2425.3917541203773, 1959.500324729254, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c62186-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 13, '2019-09-05', 513, 474.9404744619893, 38.05952553801067, 1959.500324729254, 1484.5598502672647, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6231b-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 14, '2019-09-12', 513, 484.1652798313472, 28.834720168652755, 1484.5598502672647, 1000.3945704359174, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c624a0-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 15, '2019-09-19', 513, 493.5692593049946, 19.430740695005397, 1000.3945704359174, 506.82531113092284, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6262c-30d4-11eb-a819-18dbf2217749', 'aaa1c986-97f9-41ea-9389-60fe5d5daf4d', 16, '2019-09-26', 513, 503.1558929953417, 9.84410700465835, 506.82531113092284, 3.669418135581168, '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('498cf6a7-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 1, '2019-03-27', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cf980-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 2, '2019-04-03', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfb26-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 3, '2019-04-10', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfca4-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 4, '2019-04-17', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfe0f-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 5, '2019-04-24', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cff79-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 6, '2019-05-01', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d00d8-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 7, '2019-05-08', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d022d-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 8, '2019-05-15', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d037f-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 9, '2019-05-22', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d04d5-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 10, '2019-05-29', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0629-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 11, '2019-06-05', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0779-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 12, '2019-06-12', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d08cb-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 13, '2019-06-19', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0a21-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 14, '2019-06-26', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0b73-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 15, '2019-07-03', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0cc4-30d3-11eb-a819-18dbf2217749', 'd52977b5-c2ba-463d-a737-ef0052e0c601', 16, '2019-07-10', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('49f6f8c6-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 1, '2019-09-25', 733, 538.76923076923, 194.23076923077002, 10000, 9461.23076923077, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f6fd89-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 2, '2019-10-02', 733, 549.2337869822478, 183.76621301775222, 9461.23076923077, 8911.996982248522, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7009f-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 3, '2019-10-09', 733, 559.9015970755569, 173.09840292444315, 8911.996982248522, 8352.095385172965, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7037b-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 4, '2019-10-16', 733, 570.7766088649091, 162.22339113509094, 8352.095385172965, 7781.318776308055, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f70645-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 5, '2019-10-23', 733, 581.8628468447853, 151.13715315521475, 7781.318776308055, 7199.45592946327, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f709a1-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 6, '2019-10-30', 733, 593.1644136777321, 139.83558632226791, 7199.45592946327, 6606.291515785538, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f76e4b-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 7, '2019-11-06', 733, 604.6854917126266, 128.31450828737346, 6606.291515785538, 6001.606024072911, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f770fa-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 8, '2019-11-13', 733, 616.4303445324296, 116.56965546757047, 6001.606024072911, 5385.175679540482, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77310-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 9, '2019-11-20', 733, 628.4033185320018, 104.59668146799824, 5385.175679540482, 4756.7723610084795, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77521-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 10, '2019-11-27', 733, 640.6088445265657, 92.3911554734343, 4756.7723610084795, 4116.163516481914, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7771c-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 11, '2019-12-04', 733, 653.0514393914086, 79.94856060859134, 4116.163516481914, 3463.112077090505, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f779bc-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 12, '2019-12-11', 733, 665.7357077334342, 67.26429226656585, 3463.112077090505, 2797.376369357071, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77cd1-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 13, '2019-12-18', 733, 678.6663435951798, 54.333656404820246, 2797.376369357071, 2118.7100257618913, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f804ed-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 14, '2019-12-25', 733, 691.8481321919323, 41.15186780806767, 2118.7100257618913, 1426.861893569959, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f80a92-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 15, '2020-01-01', 733, 705.2859516825833, 27.714048317416623, 1426.861893569959, 721.5759418873756, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f80eba-30d8-11eb-a819-18dbf2217749', 'faebc689-b368-4b0b-9bfe-3f0754ec98d0', 16, '2020-01-08', 733, 718.9847749748798, 14.015225025120237, 721.5759418873756, 2.5911669124958507, '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('5ded2da1-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 1, '2019-09-27', 440, 323.461538461538, 116.538461538462, 6000, 5676.538461538462, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded31dc-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 2, '2019-10-04', 440, 329.7441568047333, 110.25584319526672, 5676.538461538462, 5346.7943047337285, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded3703-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 3, '2019-10-11', 440, 336.1488029272868, 103.85119707271322, 5346.7943047337285, 5010.645501806442, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded3bd0-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 4, '2019-10-18', 440, 342.67784698414374, 97.32215301585627, 5010.645501806442, 4667.967654822298, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded4116-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 5, '2019-10-25', 440, 349.3337051659512, 90.66629483404884, 4667.967654822298, 4318.633949656347, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded8537-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 6, '2019-11-01', 440, 356.1188405932129, 83.88115940678708, 4318.633949656347, 3962.515109063134, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded89e1-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 7, '2019-11-08', 440, 363.0357642278119, 76.9642357721881, 3962.515109063134, 3599.479344835322, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded8cac-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 8, '2019-11-15', 440, 370.08703580223676, 69.91296419776327, 3599.479344835322, 3229.3923090330854, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded8ed5-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 9, '2019-11-22', 440, 377.2752647668571, 62.72473523314287, 3229.3923090330854, 2852.1170442662283, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded90f7-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 10, '2019-11-29', 440, 384.60311125559804, 55.39688874440196, 2852.1170442662283, 2467.5139330106304, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9309-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 11, '2019-12-06', 440, 392.07328707037027, 47.926712929629744, 2467.5139330106304, 2075.44064594026, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9522-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 12, '2019-12-13', 440, 399.68855668462174, 40.311443315378284, 2075.44064594026, 1675.752089255638, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded972f-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 13, '2019-12-20', 440, 407.45173826638074, 32.548261733619256, 1675.752089255638, 1268.3003509892574, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded993e-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 14, '2019-12-27', 440, 415.3657047211701, 24.634295278829907, 1268.3003509892574, 852.9346462680872, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9b78-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 15, '2020-01-03', 440, 423.4333847551775, 16.56661524482253, 852.9346462680872, 429.50126151290976, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9d87-30d8-11eb-a819-18dbf2217749', '31e6476f-fd38-452d-b524-59edbffb340b', 16, '2020-01-10', 440, 431.65776395907614, 8.342236040923858, 429.50126151290976, -2.156502446166371, '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('6bb7617d-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 1, '2019-04-03', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb76816-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 2, '2019-04-10', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb76cc2-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 3, '2019-04-17', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb770ba-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 4, '2019-04-24', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb772a7-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 5, '2019-05-01', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77432-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 6, '2019-05-08', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb775e7-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 7, '2019-05-15', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7780e-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 8, '2019-05-22', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb779f1-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 9, '2019-05-29', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77bcd-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 10, '2019-06-05', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77e0d-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 11, '2019-06-12', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb78061-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 12, '2019-06-19', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7836a-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 13, '2019-06-26', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb784e0-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 14, '2019-07-03', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb786ce-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 15, '2019-07-10', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7883a-30d3-11eb-a819-18dbf2217749', '5ce491be-bd00-415f-b6e5-8ebfb3845dea', 16, '2019-07-17', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6c004e38-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 1, '2019-08-07', 440, 323.461538461538, 116.538461538462, 6000, 5676.538461538462, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c005216-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 2, '2019-08-14', 440, 329.7441568047333, 110.25584319526672, 5676.538461538462, 5346.7943047337285, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00909f-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 3, '2019-08-21', 440, 336.1488029272868, 103.85119707271322, 5346.7943047337285, 5010.645501806442, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0092e7-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 4, '2019-08-28', 440, 342.67784698414374, 97.32215301585627, 5010.645501806442, 4667.967654822298, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0094a7-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 5, '2019-09-04', 440, 349.3337051659512, 90.66629483404884, 4667.967654822298, 4318.633949656347, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00963f-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 6, '2019-09-11', 440, 356.1188405932129, 83.88115940678708, 4318.633949656347, 3962.515109063134, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0097c7-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 7, '2019-09-18', 440, 363.0357642278119, 76.9642357721881, 3962.515109063134, 3599.479344835322, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009940-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 8, '2019-09-25', 440, 370.08703580223676, 69.91296419776327, 3599.479344835322, 3229.3923090330854, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009ac1-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 9, '2019-10-02', 440, 377.2752647668571, 62.72473523314287, 3229.3923090330854, 2852.1170442662283, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009c41-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 10, '2019-10-09', 440, 384.60311125559804, 55.39688874440196, 2852.1170442662283, 2467.5139330106304, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009dd1-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 11, '2019-10-16', 440, 392.07328707037027, 47.926712929629744, 2467.5139330106304, 2075.44064594026, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009f4f-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 12, '2019-10-23', 440, 399.68855668462174, 40.311443315378284, 2075.44064594026, 1675.752089255638, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00a0c7-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 13, '2019-10-30', 440, 407.45173826638074, 32.548261733619256, 1675.752089255638, 1268.3003509892574, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e093-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 14, '2019-11-06', 440, 415.3657047211701, 24.634295278829907, 1268.3003509892574, 852.9346462680872, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e3bd-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 15, '2019-11-13', 440, 423.4333847551775, 16.56661524482253, 852.9346462680872, 429.50126151290976, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e64e-30d7-11eb-a819-18dbf2217749', '9597d208-1925-49bb-9f6b-77b0406ed22b', 16, '2019-11-20', 440, 431.65776395907614, 8.342236040923858, 429.50126151290976, -2.156502446166371, '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c2ca34e-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 1, '2019-07-17', 607, 426.69230769230796, 180.307692307692, 4000, 3573.307692307692, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2ca6b1-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 2, '2019-07-31', 607, 445.9262840236689, 161.07371597633107, 3573.307692307692, 3127.381408284023, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2ca874-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 3, '2019-08-14', 607, 466.027268826582, 140.97273117341803, 3127.381408284023, 2661.3541394574413, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2caa42-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 4, '2019-08-28', 607, 487.0343441752263, 119.96565582477369, 2661.3541394574413, 2174.319795282215, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cabd4-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 5, '2019-09-11', 607, 508.9883538434326, 98.01164615656738, 2174.319795282215, 1665.3314414387826, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cad6e-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 6, '2019-09-25', 607, 531.9319827166827, 75.0680172833173, 1665.3314414387826, 1133.3994587221, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2caee9-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 7, '2019-10-09', 607, 555.9098397837578, 51.09016021624227, 1133.3994587221, 577.4896189383422, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cb065-30d6-11eb-a819-18dbf2217749', 'b7b3c960-4ab9-4d02-8fb9-b35e7700f723', 8, '2019-10-23', 607, 580.9685448693948, 26.031455130605227, 577.4896189383422, -3.478925931052572, '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('717c33c0-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 1, '2019-10-09', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3741-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 2, '2019-10-16', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c38fa-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 3, '2019-10-23', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3a97-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 4, '2019-10-30', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3c26-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 5, '2019-11-06', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3db4-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 6, '2019-11-13', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3f2f-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 7, '2019-11-20', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c40ad-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 8, '2019-11-27', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c422e-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 9, '2019-12-04', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c43a6-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 10, '2019-12-11', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c451d-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 11, '2019-12-18', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4690-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 12, '2019-12-25', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4808-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 13, '2020-01-01', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4981-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 14, '2020-01-08', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4afb-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 15, '2020-01-15', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4c70-30d8-11eb-a819-18dbf2217749', 'ef421fe9-373f-4ba7-806f-c2efe8199449', 16, '2020-01-22', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('7ecb1b74-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 1, '2019-04-09', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb1f75-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 2, '2019-04-16', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2113-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 3, '2019-04-23', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2292-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 4, '2019-04-30', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2405-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 5, '2019-05-07', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb258f-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 6, '2019-05-14', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2701-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 7, '2019-05-21', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb286b-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 8, '2019-05-28', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb29d9-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 9, '2019-06-04', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2b46-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 10, '2019-06-11', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2cb2-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 11, '2019-06-18', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2e1d-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 12, '2019-06-25', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb33e9-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 13, '2019-07-02', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb36ab-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 14, '2019-07-09', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb384c-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 15, '2019-07-16', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb39c6-30d3-11eb-a819-18dbf2217749', '8c9795bd-4a15-4caf-8888-69e5725530b0', 16, '2019-07-23', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('85c7a5b2-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 1, '2019-08-08', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7a965-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 2, '2019-08-15', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7ab4a-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 3, '2019-08-22', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7acf3-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 4, '2019-08-29', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7ae8e-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 5, '2019-09-05', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b03d-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 6, '2019-09-12', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b24d-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 7, '2019-09-19', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b455-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 8, '2019-09-26', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b5d0-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 9, '2019-10-03', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b74f-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 10, '2019-10-10', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7fedc-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 11, '2019-10-17', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c801ac-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 12, '2019-10-24', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c80350-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 13, '2019-10-31', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c804e6-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 14, '2019-11-07', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c80671-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 15, '2019-11-14', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c80877-30d7-11eb-a819-18dbf2217749', '6a8b917d-592d-4443-8e56-52c3b186377a', 16, '2019-11-21', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('8d849b41-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 1, '2019-07-22', 733, 538.76923076923, 194.23076923077002, 10000, 9461.23076923077, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84a682-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 2, '2019-07-29', 733, 549.2337869822478, 183.76621301775222, 9461.23076923077, 8911.996982248522, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84ac85-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 3, '2019-08-05', 733, 559.9015970755569, 173.09840292444315, 8911.996982248522, 8352.095385172965, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84ae81-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 4, '2019-08-12', 733, 570.7766088649091, 162.22339113509094, 8352.095385172965, 7781.318776308055, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84b147-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 5, '2019-08-19', 733, 581.8628468447853, 151.13715315521475, 7781.318776308055, 7199.45592946327, '2020-11-27 17:32:42', '2020-11-27 17:32:42');
+INSERT INTO `sales_credits_amortizations_tables` (`uuid`, `sales_credit_uuid`, `number_payment`, `payment_date`, `amount_payment`, `principal_payment`, `interest_payment`, `balance`, `adjustment`, `created`, `modified`) VALUES
+('8d84b5ef-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 6, '2019-08-26', 733, 593.1644136777321, 139.83558632226791, 7199.45592946327, 6606.291515785538, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84ba0c-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 7, '2019-09-02', 733, 604.6854917126266, 128.31450828737346, 6606.291515785538, 6001.606024072911, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84bf4d-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 8, '2019-09-09', 733, 616.4303445324296, 116.56965546757047, 6001.606024072911, 5385.175679540482, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c15f-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 9, '2019-09-16', 733, 628.4033185320018, 104.59668146799824, 5385.175679540482, 4756.7723610084795, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c363-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 10, '2019-09-23', 733, 640.6088445265657, 92.3911554734343, 4756.7723610084795, 4116.163516481914, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c4ee-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 11, '2019-09-30', 733, 653.0514393914086, 79.94856060859134, 4116.163516481914, 3463.112077090505, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c927-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 12, '2019-10-07', 733, 665.7357077334342, 67.26429226656585, 3463.112077090505, 2797.376369357071, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84cc84-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 13, '2019-10-14', 733, 678.6663435951798, 54.333656404820246, 2797.376369357071, 2118.7100257618913, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84cecb-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 14, '2019-10-21', 733, 691.8481321919323, 41.15186780806767, 2118.7100257618913, 1426.861893569959, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84d04d-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 15, '2019-10-28', 733, 705.2859516825833, 27.714048317416623, 1426.861893569959, 721.5759418873756, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84d1ea-30d6-11eb-a819-18dbf2217749', '36537bca-6101-49a5-967a-e446347f0d9a', 16, '2019-11-04', 733, 718.9847749748798, 14.015225025120237, 721.5759418873756, 2.5911669124958507, '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('96d79553-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 1, '2019-04-09', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79833-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 2, '2019-04-16', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d799fe-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 3, '2019-04-23', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79b96-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 4, '2019-04-30', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79d9e-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 5, '2019-05-07', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79f18-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 6, '2019-05-14', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a088-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 7, '2019-05-21', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a1fe-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 8, '2019-05-28', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a371-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 9, '2019-06-04', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a4e3-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 10, '2019-06-11', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a656-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 11, '2019-06-18', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a7e6-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 12, '2019-06-25', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a9e7-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 13, '2019-07-02', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7ab72-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 14, '2019-07-09', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7b12d-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 15, '2019-07-16', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7b2b9-30d3-11eb-a819-18dbf2217749', 'db500b2f-a102-4668-9b18-10cea205d0db', 16, '2019-07-23', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('99882966-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 1, '2019-06-20', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('99882d95-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 2, '2019-06-27', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988c449-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 3, '2019-07-04', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988cb6e-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 4, '2019-07-11', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988cdd2-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 5, '2019-07-18', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988cff0-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 6, '2019-07-25', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d1a0-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 7, '2019-08-01', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d32d-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 8, '2019-08-08', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d4ac-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 9, '2019-08-15', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d6ae-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 10, '2019-08-22', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d825-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 11, '2019-08-29', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d9a6-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 12, '2019-09-05', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988dc10-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 13, '2019-09-12', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988de82-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 14, '2019-09-19', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988e0bd-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 15, '2019-09-26', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988e32c-30d5-11eb-a819-18dbf2217749', '38bb7223-d71b-4978-b694-6cb9f050bc52', 16, '2019-10-03', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('a5438743-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 1, '2019-07-24', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438a2e-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 2, '2019-07-31', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438be6-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 3, '2019-08-07', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438d95-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 4, '2019-08-14', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438f26-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 5, '2019-08-21', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543ea51-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 6, '2019-08-28', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543ee74-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 7, '2019-09-04', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f0c9-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 8, '2019-09-11', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f265-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 9, '2019-09-18', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f488-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 10, '2019-09-25', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f610-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 11, '2019-10-02', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f78d-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 12, '2019-10-09', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f90c-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 13, '2019-10-16', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fa88-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 14, '2019-10-23', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fc04-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 15, '2019-10-30', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fd86-30d6-11eb-a819-18dbf2217749', '9e002436-447e-4e7c-a9f1-6c03f041cc26', 16, '2019-11-06', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('adc01093-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 1, '2019-08-29', 440, 323.461538461538, 116.538461538462, 6000, 5676.538461538462, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01375-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 2, '2019-09-05', 440, 329.7441568047333, 110.25584319526672, 5676.538461538462, 5346.7943047337285, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01518-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 3, '2019-09-12', 440, 336.1488029272868, 103.85119707271322, 5346.7943047337285, 5010.645501806442, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc016e0-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 4, '2019-09-19', 440, 342.67784698414374, 97.32215301585627, 5010.645501806442, 4667.967654822298, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01854-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 5, '2019-09-26', 440, 349.3337051659512, 90.66629483404884, 4667.967654822298, 4318.633949656347, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc019c2-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 6, '2019-10-03', 440, 356.1188405932129, 83.88115940678708, 4318.633949656347, 3962.515109063134, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01b3f-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 7, '2019-10-10', 440, 363.0357642278119, 76.9642357721881, 3962.515109063134, 3599.479344835322, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc092e7-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 8, '2019-10-17', 440, 370.08703580223676, 69.91296419776327, 3599.479344835322, 3229.3923090330854, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09551-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 9, '2019-10-24', 440, 377.2752647668571, 62.72473523314287, 3229.3923090330854, 2852.1170442662283, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09756-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 10, '2019-10-31', 440, 384.60311125559804, 55.39688874440196, 2852.1170442662283, 2467.5139330106304, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0994b-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 11, '2019-11-07', 440, 392.07328707037027, 47.926712929629744, 2467.5139330106304, 2075.44064594026, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09b33-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 12, '2019-11-14', 440, 399.68855668462174, 40.311443315378284, 2075.44064594026, 1675.752089255638, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09f60-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 13, '2019-11-21', 440, 407.45173826638074, 32.548261733619256, 1675.752089255638, 1268.3003509892574, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a248-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 14, '2019-11-28', 440, 415.3657047211701, 24.634295278829907, 1268.3003509892574, 852.9346462680872, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a6b4-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 15, '2019-12-05', 440, 423.4333847551775, 16.56661524482253, 852.9346462680872, 429.50126151290976, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a939-30d7-11eb-a819-18dbf2217749', '29885792-cf40-4309-8535-210e34dfc43a', 16, '2019-12-12', 440, 431.65776395907614, 8.342236040923858, 429.50126151290976, -2.156502446166371, '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('b12ea1d0-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 1, '2019-04-11', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ea8df-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 2, '2019-04-18', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ead27-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 3, '2019-04-25', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb0ca-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 4, '2019-05-02', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb404-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 5, '2019-05-09', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb6c3-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 6, '2019-05-16', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb939-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 7, '2019-05-23', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ebba9-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 8, '2019-05-30', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ebe22-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 9, '2019-06-06', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec08e-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 10, '2019-06-13', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec2f6-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 11, '2019-06-20', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec5cc-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 12, '2019-06-27', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec854-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 13, '2019-07-04', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ecaf6-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 14, '2019-07-11', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ecd8d-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 15, '2019-07-18', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ed026-30d3-11eb-a819-18dbf2217749', '90aeecf6-77f5-4c16-8223-9ecf5f14f08a', 16, '2019-07-25', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('c1590705-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 1, '2019-08-01', 758, 532.615384615385, 225.384615384615, 5000, 4467.384615384615, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1590bb3-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 2, '2019-08-15', 758, 556.6240473372784, 201.37595266272155, 4467.384615384615, 3910.760568047337, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1590e9c-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 3, '2019-08-29', 758, 581.7149467018664, 176.2850532981335, 3910.760568047337, 3329.045621345471, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1591159-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 4, '2019-09-12', 758, 607.9368666070429, 150.06313339295713, 3329.045621345471, 2721.1087547384277, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159137b-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 5, '2019-09-26', 758, 635.3407899787142, 122.65921002128584, 2721.1087547384277, 2085.7679647597133, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159151a-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 6, '2019-10-10', 758, 663.9799978962162, 94.02000210378384, 2085.7679647597133, 1421.787966863497, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159169d-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 7, '2019-10-24', 758, 693.9101731859994, 64.0898268140006, 1421.787966863497, 727.8777936774977, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159181a-30d6-11eb-a819-18dbf2217749', '659f8b9b-c17c-44d8-9c87-dd97ca2e4a4b', 8, '2019-11-07', 758, 725.189508684999, 32.810491315000995, 727.8777936774977, 2.688284992498666, '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c9dab033-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 1, '2019-06-24', 367, 269.884615384615, 97.11538461538501, 5000, 4730.115384615385, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab314-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 2, '2019-07-01', 367, 275.12660502958545, 91.87339497041458, 4730.115384615385, 4454.988779585799, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab4de-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 3, '2019-07-08', 367, 280.4704102426601, 86.52958975733992, 4454.988779585799, 4174.518369343139, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab67a-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 4, '2019-07-15', 367, 285.91800859545026, 81.08199140454975, 4174.518369343139, 3888.6003607476887, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab846-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 5, '2019-07-22', 367, 291.4714160700927, 75.52858392990733, 3888.6003607476887, 3597.128944677596, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9daba97-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 6, '2019-07-29', 367, 297.1326878053003, 69.86731219469974, 3597.128944677596, 3299.996256872296, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabc1c-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 7, '2019-08-05', 367, 302.90391885690326, 64.09608114309677, 3299.996256872296, 2997.0923380153927, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabdaf-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 8, '2019-08-12', 367, 308.78724497316233, 58.21275502683767, 2997.0923380153927, 2688.3050930422305, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabf30-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 9, '2019-08-19', 367, 314.7848433851411, 52.21515661485892, 2688.3050930422305, 2373.5202496570896, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac0d3-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 10, '2019-08-26', 367, 320.8989336124294, 46.10106638757058, 2373.5202496570896, 2052.62131604466, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac30c-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 11, '2019-09-02', 367, 327.131778284517, 39.86822171548298, 2052.62131604466, 1725.489537760143, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac4b9-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 12, '2019-09-09', 367, 333.48568397812016, 33.514316021879836, 1725.489537760143, 1392.0038537820228, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac68b-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 13, '2019-09-16', 367, 339.9630020707721, 27.03699792922786, 1392.0038537820228, 1052.0408517112508, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac9d0-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 14, '2019-09-23', 367, 346.5661296109929, 20.43387038900707, 1052.0408517112508, 705.4747221002578, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dacb7c-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 15, '2019-09-30', 367, 353.2975102053603, 13.702489794639678, 705.4747221002578, 352.17721189489754, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9daccf4-30d5-11eb-a819-18dbf2217749', '1d0c7597-198a-4fbe-b821-49e762249caf', 16, '2019-10-07', 367, 360.1596349228106, 6.840365077189383, 352.17721189489754, -7.9824230279130575, '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('cd12a111-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 1, '2019-03-18', 758, 532.615384615385, 225.384615384615, 5000, 4467.384615384615, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12a44e-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 2, '2019-04-01', 758, 556.6240473372784, 201.37595266272155, 4467.384615384615, 3910.760568047337, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12a682-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 3, '2019-04-15', 758, 581.7149467018664, 176.2850532981335, 3910.760568047337, 3329.045621345471, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12a8e1-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 4, '2019-04-29', 758, 607.9368666070429, 150.06313339295713, 3329.045621345471, 2721.1087547384277, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12ab52-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 5, '2019-05-13', 758, 635.3407899787142, 122.65921002128584, 2721.1087547384277, 2085.7679647597133, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12ad7a-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 6, '2019-05-27', 758, 663.9799978962162, 94.02000210378384, 2085.7679647597133, 1421.787966863497, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12af9d-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 7, '2019-06-10', 758, 693.9101731859994, 64.0898268140006, 1421.787966863497, 727.8777936774977, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12b6e8-30d1-11eb-a819-18dbf2217749', '1b12d326-b177-46f5-9c0f-be2ed1a42b26', 8, '2019-06-24', 758, 725.189508684999, 32.810491315000995, 727.8777936774977, 2.688284992498666, '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cee17d8c-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 1, '2019-10-09', 147, 108.15384615384599, 38.846153846154, 2000, 1891.846153846154, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18109-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 2, '2019-10-16', 147, 110.25452662721878, 36.74547337278122, 1891.846153846154, 1781.5916272189352, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee182d7-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 3, '2019-10-23', 147, 112.3960087790167, 34.6039912209833, 1781.5916272189352, 1669.1956184399185, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18478-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 4, '2019-10-30', 147, 114.57908510337838, 32.420914896621625, 1669.1956184399185, 1554.61653333654, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18610-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 5, '2019-11-06', 147, 116.80456348711708, 30.195436512882917, 1554.61653333654, 1437.811969849423, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee187bb-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 6, '2019-11-13', 147, 119.07326750869379, 27.92673249130621, 1437.811969849423, 1318.738702340729, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee1893b-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 7, '2019-11-20', 147, 121.38603674299728, 25.613963257002727, 1318.738702340729, 1197.3526655977319, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18ab9-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 8, '2019-11-27', 147, 123.74372707204395, 23.25627292795604, 1197.3526655977319, 1073.6089385256878, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18c33-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 9, '2019-12-04', 147, 126.14721100171252, 20.85278899828748, 1073.6089385256878, 947.4617275239752, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee1fa65-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 10, '2019-12-11', 147, 128.5973779846304, 18.402622015369595, 947.4617275239752, 818.8643495393449, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee200ef-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 11, '2019-12-18', 147, 131.0951347493319, 15.904865250668108, 818.8643495393449, 687.7692147900129, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20350-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 12, '2019-12-25', 147, 133.64140563580932, 13.35859436419069, 687.7692147900129, 554.1278091542036, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee2059a-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 13, '2020-01-01', 147, 136.23713293758178, 10.762867062418229, 554.1278091542036, 417.89067621662184, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee207c6-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 14, '2020-01-08', 147, 138.8832772504079, 8.11672274959211, 417.89067621662184, 279.00739896621394, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20957-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 15, '2020-01-15', 147, 141.5808178277716, 5.419182172228408, 279.00739896621394, 137.42658113844234, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20ade-30d9-11eb-a819-18dbf2217749', 'c8a63fe9-a388-4226-b8ff-86170e02769d', 16, '2020-01-22', 147, 144.33075294327256, 2.6692470567274484, 137.42658113844234, -6.904171804830213, '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('d4156620-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 1, '2019-03-14', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156a09-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 2, '2019-03-21', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156bc6-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 3, '2019-03-28', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156d84-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 4, '2019-04-04', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156fb5-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 5, '2019-04-11', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d415718e-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 6, '2019-04-18', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d415731e-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 7, '2019-04-25', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157544-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 8, '2019-05-02', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d415770d-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 9, '2019-05-09', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157878-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 10, '2019-05-16', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157a2d-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 11, '2019-05-23', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157ba7-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 12, '2019-05-30', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157d93-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 13, '2019-06-06', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157f8f-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 14, '2019-06-13', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d41580f8-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 15, '2019-06-20', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4158262-30d2-11eb-a819-18dbf2217749', '9faf46c1-a472-4b7b-8b23-89f80a15326c', 16, '2019-06-27', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d5a75490-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 1, '2019-08-02', 758, 532.615384615385, 225.384615384615, 5000, 4467.384615384615, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75766-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 2, '2019-08-16', 758, 556.6240473372784, 201.37595266272155, 4467.384615384615, 3910.760568047337, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75917-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 3, '2019-08-30', 758, 581.7149467018664, 176.2850532981335, 3910.760568047337, 3329.045621345471, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75ab9-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 4, '2019-09-13', 758, 607.9368666070429, 150.06313339295713, 3329.045621345471, 2721.1087547384277, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75c4a-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 5, '2019-09-27', 758, 635.3407899787142, 122.65921002128584, 2721.1087547384277, 2085.7679647597133, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75de4-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 6, '2019-10-11', 758, 663.9799978962162, 94.02000210378384, 2085.7679647597133, 1421.787966863497, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a7611c-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 7, '2019-10-25', 758, 693.9101731859994, 64.0898268140006, 1421.787966863497, 727.8777936774977, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a762f9-30d6-11eb-a819-18dbf2217749', '3da56b0e-030a-44b0-854e-911f137c2cd6', 8, '2019-11-08', 758, 725.189508684999, 32.810491315000995, 727.8777936774977, 2.688284992498666, '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d88d382d-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 1, '2019-05-16', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d3ea6-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 2, '2019-05-23', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d420c-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 3, '2019-05-30', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d4558-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 4, '2019-06-06', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d494d-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 5, '2019-06-13', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d4dfb-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 6, '2019-06-20', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d5533-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 7, '2019-06-27', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d5921-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 8, '2019-07-04', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d5e3d-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 9, '2019-07-11', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6222-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 10, '2019-07-18', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6644-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 11, '2019-07-25', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d68fa-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 12, '2019-08-01', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6bfb-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 13, '2019-08-08', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6ea1-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 14, '2019-08-15', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d7138-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 15, '2019-08-22', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d7419-30d3-11eb-a819-18dbf2217749', '860ecd97-368d-4887-9bdf-201d249832df', 16, '2019-08-29', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('eaa498e3-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 1, '2019-09-02', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa49c62-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 2, '2019-09-09', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa49e10-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 3, '2019-09-16', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa49fa6-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 4, '2019-09-23', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a135-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 5, '2019-09-30', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a2c8-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 6, '2019-10-07', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a448-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 7, '2019-10-14', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a5fe-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 8, '2019-10-21', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a875-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 9, '2019-10-28', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4ab40-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 10, '2019-11-04', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4add5-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 11, '2019-11-11', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b04d-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 12, '2019-11-18', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b2bf-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 13, '2019-11-25', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b515-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 14, '2019-12-02', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b6a4-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 15, '2019-12-09', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b838-30d7-11eb-a819-18dbf2217749', '4b9e8a52-fdd9-45e1-9089-78738167a06f', 16, '2019-12-16', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eae3d080-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 1, '2019-07-26', 220, 161.730769230769, 58.269230769231, 3000, 2838.269230769231, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d4e9-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 2, '2019-08-02', 220, 164.87207840236664, 55.12792159763336, 2838.269230769231, 2673.3971523668642, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d694-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 3, '2019-08-09', 220, 168.0744014636434, 51.92559853635661, 2673.3971523668642, 2505.322750903221, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d81d-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 4, '2019-08-16', 220, 171.33892349207187, 48.661076507928136, 2505.322750903221, 2333.983827411149, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d9a7-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 5, '2019-08-23', 220, 174.6668525829756, 45.33314741702442, 2333.983827411149, 2159.3169748281734, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3db27-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 6, '2019-08-30', 220, 178.05942029660645, 41.94057970339354, 2159.3169748281734, 1981.257554531567, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3dc9f-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 7, '2019-09-06', 220, 181.51788211390596, 38.48211788609405, 1981.257554531567, 1799.739672417661, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3de18-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 8, '2019-09-13', 220, 185.04351790111838, 34.95648209888164, 1799.739672417661, 1614.6961545165427, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3df87-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 9, '2019-09-20', 220, 188.63763238342855, 31.362367616571436, 1614.6961545165427, 1426.0585221331141, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e0f5-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 10, '2019-09-27', 220, 192.30155562779902, 27.69844437220098, 1426.0585221331141, 1233.7569665053152, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e263-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 11, '2019-10-04', 220, 196.03664353518514, 23.963356464814872, 1233.7569665053152, 1037.72032297013, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e3cc-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 12, '2019-10-11', 220, 199.84427834231087, 20.155721657689142, 1037.72032297013, 837.876044627819, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e536-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 13, '2019-10-18', 220, 203.72586913319037, 16.274130866809628, 837.876044627819, 634.1501754946287, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e6a3-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 14, '2019-10-25', 220, 207.68285236058506, 12.317147639414953, 634.1501754946287, 426.4673231340436, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e80d-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 15, '2019-11-01', 220, 211.71669237758874, 8.283307622411265, 426.4673231340436, 214.75063075645488, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e975-30d6-11eb-a819-18dbf2217749', '499702c3-4f2c-405a-9bee-4019616145c1', 16, '2019-11-08', 220, 215.82888197953807, 4.171118020461929, 214.75063075645488, -1.0782512230831856, '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('f71ed9c9-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 1, '2019-05-23', 1466, 1077.53846153846, 388.46153846154004, 20000, 18922.46153846154, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71edcba-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 2, '2019-05-30', 1466, 1098.4675739644956, 367.53242603550444, 18922.46153846154, 17823.993964497044, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ede5f-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 3, '2019-06-06', 1466, 1119.8031941511138, 346.1968058488863, 17823.993964497044, 16704.19077034593, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee065-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 4, '2019-06-13', 1466, 1141.5532177298182, 324.44678227018187, 16704.19077034593, 15562.63755261611, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee407-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 5, '2019-06-20', 1466, 1163.7256936895706, 302.2743063104295, 15562.63755261611, 14398.91185892654, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee7db-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 6, '2019-06-27', 1466, 1186.3288273554642, 279.67117264453583, 14398.91185892654, 13212.583031571075, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eeae3-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 7, '2019-07-04', 1466, 1209.3709834252531, 256.6290165747469, 13212.583031571075, 12003.212048145822, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eed46-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 8, '2019-07-11', 1466, 1232.8606890648591, 233.13931093514094, 12003.212048145822, 10770.351359080963, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eefb1-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 9, '2019-07-18', 1466, 1256.8066370640036, 209.19336293599648, 10770.351359080963, 9513.544722016959, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef1d5-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 10, '2019-07-25', 1466, 1281.2176890531314, 184.7823109468686, 9513.544722016959, 8232.327032963827, '2020-11-27 17:14:10', '2020-11-27 17:14:10');
+INSERT INTO `sales_credits_amortizations_tables` (`uuid`, `sales_credit_uuid`, `number_payment`, `payment_date`, `amount_payment`, `principal_payment`, `interest_payment`, `balance`, `adjustment`, `created`, `modified`) VALUES
+('f71ef362-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 11, '2019-08-01', 1466, 1306.1028787828172, 159.89712121718267, 8232.327032963827, 6926.22415418101, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef4d2-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 12, '2019-08-08', 1466, 1331.4714154668684, 134.5285845331317, 6926.22415418101, 5594.752738714142, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef63d-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 13, '2019-08-15', 1466, 1357.3326871903596, 108.66731280964049, 5594.752738714142, 4237.420051523783, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef7fd-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 14, '2019-08-22', 1466, 1383.6962643838647, 82.30373561613534, 4237.420051523783, 2853.723787139918, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef96d-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 15, '2019-08-29', 1466, 1410.5719033651667, 55.428096634833246, 2853.723787139918, 1443.1518837747512, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71efae9-30d3-11eb-a819-18dbf2217749', 'dcf1b612-9f21-42e2-b01f-10e08e78d42e', 16, '2019-09-05', 1466, 1437.9695499497595, 28.030450050240475, 1443.1518837747512, 5.1823338249917015, '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('fe0c75ab-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 1, '2019-06-27', 147, 108.15384615384599, 38.846153846154, 2000, 1891.846153846154, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c7b50-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 2, '2019-07-04', 147, 110.25452662721878, 36.74547337278122, 1891.846153846154, 1781.5916272189352, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c7dca-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 3, '2019-07-11', 147, 112.3960087790167, 34.6039912209833, 1781.5916272189352, 1669.1956184399185, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c80a8-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 4, '2019-07-18', 147, 114.57908510337838, 32.420914896621625, 1669.1956184399185, 1554.61653333654, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c840c-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 5, '2019-07-25', 147, 116.80456348711708, 30.195436512882917, 1554.61653333654, 1437.811969849423, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8668-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 6, '2019-08-01', 147, 119.07326750869379, 27.92673249130621, 1437.811969849423, 1318.738702340729, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c88bc-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 7, '2019-08-08', 147, 121.38603674299728, 25.613963257002727, 1318.738702340729, 1197.3526655977319, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8b28-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 8, '2019-08-15', 147, 123.74372707204395, 23.25627292795604, 1197.3526655977319, 1073.6089385256878, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8dbc-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 9, '2019-08-22', 147, 126.14721100171252, 20.85278899828748, 1073.6089385256878, 947.4617275239752, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9015-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 10, '2019-08-29', 147, 128.5973779846304, 18.402622015369595, 947.4617275239752, 818.8643495393449, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c926b-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 11, '2019-09-05', 147, 131.0951347493319, 15.904865250668108, 818.8643495393449, 687.7692147900129, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c94e4-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 12, '2019-09-12', 147, 133.64140563580932, 13.35859436419069, 687.7692147900129, 554.1278091542036, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9746-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 13, '2019-09-19', 147, 136.23713293758178, 10.762867062418229, 554.1278091542036, 417.89067621662184, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c998f-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 14, '2019-09-26', 147, 138.8832772504079, 8.11672274959211, 417.89067621662184, 279.00739896621394, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9b87-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 15, '2019-10-03', 147, 141.5808178277716, 5.419182172228408, 279.00739896621394, 137.42658113844234, '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9cec-30d5-11eb-a819-18dbf2217749', '813c195f-59c6-48c5-94ab-d5677b947969', 16, '2019-10-10', 147, 144.33075294327256, 2.6692470567274484, 137.42658113844234, -6.904171804830213, '2020-11-27 17:28:41', '2020-11-27 17:28:41');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_credits_payments`
+--
+
+CREATE TABLE `sales_credits_payments` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `sales_credits_amortizations_table_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `number_payment` int(11) NOT NULL,
+  `required_payment` double NOT NULL,
+  `required_principal_payment` double NOT NULL,
+  `required_interest_payment` double NOT NULL,
+  `required_day_payment` date NOT NULL,
+  `payment` double NOT NULL,
+  `sales_credits_payments_state_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_credits_payments`
+--
+
+INSERT INTO `sales_credits_payments` (`uuid`, `sales_credits_amortizations_table_uuid`, `number_payment`, `required_payment`, `required_principal_payment`, `required_interest_payment`, `required_day_payment`, `payment`, `sales_credits_payments_state_uuid`, `created`, `modified`) VALUES
+('13d0ca79-30d8-11eb-a819-18dbf2217749', '13d0c87a-30d8-11eb-a819-18dbf2217749', 1, 1613, 1185.692307692306, 427.307692307694, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0ccde-30d8-11eb-a819-18dbf2217749', '13d0cb90-30d8-11eb-a819-18dbf2217749', 2, 1613, 1208.7221005917143, 404.2778994082857, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0ce8a-30d8-11eb-a819-18dbf2217749', '13d0cd8a-30d8-11eb-a819-18dbf2217749', 3, 1613, 1232.1992029301305, 380.80079706986965, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d020-30d8-11eb-a819-18dbf2217749', '13d0cf27-30d8-11eb-a819-18dbf2217749', 4, 1613, 1256.1323028331965, 356.86769716680357, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d1ab-30d8-11eb-a819-18dbf2217749', '13d0d0b5-30d8-11eb-a819-18dbf2217749', 5, 1613, 1280.5302571766874, 332.4697428233125, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d336-30d8-11eb-a819-18dbf2217749', '13d0d244-30d8-11eb-a819-18dbf2217749', 6, 1613, 1305.4020948641578, 307.59790513584215, '2019-10-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d4b4-30d8-11eb-a819-18dbf2217749', '13d0d3c6-30d8-11eb-a819-18dbf2217749', 7, 1613, 1330.7570201682502, 282.2429798317498, '2019-10-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d630-30d8-11eb-a819-18dbf2217749', '13d0d547-30d8-11eb-a819-18dbf2217749', 8, 1613, 1356.604416136903, 256.3955838630971, '2019-10-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d7b1-30d8-11eb-a819-18dbf2217749', '13d0d6c1-30d8-11eb-a819-18dbf2217749', 9, 1613, 1382.9538480657159, 230.0461519342841, '2019-11-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0d92e-30d8-11eb-a819-18dbf2217749', '13d0d843-30d8-11eb-a819-18dbf2217749', 10, 1613, 1409.8150670377618, 203.18493296223835, '2019-11-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0daad-30d8-11eb-a819-18dbf2217749', '13d0d9c4-30d8-11eb-a819-18dbf2217749', 11, 1613, 1437.1980135321492, 175.80198646785095, '2019-11-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0dc28-30d8-11eb-a819-18dbf2217749', '13d0db3f-30d8-11eb-a819-18dbf2217749', 12, 1613, 1465.1128211026776, 147.88717889732254, '2019-11-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0dda4-30d8-11eb-a819-18dbf2217749', '13d0dcb9-30d8-11eb-a819-18dbf2217749', 13, 1613, 1493.569820127941, 119.43017987205889, '2019-12-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0dffd-30d8-11eb-a819-18dbf2217749', '13d0df04-30d8-11eb-a819-18dbf2217749', 14, 1613, 1522.5795416342723, 90.4204583657276, '2019-12-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0e20b-30d8-11eb-a819-18dbf2217749', '13d0e11d-30d8-11eb-a819-18dbf2217749', 15, 1613, 1552.152721192938, 60.847278807061805, '2019-12-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('13d0e3ac-30d8-11eb-a819-18dbf2217749', '13d0e2b9-30d8-11eb-a819-18dbf2217749', 16, 1613, 1582.3003028930318, 30.69969710696808, '2019-12-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:43:36', '2020-11-27 17:43:36'),
+('19a88f32-30d7-11eb-a819-18dbf2217749', '19a88d68-30d7-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a89135-30d7-11eb-a819-18dbf2217749', '19a8903b-30d7-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a892ba-30d7-11eb-a819-18dbf2217749', '19a891d2-30d7-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8951d-30d7-11eb-a819-18dbf2217749', '19a8935b-30d7-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a89b9b-30d7-11eb-a819-18dbf2217749', '19a89640-30d7-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a89faa-30d7-11eb-a819-18dbf2217749', '19a89d93-30d7-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a25e-30d7-11eb-a819-18dbf2217749', '19a8a0c2-30d7-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a525-30d7-11eb-a819-18dbf2217749', '19a8a375-30d7-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8a7fa-30d7-11eb-a819-18dbf2217749', '19a8a639-30d7-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8ac72-30d7-11eb-a819-18dbf2217749', '19a8a916-30d7-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19a8b708-30d7-11eb-a819-18dbf2217749', '19a8ae1f-30d7-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae63df-30d7-11eb-a819-18dbf2217749', '19ae0dd1-30d7-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-10-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae6d12-30d7-11eb-a819-18dbf2217749', '19ae69e5-30d7-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-10-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae71a4-30d7-11eb-a819-18dbf2217749', '19ae6eba-30d7-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-10-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae74ab-30d7-11eb-a819-18dbf2217749', '19ae7320-30d7-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-11-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('19ae7725-30d7-11eb-a819-18dbf2217749', '19ae759f-30d7-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-11-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:36:37', '2020-11-27 17:36:37'),
+('1d8acf91-30d6-11eb-a819-18dbf2217749', '1d8acda1-30d6-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad1cc-30d6-11eb-a819-18dbf2217749', '1d8ad0bc-30d6-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad3e9-30d6-11eb-a819-18dbf2217749', '1d8ad2f2-30d6-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad579-30d6-11eb-a819-18dbf2217749', '1d8ad483-30d6-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad705-30d6-11eb-a819-18dbf2217749', '1d8ad612-30d6-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ad88b-30d6-11eb-a819-18dbf2217749', '1d8ad79f-30d6-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ada04-30d6-11eb-a819-18dbf2217749', '1d8ad91f-30d6-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8adbc0-30d6-11eb-a819-18dbf2217749', '1d8ada97-30d6-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ade0e-30d6-11eb-a819-18dbf2217749', '1d8adca2-30d6-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae065-30d6-11eb-a819-18dbf2217749', '1d8adf01-30d6-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae2ce-30d6-11eb-a819-18dbf2217749', '1d8ae151-30d6-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae56f-30d6-11eb-a819-18dbf2217749', '1d8ae3fe-30d6-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae720-30d6-11eb-a819-18dbf2217749', '1d8ae62f-30d6-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8ae8b2-30d6-11eb-a819-18dbf2217749', '1d8ae7b2-30d6-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8aeb2e-30d6-11eb-a819-18dbf2217749', '1d8ae98f-30d6-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('1d8aed59-30d6-11eb-a819-18dbf2217749', '1d8aec1b-30d6-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-10-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:29:34', '2020-11-27 17:29:34'),
+('23550a41-30d2-11eb-a819-18dbf2217749', '235507f5-30d2-11eb-a819-18dbf2217749', 1, 147, 108.15384615384599, 38.846153846154, '2019-03-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550c56-30d2-11eb-a819-18dbf2217749', '23550b50-30d2-11eb-a819-18dbf2217749', 2, 147, 110.25452662721878, 36.74547337278122, '2019-03-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550df2-30d2-11eb-a819-18dbf2217749', '23550cf1-30d2-11eb-a819-18dbf2217749', 3, 147, 112.3960087790167, 34.6039912209833, '2019-03-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23550fa6-30d2-11eb-a819-18dbf2217749', '23550e83-30d2-11eb-a819-18dbf2217749', 4, 147, 114.57908510337838, 32.420914896621625, '2019-04-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('235511f0-30d2-11eb-a819-18dbf2217749', '235510f6-30d2-11eb-a819-18dbf2217749', 5, 147, 116.80456348711708, 30.195436512882917, '2019-04-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551402-30d2-11eb-a819-18dbf2217749', '2355130b-30d2-11eb-a819-18dbf2217749', 6, 147, 119.07326750869379, 27.92673249130621, '2019-04-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551585-30d2-11eb-a819-18dbf2217749', '23551494-30d2-11eb-a819-18dbf2217749', 7, 147, 121.38603674299728, 25.613963257002727, '2019-04-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551706-30d2-11eb-a819-18dbf2217749', '23551615-30d2-11eb-a819-18dbf2217749', 8, 147, 123.74372707204395, 23.25627292795604, '2019-04-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('2355188a-30d2-11eb-a819-18dbf2217749', '23551798-30d2-11eb-a819-18dbf2217749', 9, 147, 126.14721100171252, 20.85278899828748, '2019-05-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551a0e-30d2-11eb-a819-18dbf2217749', '23551919-30d2-11eb-a819-18dbf2217749', 10, 147, 128.5973779846304, 18.402622015369595, '2019-05-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551b9c-30d2-11eb-a819-18dbf2217749', '23551aad-30d2-11eb-a819-18dbf2217749', 11, 147, 131.0951347493319, 15.904865250668108, '2019-05-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551d38-30d2-11eb-a819-18dbf2217749', '23551c46-30d2-11eb-a819-18dbf2217749', 12, 147, 133.64140563580932, 13.35859436419069, '2019-05-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23551eba-30d2-11eb-a819-18dbf2217749', '23551dc7-30d2-11eb-a819-18dbf2217749', 13, 147, 136.23713293758178, 10.762867062418229, '2019-06-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23552039-30d2-11eb-a819-18dbf2217749', '23551f49-30d2-11eb-a819-18dbf2217749', 14, 147, 138.8832772504079, 8.11672274959211, '2019-06-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('235521b7-30d2-11eb-a819-18dbf2217749', '235520c8-30d2-11eb-a819-18dbf2217749', 15, 147, 141.5808178277716, 5.419182172228408, '2019-06-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('23552335-30d2-11eb-a819-18dbf2217749', '23552246-30d2-11eb-a819-18dbf2217749', 16, 147, 144.33075294327256, 2.6692470567274484, '2019-06-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:01:05', '2020-11-27 17:01:05'),
+('25c60d22-30d4-11eb-a819-18dbf2217749', '25c60aef-30d4-11eb-a819-18dbf2217749', 1, 513, 377.038461538461, 135.96153846153902, '2019-06-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c60f71-30d4-11eb-a819-18dbf2217749', '25c60e4e-30d4-11eb-a819-18dbf2217749', 2, 513, 384.3617085798811, 128.63829142011886, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6114f-30d4-11eb-a819-18dbf2217749', '25c61023-30d4-11eb-a819-18dbf2217749', 3, 513, 391.82719561191345, 121.17280438808653, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61307-30d4-11eb-a819-18dbf2217749', '25c611f5-30d4-11eb-a819-18dbf2217749', 4, 513, 399.4376853728372, 113.56231462716279, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6153d-30d4-11eb-a819-18dbf2217749', '25c613ab-30d4-11eb-a819-18dbf2217749', 5, 513, 407.19599426180963, 105.80400573819036, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c616eb-30d4-11eb-a819-18dbf2217749', '25c615f1-30d4-11eb-a819-18dbf2217749', 6, 513, 415.1049933811256, 97.8950066188744, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61876-30d4-11eb-a819-18dbf2217749', '25c61782-30d4-11eb-a819-18dbf2217749', 7, 513, 423.16760959872056, 89.83239040127943, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61a01-30d4-11eb-a819-18dbf2217749', '25c61908-30d4-11eb-a819-18dbf2217749', 8, 513, 431.3868266313111, 81.61317336868886, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61c1d-30d4-11eb-a819-18dbf2217749', '25c61a93-30d4-11eb-a819-18dbf2217749', 9, 513, 439.7656861485732, 73.23431385142683, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61dc5-30d4-11eb-a819-18dbf2217749', '25c61ccd-30d4-11eb-a819-18dbf2217749', 10, 513, 448.3072888987666, 64.69271110123336, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c61f4c-30d4-11eb-a819-18dbf2217749', '25c61e56-30d4-11eb-a819-18dbf2217749', 11, 513, 457.0147958562235, 55.98520414377651, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c620e6-30d4-11eb-a819-18dbf2217749', '25c61ff0-30d4-11eb-a819-18dbf2217749', 12, 513, 465.89142939112327, 47.10857060887675, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6227a-30d4-11eb-a819-18dbf2217749', '25c62186-30d4-11eb-a819-18dbf2217749', 13, 513, 474.9404744619893, 38.05952553801067, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6240f-30d4-11eb-a819-18dbf2217749', '25c6231b-30d4-11eb-a819-18dbf2217749', 14, 513, 484.1652798313472, 28.834720168652755, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c6259c-30d4-11eb-a819-18dbf2217749', '25c624a0-30d4-11eb-a819-18dbf2217749', 15, 513, 493.5692593049946, 19.430740695005397, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('25c627a0-30d4-11eb-a819-18dbf2217749', '25c6262c-30d4-11eb-a819-18dbf2217749', 16, 513, 503.1558929953417, 9.84410700465835, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:15:29', '2020-11-27 17:15:29'),
+('498cf883-30d3-11eb-a819-18dbf2217749', '498cf6a7-30d3-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-03-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfa8e-30d3-11eb-a819-18dbf2217749', '498cf980-30d3-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-04-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfc11-30d3-11eb-a819-18dbf2217749', '498cfb26-30d3-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-04-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfd82-30d3-11eb-a819-18dbf2217749', '498cfca4-30d3-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-04-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498cfeec-30d3-11eb-a819-18dbf2217749', '498cfe0f-30d3-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-04-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0052-30d3-11eb-a819-18dbf2217749', '498cff79-30d3-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-05-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d01ac-30d3-11eb-a819-18dbf2217749', '498d00d8-30d3-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-05-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d02fe-30d3-11eb-a819-18dbf2217749', '498d022d-30d3-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-05-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0454-30d3-11eb-a819-18dbf2217749', '498d037f-30d3-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-05-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d05a9-30d3-11eb-a819-18dbf2217749', '498d04d5-30d3-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-05-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d06fa-30d3-11eb-a819-18dbf2217749', '498d0629-30d3-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-06-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d084b-30d3-11eb-a819-18dbf2217749', '498d0779-30d3-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-06-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d099f-30d3-11eb-a819-18dbf2217749', '498d08cb-30d3-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-06-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0af4-30d3-11eb-a819-18dbf2217749', '498d0a21-30d3-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-06-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0c44-30d3-11eb-a819-18dbf2217749', '498d0b73-30d3-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-07-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('498d0d97-30d3-11eb-a819-18dbf2217749', '498d0cc4-30d3-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-07-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:09:19', '2020-11-27 17:09:19'),
+('49f6fbb7-30d8-11eb-a819-18dbf2217749', '49f6f8c6-30d8-11eb-a819-18dbf2217749', 1, 733, 538.76923076923, 194.23076923077002, '2019-09-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f6ff8a-30d8-11eb-a819-18dbf2217749', '49f6fd89-30d8-11eb-a819-18dbf2217749', 2, 733, 549.2337869822478, 183.76621301775222, '2019-10-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f70267-30d8-11eb-a819-18dbf2217749', '49f7009f-30d8-11eb-a819-18dbf2217749', 3, 733, 559.9015970755569, 173.09840292444315, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7053c-30d8-11eb-a819-18dbf2217749', '49f7037b-30d8-11eb-a819-18dbf2217749', 4, 733, 570.7766088649091, 162.22339113509094, '2019-10-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f70809-30d8-11eb-a819-18dbf2217749', '49f70645-30d8-11eb-a819-18dbf2217749', 5, 733, 581.8628468447853, 151.13715315521475, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f76acb-30d8-11eb-a819-18dbf2217749', '49f709a1-30d8-11eb-a819-18dbf2217749', 6, 733, 593.1644136777321, 139.83558632226791, '2019-10-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77015-30d8-11eb-a819-18dbf2217749', '49f76e4b-30d8-11eb-a819-18dbf2217749', 7, 733, 604.6854917126266, 128.31450828737346, '2019-11-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7724a-30d8-11eb-a819-18dbf2217749', '49f770fa-30d8-11eb-a819-18dbf2217749', 8, 733, 616.4303445324296, 116.56965546757047, '2019-11-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7745d-30d8-11eb-a819-18dbf2217749', '49f77310-30d8-11eb-a819-18dbf2217749', 9, 733, 628.4033185320018, 104.59668146799824, '2019-11-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77663-30d8-11eb-a819-18dbf2217749', '49f77521-30d8-11eb-a819-18dbf2217749', 10, 733, 640.6088445265657, 92.3911554734343, '2019-11-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f7789e-30d8-11eb-a819-18dbf2217749', '49f7771c-30d8-11eb-a819-18dbf2217749', 11, 733, 653.0514393914086, 79.94856060859134, '2019-12-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77b86-30d8-11eb-a819-18dbf2217749', '49f779bc-30d8-11eb-a819-18dbf2217749', 12, 733, 665.7357077334342, 67.26429226656585, '2019-12-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f77ea0-30d8-11eb-a819-18dbf2217749', '49f77cd1-30d8-11eb-a819-18dbf2217749', 13, 733, 678.6663435951798, 54.333656404820246, '2019-12-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f8090e-30d8-11eb-a819-18dbf2217749', '49f804ed-30d8-11eb-a819-18dbf2217749', 14, 733, 691.8481321919323, 41.15186780806767, '2019-12-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f80c8f-30d8-11eb-a819-18dbf2217749', '49f80a92-30d8-11eb-a819-18dbf2217749', 15, 733, 705.2859516825833, 27.714048317416623, '2020-01-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('49f81260-30d8-11eb-a819-18dbf2217749', '49f80eba-30d8-11eb-a819-18dbf2217749', 16, 733, 718.9847749748798, 14.015225025120237, '2020-01-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:07', '2020-11-27 17:45:07'),
+('5ded2fb8-30d8-11eb-a819-18dbf2217749', '5ded2da1-30d8-11eb-a819-18dbf2217749', 1, 440, 323.461538461538, 116.538461538462, '2019-09-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded3545-30d8-11eb-a819-18dbf2217749', '5ded31dc-30d8-11eb-a819-18dbf2217749', 2, 440, 329.7441568047333, 110.25584319526672, '2019-10-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded3a19-30d8-11eb-a819-18dbf2217749', '5ded3703-30d8-11eb-a819-18dbf2217749', 3, 440, 336.1488029272868, 103.85119707271322, '2019-10-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded3ec7-30d8-11eb-a819-18dbf2217749', '5ded3bd0-30d8-11eb-a819-18dbf2217749', 4, 440, 342.67784698414374, 97.32215301585627, '2019-10-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded4429-30d8-11eb-a819-18dbf2217749', '5ded4116-30d8-11eb-a819-18dbf2217749', 5, 440, 349.3337051659512, 90.66629483404884, '2019-10-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded88cc-30d8-11eb-a819-18dbf2217749', '5ded8537-30d8-11eb-a819-18dbf2217749', 6, 440, 356.1188405932129, 83.88115940678708, '2019-11-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded8bd3-30d8-11eb-a819-18dbf2217749', '5ded89e1-30d8-11eb-a819-18dbf2217749', 7, 440, 363.0357642278119, 76.9642357721881, '2019-11-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded8e06-30d8-11eb-a819-18dbf2217749', '5ded8cac-30d8-11eb-a819-18dbf2217749', 8, 440, 370.08703580223676, 69.91296419776327, '2019-11-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9026-30d8-11eb-a819-18dbf2217749', '5ded8ed5-30d8-11eb-a819-18dbf2217749', 9, 440, 377.2752647668571, 62.72473523314287, '2019-11-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9244-30d8-11eb-a819-18dbf2217749', '5ded90f7-30d8-11eb-a819-18dbf2217749', 10, 440, 384.60311125559804, 55.39688874440196, '2019-11-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9456-30d8-11eb-a819-18dbf2217749', '5ded9309-30d8-11eb-a819-18dbf2217749', 11, 440, 392.07328707037027, 47.926712929629744, '2019-12-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9669-30d8-11eb-a819-18dbf2217749', '5ded9522-30d8-11eb-a819-18dbf2217749', 12, 440, 399.68855668462174, 40.311443315378284, '2019-12-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9879-30d8-11eb-a819-18dbf2217749', '5ded972f-30d8-11eb-a819-18dbf2217749', 13, 440, 407.45173826638074, 32.548261733619256, '2019-12-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9aad-30d8-11eb-a819-18dbf2217749', '5ded993e-30d8-11eb-a819-18dbf2217749', 14, 440, 415.3657047211701, 24.634295278829907, '2019-12-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9cbd-30d8-11eb-a819-18dbf2217749', '5ded9b78-30d8-11eb-a819-18dbf2217749', 15, 440, 423.4333847551775, 16.56661524482253, '2020-01-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('5ded9ecc-30d8-11eb-a819-18dbf2217749', '5ded9d87-30d8-11eb-a819-18dbf2217749', 16, 440, 431.65776395907614, 8.342236040923858, '2020-01-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:45:41', '2020-11-27 17:45:41'),
+('6bb765eb-30d3-11eb-a819-18dbf2217749', '6bb7617d-30d3-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-04-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb76ae2-30d3-11eb-a819-18dbf2217749', '6bb76816-30d3-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-04-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb76f6e-30d3-11eb-a819-18dbf2217749', '6bb76cc2-30d3-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-04-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77201-30d3-11eb-a819-18dbf2217749', '6bb770ba-30d3-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-04-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7739b-30d3-11eb-a819-18dbf2217749', '6bb772a7-30d3-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-05-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77517-30d3-11eb-a819-18dbf2217749', '6bb77432-30d3-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-05-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77777-30d3-11eb-a819-18dbf2217749', '6bb775e7-30d3-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-05-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7793a-30d3-11eb-a819-18dbf2217749', '6bb7780e-30d3-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-05-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77b0b-30d3-11eb-a819-18dbf2217749', '6bb779f1-30d3-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-05-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77d1c-30d3-11eb-a819-18dbf2217749', '6bb77bcd-30d3-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-06-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb77f99-30d3-11eb-a819-18dbf2217749', '6bb77e0d-30d3-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-06-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7823e-30d3-11eb-a819-18dbf2217749', '6bb78061-30d3-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-06-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb78453-30d3-11eb-a819-18dbf2217749', '6bb7836a-30d3-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-06-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb78644-30d3-11eb-a819-18dbf2217749', '6bb784e0-30d3-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-07-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb787ae-30d3-11eb-a819-18dbf2217749', '6bb786ce-30d3-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-07-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6bb7891a-30d3-11eb-a819-18dbf2217749', '6bb7883a-30d3-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-07-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:16', '2020-11-27 17:10:16'),
+('6c0050ef-30d7-11eb-a819-18dbf2217749', '6c004e38-30d7-11eb-a819-18dbf2217749', 1, 440, 323.461538461538, 116.538461538462, '2019-08-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00533a-30d7-11eb-a819-18dbf2217749', '6c005216-30d7-11eb-a819-18dbf2217749', 2, 440, 329.7441568047333, 110.25584319526672, '2019-08-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009232-30d7-11eb-a819-18dbf2217749', '6c00909f-30d7-11eb-a819-18dbf2217749', 3, 440, 336.1488029272868, 103.85119707271322, '2019-08-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0093fb-30d7-11eb-a819-18dbf2217749', '6c0092e7-30d7-11eb-a819-18dbf2217749', 4, 440, 342.67784698414374, 97.32215301585627, '2019-08-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0095a2-30d7-11eb-a819-18dbf2217749', '6c0094a7-30d7-11eb-a819-18dbf2217749', 5, 440, 349.3337051659512, 90.66629483404884, '2019-09-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00972d-30d7-11eb-a819-18dbf2217749', '6c00963f-30d7-11eb-a819-18dbf2217749', 6, 440, 356.1188405932129, 83.88115940678708, '2019-09-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c0098ac-30d7-11eb-a819-18dbf2217749', '6c0097c7-30d7-11eb-a819-18dbf2217749', 7, 440, 363.0357642278119, 76.9642357721881, '2019-09-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009a2c-30d7-11eb-a819-18dbf2217749', '6c009940-30d7-11eb-a819-18dbf2217749', 8, 440, 370.08703580223676, 69.91296419776327, '2019-09-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009bac-30d7-11eb-a819-18dbf2217749', '6c009ac1-30d7-11eb-a819-18dbf2217749', 9, 440, 377.2752647668571, 62.72473523314287, '2019-10-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009d25-30d7-11eb-a819-18dbf2217749', '6c009c41-30d7-11eb-a819-18dbf2217749', 10, 440, 384.60311125559804, 55.39688874440196, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c009ebd-30d7-11eb-a819-18dbf2217749', '6c009dd1-30d7-11eb-a819-18dbf2217749', 11, 440, 392.07328707037027, 47.926712929629744, '2019-10-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00a035-30d7-11eb-a819-18dbf2217749', '6c009f4f-30d7-11eb-a819-18dbf2217749', 12, 440, 399.68855668462174, 40.311443315378284, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00dd55-30d7-11eb-a819-18dbf2217749', '6c00a0c7-30d7-11eb-a819-18dbf2217749', 13, 440, 407.45173826638074, 32.548261733619256, '2019-10-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e299-30d7-11eb-a819-18dbf2217749', '6c00e093-30d7-11eb-a819-18dbf2217749', 14, 440, 415.3657047211701, 24.634295278829907, '2019-11-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e55d-30d7-11eb-a819-18dbf2217749', '6c00e3bd-30d7-11eb-a819-18dbf2217749', 15, 440, 423.4333847551775, 16.56661524482253, '2019-11-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c00e7c9-30d7-11eb-a819-18dbf2217749', '6c00e64e-30d7-11eb-a819-18dbf2217749', 16, 440, 431.65776395907614, 8.342236040923858, '2019-11-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:38:55', '2020-11-27 17:38:55'),
+('6c2ca57e-30d6-11eb-a819-18dbf2217749', '6c2ca34e-30d6-11eb-a819-18dbf2217749', 1, 607, 426.69230769230796, 180.307692307692, '2019-07-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2ca7ca-30d6-11eb-a819-18dbf2217749', '6c2ca6b1-30d6-11eb-a819-18dbf2217749', 2, 607, 445.9262840236689, 161.07371597633107, '2019-07-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2ca9a5-30d6-11eb-a819-18dbf2217749', '6c2ca874-30d6-11eb-a819-18dbf2217749', 3, 607, 466.027268826582, 140.97273117341803, '2019-08-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cab33-30d6-11eb-a819-18dbf2217749', '6c2caa42-30d6-11eb-a819-18dbf2217749', 4, 607, 487.0343441752263, 119.96565582477369, '2019-08-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cacc4-30d6-11eb-a819-18dbf2217749', '6c2cabd4-30d6-11eb-a819-18dbf2217749', 5, 607, 508.9883538434326, 98.01164615656738, '2019-09-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cae54-30d6-11eb-a819-18dbf2217749', '6c2cad6e-30d6-11eb-a819-18dbf2217749', 6, 607, 531.9319827166827, 75.0680172833173, '2019-09-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cafcf-30d6-11eb-a819-18dbf2217749', '6c2caee9-30d6-11eb-a819-18dbf2217749', 7, 607, 555.9098397837578, 51.09016021624227, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('6c2cb14b-30d6-11eb-a819-18dbf2217749', '6c2cb065-30d6-11eb-a819-18dbf2217749', 8, 607, 580.9685448693948, 26.031455130605227, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:31:46', '2020-11-27 17:31:46'),
+('717c363d-30d8-11eb-a819-18dbf2217749', '717c33c0-30d8-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3851-30d8-11eb-a819-18dbf2217749', '717c3741-30d8-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-10-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c39f5-30d8-11eb-a819-18dbf2217749', '717c38fa-30d8-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3b8c-30d8-11eb-a819-18dbf2217749', '717c3a97-30d8-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-10-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3d18-30d8-11eb-a819-18dbf2217749', '717c3c26-30d8-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-11-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c3e9d-30d8-11eb-a819-18dbf2217749', '717c3db4-30d8-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-11-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c401d-30d8-11eb-a819-18dbf2217749', '717c3f2f-30d8-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-11-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c419e-30d8-11eb-a819-18dbf2217749', '717c40ad-30d8-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-11-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4316-30d8-11eb-a819-18dbf2217749', '717c422e-30d8-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-12-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4490-30d8-11eb-a819-18dbf2217749', '717c43a6-30d8-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-12-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4602-30d8-11eb-a819-18dbf2217749', '717c451d-30d8-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-12-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4779-30d8-11eb-a819-18dbf2217749', '717c4690-30d8-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-12-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c48f0-30d8-11eb-a819-18dbf2217749', '717c4808-30d8-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2020-01-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4a69-30d8-11eb-a819-18dbf2217749', '717c4981-30d8-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2020-01-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4be2-30d8-11eb-a819-18dbf2217749', '717c4afb-30d8-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2020-01-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('717c4d5b-30d8-11eb-a819-18dbf2217749', '717c4c70-30d8-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2020-01-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:46:14', '2020-11-27 17:46:14'),
+('7ecb1e86-30d3-11eb-a819-18dbf2217749', '7ecb1b74-30d3-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-04-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2079-30d3-11eb-a819-18dbf2217749', '7ecb1f75-30d3-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-04-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2201-30d3-11eb-a819-18dbf2217749', '7ecb2113-30d3-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-04-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2379-30d3-11eb-a819-18dbf2217749', '7ecb2292-30d3-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-04-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb24e3-30d3-11eb-a819-18dbf2217749', '7ecb2405-30d3-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-05-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2674-30d3-11eb-a819-18dbf2217749', '7ecb258f-30d3-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-05-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb27df-30d3-11eb-a819-18dbf2217749', '7ecb2701-30d3-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-05-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb294a-30d3-11eb-a819-18dbf2217749', '7ecb286b-30d3-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-05-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2aba-30d3-11eb-a819-18dbf2217749', '7ecb29d9-30d3-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-06-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2c29-30d3-11eb-a819-18dbf2217749', '7ecb2b46-30d3-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-06-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2d91-30d3-11eb-a819-18dbf2217749', '7ecb2cb2-30d3-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-06-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb2f05-30d3-11eb-a819-18dbf2217749', '7ecb2e1d-30d3-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-06-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb34ec-30d3-11eb-a819-18dbf2217749', '7ecb33e9-30d3-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-07-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb37b3-30d3-11eb-a819-18dbf2217749', '7ecb36ab-30d3-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-07-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb392f-30d3-11eb-a819-18dbf2217749', '7ecb384c-30d3-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-07-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('7ecb3aa8-30d3-11eb-a819-18dbf2217749', '7ecb39c6-30d3-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-07-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:10:48', '2020-11-27 17:10:48'),
+('85c7a83f-30d7-11eb-a819-18dbf2217749', '85c7a5b2-30d7-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7aa80-30d7-11eb-a819-18dbf2217749', '85c7a965-30d7-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7ac4f-30d7-11eb-a819-18dbf2217749', '85c7ab4a-30d7-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7adef-30d7-11eb-a819-18dbf2217749', '85c7acf3-30d7-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7af9d-30d7-11eb-a819-18dbf2217749', '85c7ae8e-30d7-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b1b6-30d7-11eb-a819-18dbf2217749', '85c7b03d-30d7-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b3bf-30d7-11eb-a819-18dbf2217749', '85c7b24d-30d7-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b53d-30d7-11eb-a819-18dbf2217749', '85c7b455-30d7-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b6ba-30d7-11eb-a819-18dbf2217749', '85c7b5d0-30d7-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c7b8c0-30d7-11eb-a819-18dbf2217749', '85c7b74f-30d7-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c800e6-30d7-11eb-a819-18dbf2217749', '85c7fedc-30d7-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-10-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c802af-30d7-11eb-a819-18dbf2217749', '85c801ac-30d7-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-10-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c80448-30d7-11eb-a819-18dbf2217749', '85c80350-30d7-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-10-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c805d9-30d7-11eb-a819-18dbf2217749', '85c804e6-30d7-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-11-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('85c807e4-30d7-11eb-a819-18dbf2217749', '85c80671-30d7-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-11-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38');
+INSERT INTO `sales_credits_payments` (`uuid`, `sales_credits_amortizations_table_uuid`, `number_payment`, `required_payment`, `required_principal_payment`, `required_interest_payment`, `required_day_payment`, `payment`, `sales_credits_payments_state_uuid`, `created`, `modified`) VALUES
+('85c80963-30d7-11eb-a819-18dbf2217749', '85c80877-30d7-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-11-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:39:38', '2020-11-27 17:39:38'),
+('8d849eb9-30d6-11eb-a819-18dbf2217749', '8d849b41-30d6-11eb-a819-18dbf2217749', 1, 733, 538.76923076923, 194.23076923077002, '2019-07-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84aaaa-30d6-11eb-a819-18dbf2217749', '8d84a682-30d6-11eb-a819-18dbf2217749', 2, 733, 549.2337869822478, 183.76621301775222, '2019-07-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84add3-30d6-11eb-a819-18dbf2217749', '8d84ac85-30d6-11eb-a819-18dbf2217749', 3, 733, 559.9015970755569, 173.09840292444315, '2019-08-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84b002-30d6-11eb-a819-18dbf2217749', '8d84ae81-30d6-11eb-a819-18dbf2217749', 4, 733, 570.7766088649091, 162.22339113509094, '2019-08-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84b422-30d6-11eb-a819-18dbf2217749', '8d84b147-30d6-11eb-a819-18dbf2217749', 5, 733, 581.8628468447853, 151.13715315521475, '2019-08-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84b8c4-30d6-11eb-a819-18dbf2217749', '8d84b5ef-30d6-11eb-a819-18dbf2217749', 6, 733, 593.1644136777321, 139.83558632226791, '2019-08-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84bdc4-30d6-11eb-a819-18dbf2217749', '8d84ba0c-30d6-11eb-a819-18dbf2217749', 7, 733, 604.6854917126266, 128.31450828737346, '2019-09-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c0ae-30d6-11eb-a819-18dbf2217749', '8d84bf4d-30d6-11eb-a819-18dbf2217749', 8, 733, 616.4303445324296, 116.56965546757047, '2019-09-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c25f-30d6-11eb-a819-18dbf2217749', '8d84c15f-30d6-11eb-a819-18dbf2217749', 9, 733, 628.4033185320018, 104.59668146799824, '2019-09-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c454-30d6-11eb-a819-18dbf2217749', '8d84c363-30d6-11eb-a819-18dbf2217749', 10, 733, 640.6088445265657, 92.3911554734343, '2019-09-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84c726-30d6-11eb-a819-18dbf2217749', '8d84c4ee-30d6-11eb-a819-18dbf2217749', 11, 733, 653.0514393914086, 79.94856060859134, '2019-09-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84cb49-30d6-11eb-a819-18dbf2217749', '8d84c927-30d6-11eb-a819-18dbf2217749', 12, 733, 665.7357077334342, 67.26429226656585, '2019-10-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84ce2f-30d6-11eb-a819-18dbf2217749', '8d84cc84-30d6-11eb-a819-18dbf2217749', 13, 733, 678.6663435951798, 54.333656404820246, '2019-10-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84cfb6-30d6-11eb-a819-18dbf2217749', '8d84cecb-30d6-11eb-a819-18dbf2217749', 14, 733, 691.8481321919323, 41.15186780806767, '2019-10-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84d13d-30d6-11eb-a819-18dbf2217749', '8d84d04d-30d6-11eb-a819-18dbf2217749', 15, 733, 705.2859516825833, 27.714048317416623, '2019-10-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('8d84d2d8-30d6-11eb-a819-18dbf2217749', '8d84d1ea-30d6-11eb-a819-18dbf2217749', 16, 733, 718.9847749748798, 14.015225025120237, '2019-11-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:32:42', '2020-11-27 17:32:42'),
+('96d7972f-30d3-11eb-a819-18dbf2217749', '96d79553-30d3-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-04-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7995c-30d3-11eb-a819-18dbf2217749', '96d79833-30d3-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-04-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79ae9-30d3-11eb-a819-18dbf2217749', '96d799fe-30d3-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-04-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79c84-30d3-11eb-a819-18dbf2217749', '96d79b96-30d3-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-04-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79e86-30d3-11eb-a819-18dbf2217749', '96d79d9e-30d3-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-05-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d79ff8-30d3-11eb-a819-18dbf2217749', '96d79f18-30d3-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-05-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a16e-30d3-11eb-a819-18dbf2217749', '96d7a088-30d3-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-05-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a2e0-30d3-11eb-a819-18dbf2217749', '96d7a1fe-30d3-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-05-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a452-30d3-11eb-a819-18dbf2217749', '96d7a371-30d3-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-06-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a5c8-30d3-11eb-a819-18dbf2217749', '96d7a4e3-30d3-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-06-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a753-30d3-11eb-a819-18dbf2217749', '96d7a656-30d3-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-06-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7a954-30d3-11eb-a819-18dbf2217749', '96d7a7e6-30d3-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-06-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7aacb-30d3-11eb-a819-18dbf2217749', '96d7a9e7-30d3-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-07-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7b060-30d3-11eb-a819-18dbf2217749', '96d7ab72-30d3-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-07-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7b227-30d3-11eb-a819-18dbf2217749', '96d7b12d-30d3-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-07-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('96d7b3a7-30d3-11eb-a819-18dbf2217749', '96d7b2b9-30d3-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-07-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:11:29', '2020-11-27 17:11:29'),
+('99882c1e-30d5-11eb-a819-18dbf2217749', '99882966-30d5-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('998879c1-30d5-11eb-a819-18dbf2217749', '99882d95-30d5-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988c983-30d5-11eb-a819-18dbf2217749', '9988c449-30d5-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988cd13-30d5-11eb-a819-18dbf2217749', '9988cb6e-30d5-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988cf37-30d5-11eb-a819-18dbf2217749', '9988cdd2-30d5-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d101-30d5-11eb-a819-18dbf2217749', '9988cff0-30d5-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d298-30d5-11eb-a819-18dbf2217749', '9988d1a0-30d5-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d41a-30d5-11eb-a819-18dbf2217749', '9988d32d-30d5-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d596-30d5-11eb-a819-18dbf2217749', '9988d4ac-30d5-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d795-30d5-11eb-a819-18dbf2217749', '9988d6ae-30d5-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988d90a-30d5-11eb-a819-18dbf2217749', '9988d825-30d5-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988db31-30d5-11eb-a819-18dbf2217749', '9988d9a6-30d5-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988ddd1-30d5-11eb-a819-18dbf2217749', '9988dc10-30d5-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988e015-30d5-11eb-a819-18dbf2217749', '9988de82-30d5-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988e233-30d5-11eb-a819-18dbf2217749', '9988e0bd-30d5-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('9988e44e-30d5-11eb-a819-18dbf2217749', '9988e32c-30d5-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:25:52', '2020-11-27 17:25:52'),
+('a543892a-30d6-11eb-a819-18dbf2217749', 'a5438743-30d6-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-07-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438b40-30d6-11eb-a819-18dbf2217749', 'a5438a2e-30d6-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-07-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438cf4-30d6-11eb-a819-18dbf2217749', 'a5438be6-30d6-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-08-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5438e8e-30d6-11eb-a819-18dbf2217749', 'a5438d95-30d6-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-08-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a5439019-30d6-11eb-a819-18dbf2217749', 'a5438f26-30d6-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-08-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543ed7f-30d6-11eb-a819-18dbf2217749', 'a543ea51-30d6-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-08-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f007-30d6-11eb-a819-18dbf2217749', 'a543ee74-30d6-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-09-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f1c7-30d6-11eb-a819-18dbf2217749', 'a543f0c9-30d6-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-09-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f35c-30d6-11eb-a819-18dbf2217749', 'a543f265-30d6-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-09-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f579-30d6-11eb-a819-18dbf2217749', 'a543f488-30d6-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-09-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f6f8-30d6-11eb-a819-18dbf2217749', 'a543f610-30d6-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-10-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f87a-30d6-11eb-a819-18dbf2217749', 'a543f78d-30d6-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543f9f6-30d6-11eb-a819-18dbf2217749', 'a543f90c-30d6-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-10-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fb72-30d6-11eb-a819-18dbf2217749', 'a543fa88-30d6-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fcef-30d6-11eb-a819-18dbf2217749', 'a543fc04-30d6-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-10-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('a543fe6d-30d6-11eb-a819-18dbf2217749', 'a543fd86-30d6-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-11-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:33:21', '2020-11-27 17:33:21'),
+('adc01279-30d7-11eb-a819-18dbf2217749', 'adc01093-30d7-11eb-a819-18dbf2217749', 1, 440, 323.461538461538, 116.538461538462, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01479-30d7-11eb-a819-18dbf2217749', 'adc01375-30d7-11eb-a819-18dbf2217749', 2, 440, 329.7441568047333, 110.25584319526672, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0162a-30d7-11eb-a819-18dbf2217749', 'adc01518-30d7-11eb-a819-18dbf2217749', 3, 440, 336.1488029272868, 103.85119707271322, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc017c6-30d7-11eb-a819-18dbf2217749', 'adc016e0-30d7-11eb-a819-18dbf2217749', 4, 440, 342.67784698414374, 97.32215301585627, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01937-30d7-11eb-a819-18dbf2217749', 'adc01854-30d7-11eb-a819-18dbf2217749', 5, 440, 349.3337051659512, 90.66629483404884, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc01ab7-30d7-11eb-a819-18dbf2217749', 'adc019c2-30d7-11eb-a819-18dbf2217749', 6, 440, 356.1188405932129, 83.88115940678708, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09061-30d7-11eb-a819-18dbf2217749', 'adc01b3f-30d7-11eb-a819-18dbf2217749', 7, 440, 363.0357642278119, 76.9642357721881, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0947f-30d7-11eb-a819-18dbf2217749', 'adc092e7-30d7-11eb-a819-18dbf2217749', 8, 440, 370.08703580223676, 69.91296419776327, '2019-10-17', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09694-30d7-11eb-a819-18dbf2217749', 'adc09551-30d7-11eb-a819-18dbf2217749', 9, 440, 377.2752647668571, 62.72473523314287, '2019-10-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0987f-30d7-11eb-a819-18dbf2217749', 'adc09756-30d7-11eb-a819-18dbf2217749', 10, 440, 384.60311125559804, 55.39688874440196, '2019-10-31', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09a7b-30d7-11eb-a819-18dbf2217749', 'adc0994b-30d7-11eb-a819-18dbf2217749', 11, 440, 392.07328707037027, 47.926712929629744, '2019-11-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc09df9-30d7-11eb-a819-18dbf2217749', 'adc09b33-30d7-11eb-a819-18dbf2217749', 12, 440, 399.68855668462174, 40.311443315378284, '2019-11-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a130-30d7-11eb-a819-18dbf2217749', 'adc09f60-30d7-11eb-a819-18dbf2217749', 13, 440, 407.45173826638074, 32.548261733619256, '2019-11-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a54f-30d7-11eb-a819-18dbf2217749', 'adc0a248-30d7-11eb-a819-18dbf2217749', 14, 440, 415.3657047211701, 24.634295278829907, '2019-11-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0a850-30d7-11eb-a819-18dbf2217749', 'adc0a6b4-30d7-11eb-a819-18dbf2217749', 15, 440, 423.4333847551775, 16.56661524482253, '2019-12-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('adc0aaa4-30d7-11eb-a819-18dbf2217749', 'adc0a939-30d7-11eb-a819-18dbf2217749', 16, 440, 431.65776395907614, 8.342236040923858, '2019-12-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:40:45', '2020-11-27 17:40:45'),
+('b12ea6cf-30d3-11eb-a819-18dbf2217749', 'b12ea1d0-30d3-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-04-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eab8e-30d3-11eb-a819-18dbf2217749', 'b12ea8df-30d3-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-04-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eaf4d-30d3-11eb-a819-18dbf2217749', 'b12ead27-30d3-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-04-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb2e4-30d3-11eb-a819-18dbf2217749', 'b12eb0ca-30d3-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-05-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb5cf-30d3-11eb-a819-18dbf2217749', 'b12eb404-30d3-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-05-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12eb852-30d3-11eb-a819-18dbf2217749', 'b12eb6c3-30d3-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-05-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ebac5-30d3-11eb-a819-18dbf2217749', 'b12eb939-30d3-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-05-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ebd37-30d3-11eb-a819-18dbf2217749', 'b12ebba9-30d3-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-05-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ebfab-30d3-11eb-a819-18dbf2217749', 'b12ebe22-30d3-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-06-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec214-30d3-11eb-a819-18dbf2217749', 'b12ec08e-30d3-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-06-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec4da-30d3-11eb-a819-18dbf2217749', 'b12ec2f6-30d3-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec75d-30d3-11eb-a819-18dbf2217749', 'b12ec5cc-30d3-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ec9fc-30d3-11eb-a819-18dbf2217749', 'b12ec854-30d3-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ecc94-30d3-11eb-a819-18dbf2217749', 'b12ecaf6-30d3-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ecf2a-30d3-11eb-a819-18dbf2217749', 'b12ecd8d-30d3-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('b12ed1c1-30d3-11eb-a819-18dbf2217749', 'b12ed026-30d3-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:12:13', '2020-11-27 17:12:13'),
+('c1590a3c-30d6-11eb-a819-18dbf2217749', 'c1590705-30d6-11eb-a819-18dbf2217749', 1, 758, 532.615384615385, 225.384615384615, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1590d7b-30d6-11eb-a819-18dbf2217749', 'c1590bb3-30d6-11eb-a819-18dbf2217749', 2, 758, 556.6240473372784, 201.37595266272155, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159104c-30d6-11eb-a819-18dbf2217749', 'c1590e9c-30d6-11eb-a819-18dbf2217749', 3, 758, 581.7149467018664, 176.2850532981335, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c15912c7-30d6-11eb-a819-18dbf2217749', 'c1591159-30d6-11eb-a819-18dbf2217749', 4, 758, 607.9368666070429, 150.06313339295713, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159147a-30d6-11eb-a819-18dbf2217749', 'c159137b-30d6-11eb-a819-18dbf2217749', 5, 758, 635.3407899787142, 122.65921002128584, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c159160a-30d6-11eb-a819-18dbf2217749', 'c159151a-30d6-11eb-a819-18dbf2217749', 6, 758, 663.9799978962162, 94.02000210378384, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1591787-30d6-11eb-a819-18dbf2217749', 'c159169d-30d6-11eb-a819-18dbf2217749', 7, 758, 693.9101731859994, 64.0898268140006, '2019-10-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c1591901-30d6-11eb-a819-18dbf2217749', 'c159181a-30d6-11eb-a819-18dbf2217749', 8, 758, 725.189508684999, 32.810491315000995, '2019-11-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:09', '2020-11-27 17:34:09'),
+('c9dab218-30d5-11eb-a819-18dbf2217749', 'c9dab033-30d5-11eb-a819-18dbf2217749', 1, 367, 269.884615384615, 97.11538461538501, '2019-06-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab436-30d5-11eb-a819-18dbf2217749', 'c9dab314-30d5-11eb-a819-18dbf2217749', 2, 367, 275.12660502958545, 91.87339497041458, '2019-07-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab5dc-30d5-11eb-a819-18dbf2217749', 'c9dab4de-30d5-11eb-a819-18dbf2217749', 3, 367, 280.4704102426601, 86.52958975733992, '2019-07-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab787-30d5-11eb-a819-18dbf2217749', 'c9dab67a-30d5-11eb-a819-18dbf2217749', 4, 367, 285.91800859545026, 81.08199140454975, '2019-07-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dab9ec-30d5-11eb-a819-18dbf2217749', 'c9dab846-30d5-11eb-a819-18dbf2217749', 5, 367, 291.4714160700927, 75.52858392990733, '2019-07-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabb87-30d5-11eb-a819-18dbf2217749', 'c9daba97-30d5-11eb-a819-18dbf2217749', 6, 367, 297.1326878053003, 69.86731219469974, '2019-07-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabd1b-30d5-11eb-a819-18dbf2217749', 'c9dabc1c-30d5-11eb-a819-18dbf2217749', 7, 367, 302.90391885690326, 64.09608114309677, '2019-08-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dabe9c-30d5-11eb-a819-18dbf2217749', 'c9dabdaf-30d5-11eb-a819-18dbf2217749', 8, 367, 308.78724497316233, 58.21275502683767, '2019-08-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac01b-30d5-11eb-a819-18dbf2217749', 'c9dabf30-30d5-11eb-a819-18dbf2217749', 9, 367, 314.7848433851411, 52.21515661485892, '2019-08-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac260-30d5-11eb-a819-18dbf2217749', 'c9dac0d3-30d5-11eb-a819-18dbf2217749', 10, 367, 320.8989336124294, 46.10106638757058, '2019-08-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac3fa-30d5-11eb-a819-18dbf2217749', 'c9dac30c-30d5-11eb-a819-18dbf2217749', 11, 367, 327.131778284517, 39.86822171548298, '2019-09-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac5d0-30d5-11eb-a819-18dbf2217749', 'c9dac4b9-30d5-11eb-a819-18dbf2217749', 12, 367, 333.48568397812016, 33.514316021879836, '2019-09-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dac883-30d5-11eb-a819-18dbf2217749', 'c9dac68b-30d5-11eb-a819-18dbf2217749', 13, 367, 339.9630020707721, 27.03699792922786, '2019-09-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dacabf-30d5-11eb-a819-18dbf2217749', 'c9dac9d0-30d5-11eb-a819-18dbf2217749', 14, 367, 346.5661296109929, 20.43387038900707, '2019-09-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dacc64-30d5-11eb-a819-18dbf2217749', 'c9dacb7c-30d5-11eb-a819-18dbf2217749', 15, 367, 353.2975102053603, 13.702489794639678, '2019-09-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('c9dacddb-30d5-11eb-a819-18dbf2217749', 'c9daccf4-30d5-11eb-a819-18dbf2217749', 16, 367, 360.1596349228106, 6.840365077189383, '2019-10-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:27:13', '2020-11-27 17:27:13'),
+('cd12a342-30d1-11eb-a819-18dbf2217749', 'cd12a111-30d1-11eb-a819-18dbf2217749', 1, 758, 532.615384615385, 225.384615384615, '2019-03-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12a594-30d1-11eb-a819-18dbf2217749', 'cd12a44e-30d1-11eb-a819-18dbf2217749', 2, 758, 556.6240473372784, 201.37595266272155, '2019-04-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12a7f2-30d1-11eb-a819-18dbf2217749', 'cd12a682-30d1-11eb-a819-18dbf2217749', 3, 758, 581.7149467018664, 176.2850532981335, '2019-04-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12aa5e-30d1-11eb-a819-18dbf2217749', 'cd12a8e1-30d1-11eb-a819-18dbf2217749', 4, 758, 607.9368666070429, 150.06313339295713, '2019-04-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12acbf-30d1-11eb-a819-18dbf2217749', 'cd12ab52-30d1-11eb-a819-18dbf2217749', 5, 758, 635.3407899787142, 122.65921002128584, '2019-05-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12aea7-30d1-11eb-a819-18dbf2217749', 'cd12ad7a-30d1-11eb-a819-18dbf2217749', 6, 758, 663.9799978962162, 94.02000210378384, '2019-05-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12b284-30d1-11eb-a819-18dbf2217749', 'cd12af9d-30d1-11eb-a819-18dbf2217749', 7, 758, 693.9101731859994, 64.0898268140006, '2019-06-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cd12b93e-30d1-11eb-a819-18dbf2217749', 'cd12b6e8-30d1-11eb-a819-18dbf2217749', 8, 758, 725.189508684999, 32.810491315000995, '2019-06-24', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 16:58:41', '2020-11-27 16:58:41'),
+('cee17fc6-30d9-11eb-a819-18dbf2217749', 'cee17d8c-30d9-11eb-a819-18dbf2217749', 1, 147, 108.15384615384599, 38.846153846154, '2019-10-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18228-30d9-11eb-a819-18dbf2217749', 'cee18109-30d9-11eb-a819-18dbf2217749', 2, 147, 110.25452662721878, 36.74547337278122, '2019-10-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee183d6-30d9-11eb-a819-18dbf2217749', 'cee182d7-30d9-11eb-a819-18dbf2217749', 3, 147, 112.3960087790167, 34.6039912209833, '2019-10-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18571-30d9-11eb-a819-18dbf2217749', 'cee18478-30d9-11eb-a819-18dbf2217749', 4, 147, 114.57908510337838, 32.420914896621625, '2019-10-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee1870f-30d9-11eb-a819-18dbf2217749', 'cee18610-30d9-11eb-a819-18dbf2217749', 5, 147, 116.80456348711708, 30.195436512882917, '2019-11-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee188a9-30d9-11eb-a819-18dbf2217749', 'cee187bb-30d9-11eb-a819-18dbf2217749', 6, 147, 119.07326750869379, 27.92673249130621, '2019-11-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18a26-30d9-11eb-a819-18dbf2217749', 'cee1893b-30d9-11eb-a819-18dbf2217749', 7, 147, 121.38603674299728, 25.613963257002727, '2019-11-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18ba3-30d9-11eb-a819-18dbf2217749', 'cee18ab9-30d9-11eb-a819-18dbf2217749', 8, 147, 123.74372707204395, 23.25627292795604, '2019-11-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee18d1b-30d9-11eb-a819-18dbf2217749', 'cee18c33-30d9-11eb-a819-18dbf2217749', 9, 147, 126.14721100171252, 20.85278899828748, '2019-12-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee1ff63-30d9-11eb-a819-18dbf2217749', 'cee1fa65-30d9-11eb-a819-18dbf2217749', 10, 147, 128.5973779846304, 18.402622015369595, '2019-12-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee202a1-30d9-11eb-a819-18dbf2217749', 'cee200ef-30d9-11eb-a819-18dbf2217749', 11, 147, 131.0951347493319, 15.904865250668108, '2019-12-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee204f3-30d9-11eb-a819-18dbf2217749', 'cee20350-30d9-11eb-a819-18dbf2217749', 12, 147, 133.64140563580932, 13.35859436419069, '2019-12-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20722-30d9-11eb-a819-18dbf2217749', 'cee2059a-30d9-11eb-a819-18dbf2217749', 13, 147, 136.23713293758178, 10.762867062418229, '2020-01-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee208bb-30d9-11eb-a819-18dbf2217749', 'cee207c6-30d9-11eb-a819-18dbf2217749', 14, 147, 138.8832772504079, 8.11672274959211, '2020-01-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20a4c-30d9-11eb-a819-18dbf2217749', 'cee20957-30d9-11eb-a819-18dbf2217749', 15, 147, 141.5808178277716, 5.419182172228408, '2020-01-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('cee20bcb-30d9-11eb-a819-18dbf2217749', 'cee20ade-30d9-11eb-a819-18dbf2217749', 16, 147, 144.33075294327256, 2.6692470567274484, '2020-01-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:56:00', '2020-11-27 17:56:00'),
+('d4156895-30d2-11eb-a819-18dbf2217749', 'd4156620-30d2-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-03-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156b1f-30d2-11eb-a819-18dbf2217749', 'd4156a09-30d2-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-03-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156cd2-30d2-11eb-a819-18dbf2217749', 'd4156bc6-30d2-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-03-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4156f1b-30d2-11eb-a819-18dbf2217749', 'd4156d84-30d2-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-04-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d41570f6-30d2-11eb-a819-18dbf2217749', 'd4156fb5-30d2-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-04-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157289-30d2-11eb-a819-18dbf2217749', 'd415718e-30d2-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-04-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157489-30d2-11eb-a819-18dbf2217749', 'd415731e-30d2-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-04-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157679-30d2-11eb-a819-18dbf2217749', 'd4157544-30d2-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-05-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d41577ee-30d2-11eb-a819-18dbf2217749', 'd415770d-30d2-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-05-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157984-30d2-11eb-a819-18dbf2217749', 'd4157878-30d2-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-05-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157b18-30d2-11eb-a819-18dbf2217749', 'd4157a2d-30d2-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-05-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157cd6-30d2-11eb-a819-18dbf2217749', 'd4157ba7-30d2-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-05-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4157e7e-30d2-11eb-a819-18dbf2217749', 'd4157d93-30d2-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-06-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d415806e-30d2-11eb-a819-18dbf2217749', 'd4157f8f-30d2-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-06-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d41581da-30d2-11eb-a819-18dbf2217749', 'd41580f8-30d2-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d4158344-30d2-11eb-a819-18dbf2217749', 'd4158262-30d2-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:06:02', '2020-11-27 17:06:02'),
+('d5a7566e-30d6-11eb-a819-18dbf2217749', 'd5a75490-30d6-11eb-a819-18dbf2217749', 1, 758, 532.615384615385, 225.384615384615, '2019-08-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75873-30d6-11eb-a819-18dbf2217749', 'd5a75766-30d6-11eb-a819-18dbf2217749', 2, 758, 556.6240473372784, 201.37595266272155, '2019-08-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75a0e-30d6-11eb-a819-18dbf2217749', 'd5a75917-30d6-11eb-a819-18dbf2217749', 3, 758, 581.7149467018664, 176.2850532981335, '2019-08-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75bb1-30d6-11eb-a819-18dbf2217749', 'd5a75ab9-30d6-11eb-a819-18dbf2217749', 4, 758, 607.9368666070429, 150.06313339295713, '2019-09-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75d46-30d6-11eb-a819-18dbf2217749', 'd5a75c4a-30d6-11eb-a819-18dbf2217749', 5, 758, 635.3407899787142, 122.65921002128584, '2019-09-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a75fdc-30d6-11eb-a819-18dbf2217749', 'd5a75de4-30d6-11eb-a819-18dbf2217749', 6, 758, 663.9799978962162, 94.02000210378384, '2019-10-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a76251-30d6-11eb-a819-18dbf2217749', 'd5a7611c-30d6-11eb-a819-18dbf2217749', 7, 758, 693.9101731859994, 64.0898268140006, '2019-10-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d5a7c473-30d6-11eb-a819-18dbf2217749', 'd5a762f9-30d6-11eb-a819-18dbf2217749', 8, 758, 725.189508684999, 32.810491315000995, '2019-11-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:34:43', '2020-11-27 17:34:43'),
+('d88d3c85-30d3-11eb-a819-18dbf2217749', 'd88d382d-30d3-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-05-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d40e9-30d3-11eb-a819-18dbf2217749', 'd88d3ea6-30d3-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-05-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d4444-30d3-11eb-a819-18dbf2217749', 'd88d420c-30d3-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-05-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d47ac-30d3-11eb-a819-18dbf2217749', 'd88d4558-30d3-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-06-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d4c53-30d3-11eb-a819-18dbf2217749', 'd88d494d-30d3-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-06-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d508c-30d3-11eb-a819-18dbf2217749', 'd88d4dfb-30d3-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d579c-30d3-11eb-a819-18dbf2217749', 'd88d5533-30d3-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d5b8a-30d3-11eb-a819-18dbf2217749', 'd88d5921-30d3-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6085-30d3-11eb-a819-18dbf2217749', 'd88d5e3d-30d3-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d64d3-30d3-11eb-a819-18dbf2217749', 'd88d6222-30d3-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d680a-30d3-11eb-a819-18dbf2217749', 'd88d6644-30d3-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6af0-30d3-11eb-a819-18dbf2217749', 'd88d68fa-30d3-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d6da7-30d3-11eb-a819-18dbf2217749', 'd88d6bfb-30d3-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d7049-30d3-11eb-a819-18dbf2217749', 'd88d6ea1-30d3-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d7322-30d3-11eb-a819-18dbf2217749', 'd88d7138-30d3-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('d88d7606-30d3-11eb-a819-18dbf2217749', 'd88d7419-30d3-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:13:19', '2020-11-27 17:13:19'),
+('eaa49b7c-30d7-11eb-a819-18dbf2217749', 'eaa498e3-30d7-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-09-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa49d73-30d7-11eb-a819-18dbf2217749', 'eaa49c62-30d7-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-09-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa49f0e-30d7-11eb-a819-18dbf2217749', 'eaa49e10-30d7-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-09-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a09f-30d7-11eb-a819-18dbf2217749', 'eaa49fa6-30d7-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-09-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a22f-30d7-11eb-a819-18dbf2217749', 'eaa4a135-30d7-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-09-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a3b9-30d7-11eb-a819-18dbf2217749', 'eaa4a2c8-30d7-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-10-07', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a536-30d7-11eb-a819-18dbf2217749', 'eaa4a448-30d7-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-10-14', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a7a7-30d7-11eb-a819-18dbf2217749', 'eaa4a5fe-30d7-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-10-21', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4a9ec-30d7-11eb-a819-18dbf2217749', 'eaa4a875-30d7-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-10-28', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4acc3-30d7-11eb-a819-18dbf2217749', 'eaa4ab40-30d7-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-11-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4af57-30d7-11eb-a819-18dbf2217749', 'eaa4add5-30d7-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-11-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b1e0-30d7-11eb-a819-18dbf2217749', 'eaa4b04d-30d7-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-11-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b42c-30d7-11eb-a819-18dbf2217749', 'eaa4b2bf-30d7-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-11-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b614-30d7-11eb-a819-18dbf2217749', 'eaa4b515-30d7-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-12-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b792-30d7-11eb-a819-18dbf2217749', 'eaa4b6a4-30d7-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-12-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eaa4b9a8-30d7-11eb-a819-18dbf2217749', 'eaa4b838-30d7-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-12-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:42:27', '2020-11-27 17:42:27'),
+('eae3d3dc-30d6-11eb-a819-18dbf2217749', 'eae3d080-30d6-11eb-a819-18dbf2217749', 1, 220, 161.730769230769, 58.269230769231, '2019-07-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d5f6-30d6-11eb-a819-18dbf2217749', 'eae3d4e9-30d6-11eb-a819-18dbf2217749', 2, 220, 164.87207840236664, 55.12792159763336, '2019-08-02', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d78a-30d6-11eb-a819-18dbf2217749', 'eae3d694-30d6-11eb-a819-18dbf2217749', 3, 220, 168.0744014636434, 51.92559853635661, '2019-08-09', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3d916-30d6-11eb-a819-18dbf2217749', 'eae3d81d-30d6-11eb-a819-18dbf2217749', 4, 220, 171.33892349207187, 48.661076507928136, '2019-08-16', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3da94-30d6-11eb-a819-18dbf2217749', 'eae3d9a7-30d6-11eb-a819-18dbf2217749', 5, 220, 174.6668525829756, 45.33314741702442, '2019-08-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3dc15-30d6-11eb-a819-18dbf2217749', 'eae3db27-30d6-11eb-a819-18dbf2217749', 6, 220, 178.05942029660645, 41.94057970339354, '2019-08-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3dd85-30d6-11eb-a819-18dbf2217749', 'eae3dc9f-30d6-11eb-a819-18dbf2217749', 7, 220, 181.51788211390596, 38.48211788609405, '2019-09-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3defd-30d6-11eb-a819-18dbf2217749', 'eae3de18-30d6-11eb-a819-18dbf2217749', 8, 220, 185.04351790111838, 34.95648209888164, '2019-09-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e06e-30d6-11eb-a819-18dbf2217749', 'eae3df87-30d6-11eb-a819-18dbf2217749', 9, 220, 188.63763238342855, 31.362367616571436, '2019-09-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e1de-30d6-11eb-a819-18dbf2217749', 'eae3e0f5-30d6-11eb-a819-18dbf2217749', 10, 220, 192.30155562779902, 27.69844437220098, '2019-09-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e349-30d6-11eb-a819-18dbf2217749', 'eae3e263-30d6-11eb-a819-18dbf2217749', 11, 220, 196.03664353518514, 23.963356464814872, '2019-10-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e4b2-30d6-11eb-a819-18dbf2217749', 'eae3e3cc-30d6-11eb-a819-18dbf2217749', 12, 220, 199.84427834231087, 20.155721657689142, '2019-10-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e61f-30d6-11eb-a819-18dbf2217749', 'eae3e536-30d6-11eb-a819-18dbf2217749', 13, 220, 203.72586913319037, 16.274130866809628, '2019-10-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e78a-30d6-11eb-a819-18dbf2217749', 'eae3e6a3-30d6-11eb-a819-18dbf2217749', 14, 220, 207.68285236058506, 12.317147639414953, '2019-10-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('eae3e8f2-30d6-11eb-a819-18dbf2217749', 'eae3e80d-30d6-11eb-a819-18dbf2217749', 15, 220, 211.71669237758874, 8.283307622411265, '2019-11-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18');
+INSERT INTO `sales_credits_payments` (`uuid`, `sales_credits_amortizations_table_uuid`, `number_payment`, `required_payment`, `required_principal_payment`, `required_interest_payment`, `required_day_payment`, `payment`, `sales_credits_payments_state_uuid`, `created`, `modified`) VALUES
+('eae3ea5a-30d6-11eb-a819-18dbf2217749', 'eae3e975-30d6-11eb-a819-18dbf2217749', 16, 220, 215.82888197953807, 4.171118020461929, '2019-11-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:35:18', '2020-11-27 17:35:18'),
+('f71edbd0-30d3-11eb-a819-18dbf2217749', 'f71ed9c9-30d3-11eb-a819-18dbf2217749', 1, 1466, 1077.53846153846, 388.46153846154004, '2019-05-23', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eddc8-30d3-11eb-a819-18dbf2217749', 'f71edcba-30d3-11eb-a819-18dbf2217749', 2, 1466, 1098.4675739644956, 367.53242603550444, '2019-05-30', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71edf79-30d3-11eb-a819-18dbf2217749', 'f71ede5f-30d3-11eb-a819-18dbf2217749', 3, 1466, 1119.8031941511138, 346.1968058488863, '2019-06-06', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee281-30d3-11eb-a819-18dbf2217749', 'f71ee065-30d3-11eb-a819-18dbf2217749', 4, 1466, 1141.5532177298182, 324.44678227018187, '2019-06-13', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee6a2-30d3-11eb-a819-18dbf2217749', 'f71ee407-30d3-11eb-a819-18dbf2217749', 5, 1466, 1163.7256936895706, 302.2743063104295, '2019-06-20', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ee9cd-30d3-11eb-a819-18dbf2217749', 'f71ee7db-30d3-11eb-a819-18dbf2217749', 6, 1466, 1186.3288273554642, 279.67117264453583, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eec54-30d3-11eb-a819-18dbf2217749', 'f71eeae3-30d3-11eb-a819-18dbf2217749', 7, 1466, 1209.3709834252531, 256.6290165747469, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71eeecd-30d3-11eb-a819-18dbf2217749', 'f71eed46-30d3-11eb-a819-18dbf2217749', 8, 1466, 1232.8606890648591, 233.13931093514094, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef0f8-30d3-11eb-a819-18dbf2217749', 'f71eefb1-30d3-11eb-a819-18dbf2217749', 9, 1466, 1256.8066370640036, 209.19336293599648, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef2d9-30d3-11eb-a819-18dbf2217749', 'f71ef1d5-30d3-11eb-a819-18dbf2217749', 10, 1466, 1281.2176890531314, 184.7823109468686, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef44a-30d3-11eb-a819-18dbf2217749', 'f71ef362-30d3-11eb-a819-18dbf2217749', 11, 1466, 1306.1028787828172, 159.89712121718267, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef5b7-30d3-11eb-a819-18dbf2217749', 'f71ef4d2-30d3-11eb-a819-18dbf2217749', 12, 1466, 1331.4714154668684, 134.5285845331317, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef744-30d3-11eb-a819-18dbf2217749', 'f71ef63d-30d3-11eb-a819-18dbf2217749', 13, 1466, 1357.3326871903596, 108.66731280964049, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71ef8e7-30d3-11eb-a819-18dbf2217749', 'f71ef7fd-30d3-11eb-a819-18dbf2217749', 14, 1466, 1383.6962643838647, 82.30373561613534, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71efa53-30d3-11eb-a819-18dbf2217749', 'f71ef96d-30d3-11eb-a819-18dbf2217749', 15, 1466, 1410.5719033651667, 55.428096634833246, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('f71efe93-30d3-11eb-a819-18dbf2217749', 'f71efae9-30d3-11eb-a819-18dbf2217749', 16, 1466, 1437.9695499497595, 28.030450050240475, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:14:10', '2020-11-27 17:14:10'),
+('fe0c7939-30d5-11eb-a819-18dbf2217749', 'fe0c75ab-30d5-11eb-a819-18dbf2217749', 1, 147, 108.15384615384599, 38.846153846154, '2019-06-27', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c7ced-30d5-11eb-a819-18dbf2217749', 'fe0c7b50-30d5-11eb-a819-18dbf2217749', 2, 147, 110.25452662721878, 36.74547337278122, '2019-07-04', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c7f4f-30d5-11eb-a819-18dbf2217749', 'fe0c7dca-30d5-11eb-a819-18dbf2217749', 3, 147, 112.3960087790167, 34.6039912209833, '2019-07-11', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c832b-30d5-11eb-a819-18dbf2217749', 'fe0c80a8-30d5-11eb-a819-18dbf2217749', 4, 147, 114.57908510337838, 32.420914896621625, '2019-07-18', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8585-30d5-11eb-a819-18dbf2217749', 'fe0c840c-30d5-11eb-a819-18dbf2217749', 5, 147, 116.80456348711708, 30.195436512882917, '2019-07-25', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c87e6-30d5-11eb-a819-18dbf2217749', 'fe0c8668-30d5-11eb-a819-18dbf2217749', 6, 147, 119.07326750869379, 27.92673249130621, '2019-08-01', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8a37-30d5-11eb-a819-18dbf2217749', 'fe0c88bc-30d5-11eb-a819-18dbf2217749', 7, 147, 121.38603674299728, 25.613963257002727, '2019-08-08', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8cd4-30d5-11eb-a819-18dbf2217749', 'fe0c8b28-30d5-11eb-a819-18dbf2217749', 8, 147, 123.74372707204395, 23.25627292795604, '2019-08-15', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c8f3c-30d5-11eb-a819-18dbf2217749', 'fe0c8dbc-30d5-11eb-a819-18dbf2217749', 9, 147, 126.14721100171252, 20.85278899828748, '2019-08-22', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c918f-30d5-11eb-a819-18dbf2217749', 'fe0c9015-30d5-11eb-a819-18dbf2217749', 10, 147, 128.5973779846304, 18.402622015369595, '2019-08-29', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9401-30d5-11eb-a819-18dbf2217749', 'fe0c926b-30d5-11eb-a819-18dbf2217749', 11, 147, 131.0951347493319, 15.904865250668108, '2019-09-05', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9665-30d5-11eb-a819-18dbf2217749', 'fe0c94e4-30d5-11eb-a819-18dbf2217749', 12, 147, 133.64140563580932, 13.35859436419069, '2019-09-12', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c98fa-30d5-11eb-a819-18dbf2217749', 'fe0c9746-30d5-11eb-a819-18dbf2217749', 13, 147, 136.23713293758178, 10.762867062418229, '2019-09-19', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9b01-30d5-11eb-a819-18dbf2217749', 'fe0c998f-30d5-11eb-a819-18dbf2217749', 14, 147, 138.8832772504079, 8.11672274959211, '2019-09-26', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9c69-30d5-11eb-a819-18dbf2217749', 'fe0c9b87-30d5-11eb-a819-18dbf2217749', 15, 147, 141.5808178277716, 5.419182172228408, '2019-10-03', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41'),
+('fe0c9dd6-30d5-11eb-a819-18dbf2217749', 'fe0c9cec-30d5-11eb-a819-18dbf2217749', 16, 147, 144.33075294327256, 2.6692470567274484, '2019-10-10', 0, 'f8fd1696-9d4a-4c92-bf7e-eee6eae340df', '2020-11-27 17:28:41', '2020-11-27 17:28:41');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_credits_payments_states`
+--
+
+CREATE TABLE `sales_credits_payments_states` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `pyment_state` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `description` text COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_credits_payments_states`
+--
+
+INSERT INTO `sales_credits_payments_states` (`uuid`, `pyment_state`, `enable`, `description`, `created`, `modified`) VALUES
+('f8fd1696-9d4a-4c92-bf7e-eee6eae340df', 'PENDIENTE', 1, 'Estatus para pago pendiente', '2020-11-27 16:24:08', '2020-11-27 16:24:08');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_products`
+--
+
+CREATE TABLE `sales_products` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `product_name` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `sales_types_payment_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `anual_rate` double NOT NULL,
+  `number_payments` int(11) NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `description` text COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_products`
+--
+
+INSERT INTO `sales_products` (`uuid`, `product_name`, `sales_types_payment_uuid`, `anual_rate`, `number_payments`, `enable`, `description`, `created`, `modified`) VALUES
+('760a3b9f-c474-4314-bea1-ff6bb1c8b5a0', 'Soñemos', 'dea64a2e-0469-4e7b-9f7d-35b9cf7287fb', 101, 16, 1, 'Producto base', '2020-11-25 02:12:42', '2020-11-25 02:12:42'),
+('db554dd4-1011-4ece-a19b-020d924e1a4d', 'Imagina', 'acaafb82-83e9-4440-9447-e1d345c2a9a6', 117.2, 8, 1, 'Producto catorcenas', '2020-11-25 02:13:26', '2020-11-25 02:13:26');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_products_types_states`
+--
+
+CREATE TABLE `sales_products_types_states` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `type_state` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `description` text COLLATE utf8_spanish_ci NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_products_types_states`
+--
+
+INSERT INTO `sales_products_types_states` (`uuid`, `type_state`, `enable`, `description`, `created`, `modified`) VALUES
+('30af1e37-032b-4f4f-9c40-60a7d6827e3a', 'ACTIVO', 1, 'Estatus para crédito activo', '2020-11-25 17:01:13', '2020-11-25 17:01:13'),
+('ce33a6eb-d41a-4f84-84f2-bdc969ffff5c', 'DISUELTO', 1, 'Estatus terminal para un crédito cerrado faborable', '2020-11-25 17:01:39', '2020-11-25 17:01:45');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `sales_types_payments`
+--
+
+CREATE TABLE `sales_types_payments` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `type_pyment` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `paydays` int(11) NOT NULL,
+  `description` text COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `sales_types_payments`
+--
+
+INSERT INTO `sales_types_payments` (`uuid`, `type_pyment`, `paydays`, `description`, `enable`, `created`, `modified`) VALUES
+('acaafb82-83e9-4440-9447-e1d345c2a9a6', 'Catorcenal', 14, 'Frecuencia de pago cada 14 días', 1, '2020-11-25 01:56:39', '2020-11-25 01:56:39'),
+('dea64a2e-0469-4e7b-9f7d-35b9cf7287fb', 'Semanal', 7, 'Tipo de pago semanal', 1, '2020-11-25 01:56:05', '2020-11-25 01:56:05');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `structures_colonies`
+--
+
+CREATE TABLE `structures_colonies` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_country_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_state_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_municipality_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `colony` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `postal_code` int(5) NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `description` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `structures_colonies`
+--
+
+INSERT INTO `structures_colonies` (`uuid`, `structures_country_uuid`, `structures_state_uuid`, `structures_municipality_uuid`, `colony`, `postal_code`, `enable`, `description`, `created`, `modified`) VALUES
+('074a46fe-77d9-4d8b-af55-8e22a6a3cb55', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', '82a9ccf4-197d-46b4-bfb0-6e900dd63bdc', 'Residencial del norte', 27274, 1, '', '2020-10-02 21:12:21', '2020-10-02 21:12:35');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `structures_countries`
+--
+
+CREATE TABLE `structures_countries` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `country` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `country_key` char(3) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `description` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `structures_countries`
+--
+
+INSERT INTO `structures_countries` (`uuid`, `country`, `country_key`, `enable`, `description`, `created`, `modified`) VALUES
+('4957ee1c-8691-4cda-9622-bc6b33f5028b', 'Estados Unidos Americanos', 'USA', 0, 'Estados Unidos Americanos', '2020-10-02 20:12:38', '2020-10-02 20:12:52'),
+('a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Estados Unidos Mexicanos', 'MEX', 1, 'Pais de los estados unidos mexicanos', '2020-09-30 15:49:40', '2020-09-30 15:49:40');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `structures_municipalities`
+--
+
+CREATE TABLE `structures_municipalities` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_country_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_state_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `municipality` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `municipality_key` char(3) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `description` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `structures_municipalities`
+--
+
+INSERT INTO `structures_municipalities` (`uuid`, `structures_country_uuid`, `structures_state_uuid`, `municipality`, `municipality_key`, `enable`, `description`, `created`, `modified`) VALUES
+('82a9ccf4-197d-46b4-bfb0-6e900dd63bdc', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', '4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'Torreón', 'TRC', 1, 'Municipio de torréon coahuila', '2020-10-02 20:25:57', '2020-10-02 20:25:57');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `structures_states`
+--
+
+CREATE TABLE `structures_states` (
+  `uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `structures_country_uuid` char(36) COLLATE utf8_spanish_ci NOT NULL,
+  `state` varchar(250) COLLATE utf8_spanish_ci NOT NULL,
+  `state_key` char(3) COLLATE utf8_spanish_ci NOT NULL,
+  `state_renapo` char(2) COLLATE utf8_spanish_ci NOT NULL,
+  `enable` tinyint(1) NOT NULL DEFAULT 1,
+  `description` text COLLATE utf8_spanish_ci DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `modified` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `structures_states`
+--
+
+INSERT INTO `structures_states` (`uuid`, `structures_country_uuid`, `state`, `state_key`, `state_renapo`, `enable`, `description`, `created`, `modified`) VALUES
+('262aeb73-810e-432d-bdc7-bf7f98c7ecbb', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Michoacán', 'MIC', 'MN', 1, '', '2020-10-03 02:21:41', '2020-10-03 02:21:41'),
+('27180968-37df-4c87-8d4d-e6d5fdfe74ee', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Chiapas', 'CHP', 'CS', 1, '', '2020-09-30 19:27:28', '2020-09-30 19:27:28'),
+('2a0d59dc-9855-4a4a-a43d-f35a501b26b9', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Baja California Sur', 'BCS', 'BS', 1, '', '2020-09-30 19:26:34', '2020-09-30 19:26:34'),
+('473adc58-45bc-4ea3-876f-82993d0f6755', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Campeche', 'CAM', 'CC', 1, '', '2020-09-30 19:27:06', '2020-09-30 19:27:06'),
+('4e2b538a-6f2c-4cc0-93fa-1286cf945b5a', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Coahuila', 'COA', 'CL', 1, '', '2020-09-30 19:28:46', '2020-09-30 19:28:46'),
+('4ec9bfdb-863c-4f77-bae7-24a4c58fa993', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Baja California', 'BCN', 'BC', 1, '', '2020-09-30 19:25:28', '2020-09-30 19:25:28'),
+('67841e08-5e13-45f0-915c-fc24d899af2a', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Ciudad de México', 'CMX', 'DF', 1, '', '2020-09-30 19:28:20', '2020-09-30 19:28:20'),
+('7a19474f-251e-4f1e-8c49-788e1c7d6c02', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Chihuahua', 'CHH', 'CH', 1, '', '2020-09-30 19:27:49', '2020-09-30 19:27:49'),
+('99709267-de84-4c8e-a00a-46826371a769', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Aguascalientes', 'AGU', 'AS', 1, '', '2020-09-30 19:09:00', '2020-09-30 19:09:00'),
+('fd1ce8f7-2cc5-4aaf-b0b4-9af4f441cf06', 'a6377855-e3d7-4192-bac6-d5b3550e2f82', 'Durango', 'DUR', 'DG', 1, '', '2020-10-03 02:24:27', '2020-10-03 02:24:27');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `bps_business_partners`
+--
+ALTER TABLE `bps_business_partners`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `bps_unique_number` (`bps_unique_number`),
+  ADD UNIQUE KEY `bps_unique_registry_key` (`bps_unique_registry_key`),
+  ADD UNIQUE KEY `bps_elector_key` (`bps_elector_key`);
+
+--
+-- Indices de la tabla `bps_business_partners_phones`
+--
+ALTER TABLE `bps_business_partners_phones`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `bps_business_partners_rols`
+--
+ALTER TABLE `bps_business_partners_rols`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `bps_genders`
+--
+ALTER TABLE `bps_genders`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `bps_types_addresses`
+--
+ALTER TABLE `bps_types_addresses`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `type_address` (`type_address`);
+
+--
+-- Indices de la tabla `bps_types_phones`
+--
+ALTER TABLE `bps_types_phones`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `type_address` (`type_phone`);
+
+--
+-- Indices de la tabla `bps_types_rols`
+--
+ALTER TABLE `bps_types_rols`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `type_rol` (`type_rol`);
+
+--
+-- Indices de la tabla `sales_credits`
+--
+ALTER TABLE `sales_credits`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `sales_credits_amortizations_tables`
+--
+ALTER TABLE `sales_credits_amortizations_tables`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `sales_credits_payments`
+--
+ALTER TABLE `sales_credits_payments`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `sales_credits_payments_states`
+--
+ALTER TABLE `sales_credits_payments_states`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `sales_products`
+--
+ALTER TABLE `sales_products`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `product_name` (`product_name`);
+
+--
+-- Indices de la tabla `sales_products_types_states`
+--
+ALTER TABLE `sales_products_types_states`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `sales_types_payments`
+--
+ALTER TABLE `sales_types_payments`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `type_pyment` (`type_pyment`);
+
+--
+-- Indices de la tabla `structures_colonies`
+--
+ALTER TABLE `structures_colonies`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `structures_countries`
+--
+ALTER TABLE `structures_countries`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `country_key` (`country_key`),
+  ADD UNIQUE KEY `country` (`country`);
+
+--
+-- Indices de la tabla `structures_municipalities`
+--
+ALTER TABLE `structures_municipalities`
+  ADD PRIMARY KEY (`uuid`);
+
+--
+-- Indices de la tabla `structures_states`
+--
+ALTER TABLE `structures_states`
+  ADD PRIMARY KEY (`uuid`),
+  ADD UNIQUE KEY `state_renapo` (`state_renapo`) USING BTREE,
+  ADD UNIQUE KEY `state` (`state`) USING BTREE,
+  ADD UNIQUE KEY `state_key` (`state_key`) USING BTREE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

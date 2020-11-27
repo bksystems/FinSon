@@ -26,7 +26,7 @@ class SalesCreditsController extends AppController
      */
     public function index()
     {
-        $salesCredits = $this->paginate($this->SalesCredits);
+        $salesCredits = $this->SalesCredits->find('all', ['contain' => ['BpsBusinessPartners', 'SalesProducts', 'SalesProductsTypesStates']]);
 
         $this->set(compact('salesCredits'));
     }
@@ -68,6 +68,8 @@ class SalesCreditsController extends AppController
             $salesCredit->amount_payable = $salesCreditCalculate['amount_payable'];
             $salesCredit->payment = $salesCreditCalculate['payment'];   
             $salesCredit->payment_rate = $salesCreditCalculate['interes_payment'];    
+
+            $salesCredit->credit_unique_number = $this->number_prev_cto();
 
             if ($this->SalesCredits->save($salesCredit)) {
                 $this->Flash->success(__('The sales credit has been saved.'));
@@ -247,5 +249,20 @@ class SalesCreditsController extends AppController
         }
         return $day_spanish;
     }
+
+    private function number_prev_cto()
+    {
+        $last_number = $this->SalesCredits->find()
+                        ->select(['credit_unique_number', 'created'])
+                        ->max('created');
+        if(!$last_number){
+            $last_number = 'S100000000';
+        }else{
+            $next_number =  intval(substr($last_number->credit_unique_number, 1, 9)) + 1;
+            $last_number = 'S' . $next_number;
+        }
+        return $last_number;
+    }
+
 
 }

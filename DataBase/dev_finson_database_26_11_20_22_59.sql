@@ -19,6 +19,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `dev_finson_db`
 --
+DROP DATABASE IF EXISTS `dev_finson_db`;
 CREATE DATABASE IF NOT EXISTS `dev_finson_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 USE `dev_finson_db`;
 

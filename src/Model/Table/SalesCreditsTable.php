@@ -43,6 +43,18 @@ class SalesCreditsTable extends Table
         $this->setDisplayField('uuid');
         $this->setPrimaryKey('uuid');
 
+        $this->belongsTo('BpsBusinessPartners')
+            ->setForeignKey('bps_business_partner_uuid')
+            ->setJoinType('INNER');
+        
+        $this->belongsTo('SalesProducts')
+            ->setForeignKey('sales_product_uuid')
+            ->setJoinType('INNER');
+
+        $this->belongsTo('SalesProductsTypesStates')
+            ->setForeignKey('sales_products_types_state_uuid')
+            ->setJoinType('INNER');
+
         $this->addBehavior('Timestamp');
     }
 
