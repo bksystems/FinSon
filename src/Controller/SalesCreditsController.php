@@ -66,7 +66,8 @@ class SalesCreditsController extends AppController
             
             $salesCreditCalculate = $this->calculateCredit($salesCredit->sales_product_uuid, $salesCredit->requested_amount);
             $salesCredit->amount_payable = $salesCreditCalculate['amount_payable'];
-            $salesCredit->payment = $salesCreditCalculate['payment'];          
+            $salesCredit->payment = $salesCreditCalculate['payment'];   
+            $salesCredit->payment_rate = $salesCreditCalculate['interes_payment'];    
 
             if ($this->SalesCredits->save($salesCredit)) {
                 $this->Flash->success(__('The sales credit has been saved.'));
