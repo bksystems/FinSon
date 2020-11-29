@@ -32871,3 +32871,441 @@ Request URL: /sales-credits/get-calculate-credit-end-date-json/760a3b9f-c474-431
 Referer URL: http://localhost:8080/FinSon/sales-credits/add
 
 
+2020-11-29 05:58:04 Error: [Cake\View\Exception\MissingTemplateException] Template file `SalesCredits/print_contract.php` could not be found.
+
+The following paths were searched:
+
+- `/Applications/MAMP/htdocs/FinSon/templates/SalesCredits/print_contract.php`
+- `/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/SalesCredits/print_contract.php`
+ in SalesCredits/print_contract.php on line 1354
+Exception Attributes: array (
+  'file' => 'SalesCredits/print_contract.php',
+  'paths' => 
+  array (
+    0 => '/Applications/MAMP/htdocs/FinSon/templates/',
+    1 => '/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:761
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:696
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:538
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-29 06:06:37 Warning: Warning (2): Invalid argument supplied for foreach() in [/Applications/MAMP/htdocs/FinSon/templates/SalesCredits/print_contract.php, line 9]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+include - ROOT/templates/SalesCredits/print_contract.php, line 9
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 1176
+Cake\View\View::_render() - CORE/src/View/View.php, line 1134
+Cake\View\View::render() - CORE/src/View/View.php, line 764
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 696
+Cake\Controller\Controller::invokeAction() - CORE/src/Controller/Controller.php, line 538
+Cake\Controller\ControllerFactory::invoke() - CORE/src/Controller/ControllerFactory.php, line 79
+Cake\Http\BaseApplication::handle() - CORE/src/Http/BaseApplication.php, line 251
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 77
+Cake\Http\Middleware\CsrfProtectionMiddleware::process() - CORE/src/Http/Middleware/CsrfProtectionMiddleware.php, line 156
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Middleware\BodyParserMiddleware::process() - CORE/src/Http/Middleware/BodyParserMiddleware.php, line 159
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\RoutingMiddleware::process() - CORE/src/Routing/Middleware/RoutingMiddleware.php, line 166
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Routing\Middleware\AssetMiddleware::process() - CORE/src/Routing/Middleware/AssetMiddleware.php, line 68
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Error\Middleware\ErrorHandlerMiddleware::process() - CORE/src/Error/Middleware/ErrorHandlerMiddleware.php, line 121
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+DebugKit\Middleware\DebugKitMiddleware::process() - ROOT/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php, line 60
+Cake\Http\Runner::handle() - CORE/src/Http/Runner.php, line 73
+Cake\Http\Runner::run() - CORE/src/Http/Runner.php, line 58
+Cake\Http\Server::run() - CORE/src/Http/Server.php, line 90
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 06:10:11 Error: [Cake\View\Exception\MissingTemplateException] Template file `SalesCredits/false.php` could not be found.
+
+The following paths were searched:
+
+- `/Applications/MAMP/htdocs/FinSon/templates/SalesCredits/false.php`
+- `/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/SalesCredits/false.php`
+ in SalesCredits/false.php on line 1354
+Exception Attributes: array (
+  'file' => 'SalesCredits/false.php',
+  'paths' => 
+  array (
+    0 => '/Applications/MAMP/htdocs/FinSon/templates/',
+    1 => '/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:761
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:696
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:36
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-29 20:16:33 Error: [TypeError] Return value of App\Controller\PagesController::display() must be an instance of Cake\Http\Response or null, none returned in /Applications/MAMP/htdocs/FinSon/src/Controller/PagesController.php on line 72
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /
+
+
+2020-11-29 20:18:16 Error: [Cake\View\Exception\MissingTemplateException] Template file `Pages/display.php` could not be found.
+
+The following paths were searched:
+
+- `/Applications/MAMP/htdocs/FinSon/templates/Pages/display.php`
+- `/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/Pages/display.php`
+ in Pages/display.php on line 1354
+Exception Attributes: array (
+  'file' => 'Pages/display.php',
+  'paths' => 
+  array (
+    0 => '/Applications/MAMP/htdocs/FinSon/templates/',
+    1 => '/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:761
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:696
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:538
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /
+
+
+2020-11-29 20:21:10 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 20:21:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 20:21:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 20:21:11 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:06:27 Error: [Cake\Http\Exception\MissingControllerException] Controller class BpsBusinessPartnersAddresses could not be found. in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php on line 158
+Exception Attributes: array (
+  'class' => 'BpsBusinessPartnersAddresses',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:46
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /bps-business-partners-addresses
+Referer URL: http://localhost:8888/FinSon/bps-business-partners-phones
+
+
+2020-11-29 23:22:48 Error: [Error] Call to a member function get() on null in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 37
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-29 23:22:48 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:22:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:22:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:22:48 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:23:57 Error: [Error] Call to a member function get() on null in /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php on line 37
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-29 23:23:58 Warning: Warning (512): Unable to emit headers. Headers sent in file=/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php line=954 in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 71]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 71
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:23:58 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 168]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitStatusLine() - CORE/src/Http/ResponseEmitter.php, line 168
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 74
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:23:58 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:23:58 Warning: Warning (2): Cannot modify header information - headers already sent by (output started at /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Debugger.php:954) in [/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/ResponseEmitter.php, line 197]
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 188
+DebugKit\Plugin::DebugKit\{closure}() - ROOT/vendor/cakephp/debug_kit/src/Plugin.php, line 105
+header - [internal], line ??
+Cake\Http\ResponseEmitter::emitHeaders() - CORE/src/Http/ResponseEmitter.php, line 197
+Cake\Http\ResponseEmitter::emit() - CORE/src/Http/ResponseEmitter.php, line 75
+Cake\Http\Server::emit() - CORE/src/Http/Server.php, line 130
+[main] - ROOT/webroot/index.php, line 40
+
+2020-11-29 23:24:20 Error: [Cake\View\Exception\MissingTemplateException] Template file `SalesCredits/pdf/print_contract.php` could not be found.
+
+The following paths were searched:
+
+- `/Applications/MAMP/htdocs/FinSon/templates/SalesCredits/pdf/print_contract.php`
+- `/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/SalesCredits/pdf/print_contract.php`
+ in SalesCredits/pdf/print_contract.php on line 1354
+Exception Attributes: array (
+  'file' => 'SalesCredits/pdf/print_contract.php',
+  'paths' => 
+  array (
+    0 => '/Applications/MAMP/htdocs/FinSon/templates/',
+    1 => '/Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/templates/',
+  ),
+)
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/View/View.php:761
+- /Applications/MAMP/htdocs/FinSon/vendor/friendsofcake/cakepdf/src/View/pdfView.php:107
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:696
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:538
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+

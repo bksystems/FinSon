@@ -31,6 +31,14 @@ use Cake\View\Exception\MissingTemplateException;
  */
 class PagesController extends AppController
 {
+    public function initialize():void
+    {
+        parent::initialize();
+        $this->loadModel('BpsBusinessPartners');
+        $this->loadModel('SalesProducts');
+        $this->loadModel('SalesCredits');
+        $this->loadModel('SalesProductsTypesStates');
+    }
     /**
      * Displays a view
      *
@@ -43,7 +51,7 @@ class PagesController extends AppController
      *   be found and not in debug mode.
      * @throws \Cake\View\Exception\MissingTemplateException In debug mode.
      */
-    public function display(string ...$path): ?Response
+    /*public function display(string ...$path): ?Response
     {
         if (!$path) {
             return $this->redirect('/');
@@ -69,5 +77,18 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
+    }*/
+
+    public function display(){
+        $customers = $this->BpsBusinessPartners->find('all');
+        $resume_query = $this->SalesCredits->find('all', ['contain' => ['SalesProducts']]);
+        $resume_query->select([
+            'requested_amount' => $resume_query->func()->sum('requested_amount'),
+            'amount_payable' => $resume_query->func()->sum('amount_payable'),
+            'product' => 'product_name'
+        ])
+        ->group('product_name');
+        $this->set(compact('customers', 'resume_query'));
+
     }
 }

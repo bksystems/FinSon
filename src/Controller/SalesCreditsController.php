@@ -31,6 +31,15 @@ class SalesCreditsController extends AppController
         $this->set(compact('salesCredits'));
     }
 
+    public function printContract($id = null)
+    {
+        $salesCredit = $this->SalesCredits->get($id, [
+            'contain' => [],
+        ]);
+
+        $this->set(compact('salesCredit'));
+    }
+
     /**
      * View method
      *

@@ -56,6 +56,7 @@
                     <td><?= $this->Number->format($salesCredit->payment) ?></td>
                     <td class="actions">
                         <?= $this->Html->link(__('Detalles'), ['action' => 'view', $salesCredit->uuid], ['class' => 'text-info']) ?>
+                        <?= $this->Html->link(__('Contrato'), ['action' => 'print-contract', $salesCredit->uuid], ['class' => 'text-info']) ?>
                         <!--<?= $this->Html->link(__('Editar'), ['action' => 'edit', $salesCredit->uuid], ['class' => 'text-warning']) ?>
                         <?= $this->Form->postLink(__('Eliminar'), ['action' => 'delete', $salesCredit->uuid], ['class' => 'text-danger', 'confirm' => __('Esta seguro de eliminar el registro # {0}?', $salesCredit->uuid)]) ?>-->
                     </td>
