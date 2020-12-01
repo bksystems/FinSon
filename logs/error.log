@@ -33309,3 +33309,193 @@ Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
 Referer URL: http://localhost:8888/FinSon/sales-credits
 
 
+2020-11-29 23:31:44 Error: [InvalidArgumentException] The `contain` association is not defined on `SalesCredits`.
+Valid associations are: BpsBusinessPartners, SalesProducts, SalesProductsTypesStates in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php on line 903
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:492
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:318
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:448
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/EagerLoader.php:419
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1142
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1091
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php:214
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:284
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:291
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:339
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:344
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Query.php:249
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1112
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:292
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:1059
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:443
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Datasource/QueryTrait.php:454
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1521
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:37
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-30 00:33:49 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.sales_credits_amotizations_table' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 142
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:277
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:177
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1679
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1261
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:40
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.sales_credits_amotizations_table' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:74
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:310
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:313
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:140
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:277
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:177
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1679
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1261
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:40
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+
+2020-11-30 00:34:39 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.sales_credits_amortizations_table' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 142
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:277
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:177
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1679
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1261
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:40
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.sales_credits_amortizations_table' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/StatementDecorator.php:178
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Log/LoggingStatement.php:74
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:310
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:313
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:140
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:277
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Query.php:177
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1679
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:1261
+- /Applications/MAMP/htdocs/FinSon/src/Controller/SalesCreditsController.php:40
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/Controller.php:529
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Controller/ControllerFactory.php:79
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/BaseApplication.php:251
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:77
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/CsrfProtectionMiddleware.php:156
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Middleware/BodyParserMiddleware.php:159
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/RoutingMiddleware.php:166
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Routing/Middleware/AssetMiddleware.php:68
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Error/Middleware/ErrorHandlerMiddleware.php:121
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/debug_kit/src/Middleware/DebugKitMiddleware.php:60
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:73
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Runner.php:58
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Http/Server.php:90
+- /Applications/MAMP/htdocs/FinSon/webroot/index.php:40
+
+Request URL: /sales-credits/print-contract/1b12d326-b177-46f5-9c0f-be2ed1a42b26
+Referer URL: http://localhost:8888/FinSon/sales-credits
+
+

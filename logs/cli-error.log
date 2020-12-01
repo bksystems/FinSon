@@ -318,3 +318,42 @@ Stack Trace:
 
 
 
+2020-11-30 00:30:48 Error: [Cake\Database\Exception] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.model' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php on line 142
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:649
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:199
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:122
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:98
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:81
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /Applications/MAMP/htdocs/FinSon/bin/cake.php:12
+
+Caused by: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1146 Table 'dev_finson_db.model' doesn't exist in /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php on line 39
+Stack Trace:
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Statement/MysqlStatement.php:39
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:310
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Core/Retry/CommandRetry.php:70
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Connection.php:313
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:140
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/Collection.php:100
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php:84
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:509
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/ORM/Table.php:649
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:199
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:122
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:98
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/ModelCommand.php:81
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/bake/src/Command/AllCommand.php:102
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/BaseCommand.php:179
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/CommandRunner.php:336
+- /Applications/MAMP/htdocs/FinSon/vendor/cakephp/cakephp/src/Console/CommandRunner.php:171
+- /Applications/MAMP/htdocs/FinSon/bin/cake.php:12
+
+
+

@@ -18,6 +18,7 @@ class SalesCreditsController extends AppController
         $this->loadModel('SalesProducts');
         $this->loadModel('BpsBusinessPartnersRols');
         $this->loadModel('SalesProductsTypesStates');
+        $this->loadModel('SalesCreditsAmortizationsTables');
     }
     /**
      * Index method
@@ -34,10 +35,12 @@ class SalesCreditsController extends AppController
     public function printContract($id = null)
     {
         $salesCredit = $this->SalesCredits->get($id, [
-            'contain' => [],
+            'contain' => ['BpsBusinessPartners', 'SalesProducts', 'SalesProductsTypesStates'],
         ]);
+        $amortization = $this->SalesCreditsAmortizationsTables->find('all')
+            ->where(['sales_credit_uuid' => $id]);
 
-        $this->set(compact('salesCredit'));
+        $this->set(compact('salesCredit', 'amortization'));
     }
 
     /**
